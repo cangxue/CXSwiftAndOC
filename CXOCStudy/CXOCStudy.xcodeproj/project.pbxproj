@@ -110,6 +110,7 @@
 				TargetAttributes = {
 					D1BA48541E9E265800B4DA26 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 862YF45JD7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -270,7 +271,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 862YF45JD7;
 				INFOPLIST_FILE = CXOCStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CX.CXOCStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,7 +284,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 862YF45JD7;
 				INFOPLIST_FILE = CXOCStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CX.CXOCStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -307,6 +312,7 @@
 				D1BA486E1E9E265800B4DA26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
