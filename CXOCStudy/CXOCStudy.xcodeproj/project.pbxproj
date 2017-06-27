@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D18748211F00A8980029B787 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18748201F00A8980029B787 /* CollectionViewController.m */; };
 		D1BA485A1E9E265800B4DA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA48591E9E265800B4DA26 /* main.m */; };
 		D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA485C1E9E265800B4DA26 /* AppDelegate.m */; };
 		D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA485F1E9E265800B4DA26 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D187481F1F00A8980029B787 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		D18748201F00A8980029B787 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		D1BA48551E9E265800B4DA26 /* CXOCStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXOCStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BA48591E9E265800B4DA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1BA485B1E9E265800B4DA26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +42,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D18748141F00A84E0029B787 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D18748151F00A84E0029B787 /* block */,
+				D18748161F00A84E0029B787 /* 内存 */,
+				D18748171F00A84E0029B787 /* 动画 */,
+				D18748181F00A84E0029B787 /* 单元测试 */,
+				D18748191F00A84E0029B787 /* 多线程 */,
+				D187481A1F00A84E0029B787 /* 性能检测及优化 */,
+				D187481B1F00A84E0029B787 /* 控制器 */,
+				D187481C1F00A84E0029B787 /* 流媒体 */,
+				D187481D1F00A84E0029B787 /* 网络 */,
+				D187481E1F00A84E0029B787 /* 集合 */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D18748151F00A84E0029B787 /* block */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = block;
+			sourceTree = "<group>";
+		};
+		D18748161F00A84E0029B787 /* 内存 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "内存";
+			sourceTree = "<group>";
+		};
+		D18748171F00A84E0029B787 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "动画";
+			sourceTree = "<group>";
+		};
+		D18748181F00A84E0029B787 /* 单元测试 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "单元测试";
+			sourceTree = "<group>";
+		};
+		D18748191F00A84E0029B787 /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "多线程";
+			sourceTree = "<group>";
+		};
+		D187481A1F00A84E0029B787 /* 性能检测及优化 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "性能检测及优化";
+			sourceTree = "<group>";
+		};
+		D187481B1F00A84E0029B787 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		D187481C1F00A84E0029B787 /* 流媒体 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "流媒体";
+			sourceTree = "<group>";
+		};
+		D187481D1F00A84E0029B787 /* 网络 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "网络";
+			sourceTree = "<group>";
+		};
+		D187481E1F00A84E0029B787 /* 集合 */ = {
+			isa = PBXGroup;
+			children = (
+				D187481F1F00A8980029B787 /* CollectionViewController.h */,
+				D18748201F00A8980029B787 /* CollectionViewController.m */,
+			);
+			path = "集合";
+			sourceTree = "<group>";
+		};
 		D1BA484C1E9E265800B4DA26 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +150,7 @@
 		D1BA48571E9E265800B4DA26 /* CXOCStudy */ = {
 			isa = PBXGroup;
 			children = (
+				D18748141F00A84E0029B787 /* Classes */,
 				D1BA485B1E9E265800B4DA26 /* AppDelegate.h */,
 				D1BA485C1E9E265800B4DA26 /* AppDelegate.m */,
 				D1BA485E1E9E265800B4DA26 /* ViewController.h */,
@@ -151,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,
 				D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */,
 				D1BA485A1E9E265800B4DA26 /* main.m in Sources */,
