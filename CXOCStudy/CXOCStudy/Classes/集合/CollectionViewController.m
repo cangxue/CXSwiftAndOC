@@ -18,10 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setMehod];
+    [self passingTest_selectedMethod];
 }
 
-#pragma mark - NSArray类
+#pragma mark - NSArray
 - (void)arrayMethod {
     //初始化一个数组
     NSArray *array = [NSArray arrayWithObjects:@"first", @"second", @"third", nil];
@@ -61,6 +61,20 @@
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
     NSArray *subItems = [array objectsAtIndexes:indexSet];
     NSLog(@"一组元素  %@",subItems);
+    
+    
+    //条件遍历
+    NSIndexSet *indexSets = [array indexesOfObjectsPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isEqualToString:@"second"]) {
+            NSLog(@"tow在%lu",(unsigned long)idx);
+            *stop = YES;
+            return YES;
+        }
+        
+        return NO;
+    }];
+    
+    NSLog(@"%@",indexSets);
     
 }
 
@@ -125,7 +139,54 @@
     [countSet removeObject:@"one"];
     NSLog(@"=== %lu", (unsigned long)[countSet countForObject:@"one"]);
     
+ 
     
+}
+
+#pragma mark - 集合筛选
+//使用KVO
+- (void)kvo_selectedMethod {
+    NSArray *array = @[@"one", @"two", @"three", @"three", @"three"];
+    //获取字符串length
+    NSLog(@"%@",[array valueForKeyPath:@"length"]);
+    //获取最大length
+    NSLog(@"%@",[array valueForKeyPath:@"@max.length"]);
+    //去重distinctUnionOfObjects
+    NSLog(@"%@",[array valueForKeyPath:@"@distinctUnionOfObjects.self"]);
+    //求和
+    NSArray *array1 = @[@1, @2, @3];
+    NSLog(@"%@",[array1 valueForKeyPath:@"@sum.self"]);
+}
+//使用NSPredicate
+- (void)predicate_selectedMethod {
+    NSArray *array = @[@"one", @"two", @"three", @"three", @"three"];
+    //条件筛选
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"length > 3"];
+    NSLog(@"%@", [array filteredArrayUsingPredicate:predicate]);
+    //使用OR和SELF（数据对象本身）
+    NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"SELF ENDSWITH 'o' OR length > 3"];
+    NSLog(@"%@",[array filteredArrayUsingPredicate:predicate1]);
+    
+    //使用block创建
+    NSPredicate *predicate2 = [NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+        NSString *str = evaluatedObject;
+        return [str hasSuffix:@"o"] || str.length > 3;
+    }];
+    NSLog(@"%@", [array filteredArrayUsingPredicate:predicate2]);
+}
+//使用集合自身的passingTest方法
+- (void)passingTest_selectedMethod {
+    NSArray *array = @[@"one", @"two", @"three", @"three", @"three"];
+    //使用indexesOfObjectsWithOptions
+    //NSEnumerationReverse代表从后向前枚举
+    NSIndexSet *indexSet = [array indexesOfObjectsWithOptions:NSEnumerationReverse passingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *str = obj;
+        if ([str hasSuffix:@"e"] || str.length > 3) {
+            return YES;
+        }
+        return NO;
+    }];
+    NSLog(@"%@", [array objectsAtIndexes:indexSet]);
 }
 
 @end
