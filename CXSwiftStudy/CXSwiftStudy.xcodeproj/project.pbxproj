@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18748301F04F8000029B787 /* CollectionViewController.swift */; };
 		D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */; };
 		D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483C1E9E258D00B4DA26 /* ViewController.swift */; };
 		D1BA48401E9E258D00B4DA26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BA483E1E9E258D00B4DA26 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D18748301F04F8000029B787 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D1BA48371E9E258D00B4DA26 /* CXSwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXSwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1BA483C1E9E258D00B4DA26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D18748251F04F7E80029B787 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D18748261F04F7E80029B787 /* block */,
+				D18748271F04F7E80029B787 /* 内存 */,
+				D18748281F04F7E80029B787 /* 动画 */,
+				D18748291F04F7E80029B787 /* 单元测试 */,
+				D187482A1F04F7E80029B787 /* 多线程 */,
+				D187482B1F04F7E80029B787 /* 性能检测及优化 */,
+				D187482C1F04F7E80029B787 /* 控制器 */,
+				D187482D1F04F7E80029B787 /* 流媒体 */,
+				D187482E1F04F7E80029B787 /* 网络 */,
+				D187482F1F04F7E80029B787 /* 集合 */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D18748261F04F7E80029B787 /* block */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = block;
+			sourceTree = "<group>";
+		};
+		D18748271F04F7E80029B787 /* 内存 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "内存";
+			sourceTree = "<group>";
+		};
+		D18748281F04F7E80029B787 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "动画";
+			sourceTree = "<group>";
+		};
+		D18748291F04F7E80029B787 /* 单元测试 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "单元测试";
+			sourceTree = "<group>";
+		};
+		D187482A1F04F7E80029B787 /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "多线程";
+			sourceTree = "<group>";
+		};
+		D187482B1F04F7E80029B787 /* 性能检测及优化 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "性能检测及优化";
+			sourceTree = "<group>";
+		};
+		D187482C1F04F7E80029B787 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		D187482D1F04F7E80029B787 /* 流媒体 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "流媒体";
+			sourceTree = "<group>";
+		};
+		D187482E1F04F7E80029B787 /* 网络 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "网络";
+			sourceTree = "<group>";
+		};
+		D187482F1F04F7E80029B787 /* 集合 */ = {
+			isa = PBXGroup;
+			children = (
+				D18748301F04F8000029B787 /* CollectionViewController.swift */,
+			);
+			path = "集合";
+			sourceTree = "<group>";
+		};
 		D1BA482E1E9E258D00B4DA26 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +144,7 @@
 		D1BA48391E9E258D00B4DA26 /* CXSwiftStudy */ = {
 			isa = PBXGroup;
 			children = (
+				D18748251F04F7E80029B787 /* Classes */,
 				D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */,
 				D1BA483C1E9E258D00B4DA26 /* ViewController.swift */,
 				D1BA483E1E9E258D00B4DA26 /* Main.storyboard */,
@@ -96,6 +187,7 @@
 				TargetAttributes = {
 					D1BA48361E9E258D00B4DA26 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 862YF45JD7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */,
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,
 			);
@@ -203,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -246,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -258,7 +351,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 862YF45JD7;
 				INFOPLIST_FILE = CXSwiftStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CX.CXSwiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,7 +365,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 862YF45JD7;
 				INFOPLIST_FILE = CXSwiftStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CX.CXSwiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -297,6 +394,7 @@
 				D1BA484B1E9E258D00B4DA26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
