@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BlockViewController.h"
 
 @interface ViewController ()
 
@@ -25,6 +26,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//block
+- (IBAction)blockBtnClick:(id)sender {
+    BlockViewController *blockVC = [[BlockViewController alloc] init];
+    blockVC.title = @"Block";
+    [self.navigationController pushViewController:blockVC animated:YES];
+}
 
 @end

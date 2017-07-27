@@ -22,11 +22,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-eU-U8t">
-                                <rect key="frame" x="24" y="72" width="222" height="27"/>
+                                <rect key="frame" x="0.0" y="139" width="222" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="集合"/>
                                 <connections>
                                     <segue destination="2Ms-nt-DUA" kind="show" id="dfn-PJ-jyr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4W-jS-KhL">
+                                <rect key="frame" x="4" y="84" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="block"/>
+                                <connections>
+                                    <action selector="blockBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnF-XO-xZd"/>
                                 </connections>
                             </button>
                         </subviews>
