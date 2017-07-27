@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D18748211F00A8980029B787 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18748201F00A8980029B787 /* CollectionViewController.m */; };
+		D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */; };
+		D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */; };
 		D1BA485A1E9E265800B4DA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA48591E9E265800B4DA26 /* main.m */; };
 		D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA485C1E9E265800B4DA26 /* AppDelegate.m */; };
 		D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA485F1E9E265800B4DA26 /* ViewController.m */; };
@@ -19,6 +21,11 @@
 /* Begin PBXFileReference section */
 		D187481F1F00A8980029B787 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		D18748201F00A8980029B787 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		D1A9D5C11F29CF9400DEB1BD /* BlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
+		D1A9D5C41F29D73D00DEB1BD /* CXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXBaseViewController.h; sourceTree = "<group>"; };
+		D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXBaseViewController.m; sourceTree = "<group>"; };
+		D1A9D5C71F29DE8700DEB1BD /* CXHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHeader.h; sourceTree = "<group>"; };
 		D1BA48551E9E265800B4DA26 /* CXOCStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXOCStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BA48591E9E265800B4DA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1BA485B1E9E265800B4DA26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +69,8 @@
 		D18748151F00A84E0029B787 /* block */ = {
 			isa = PBXGroup;
 			children = (
+				D1A9D5C11F29CF9400DEB1BD /* BlockViewController.h */,
+				D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */,
 			);
 			path = block;
 			sourceTree = "<group>";
@@ -155,6 +164,9 @@
 				D1BA485C1E9E265800B4DA26 /* AppDelegate.m */,
 				D1BA485E1E9E265800B4DA26 /* ViewController.h */,
 				D1BA485F1E9E265800B4DA26 /* ViewController.m */,
+				D1A9D5C41F29D73D00DEB1BD /* CXBaseViewController.h */,
+				D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */,
+				D1A9D5C71F29DE8700DEB1BD /* CXHeader.h */,
 				D1BA48611E9E265800B4DA26 /* Main.storyboard */,
 				D1BA48641E9E265800B4DA26 /* Assets.xcassets */,
 				D1BA48661E9E265800B4DA26 /* LaunchScreen.storyboard */,
@@ -244,9 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */,
 				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,
 				D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */,
+				D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */,
 				D1BA485A1E9E265800B4DA26 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
