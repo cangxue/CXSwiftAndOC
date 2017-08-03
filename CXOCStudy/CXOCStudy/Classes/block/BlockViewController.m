@@ -46,11 +46,17 @@ typedef void(^PrintBlock)(NSString *printStr);
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self testAccessVariable];
+    
+}
+
+/** block声明 **/
+- (void)declareMethod {
     
     //局部变量
     NSString *(^OutBlock)(NSString *outStr) = ^NSString *(NSString *outStr) {
         NSLog(@"%@",outStr);
-
+        
         return @"已经成功输出了局部变量";
     };
     
@@ -72,12 +78,24 @@ typedef void(^PrintBlock)(NSString *printStr);
         NSLog(@"%@",printStr);
     };
     self.printBlock(@"打印声明调用");
-    
 }
 
 - (void)printStrMethodWithPrintBlock:(void (^)(NSString *printStr))otherPrintBlock {
     NSLog(@"这是一个block函数");
     otherPrintBlock(@"函数中block的参数");
+}
+
+/** block测试 **/
+- (void)testAccessVariable {
+    NSInteger outsideVarible = 10;
+    
+    void (^blockObject)(void) = ^(void) {
+        NSLog(@"outsideVarible %ld", (long)outsideVarible);
+    };
+    
+    outsideVarible = 20; 
+    
+    blockObject();
 }
 
 @end
