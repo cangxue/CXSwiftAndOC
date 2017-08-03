@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+
 class CXBlockViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -15,6 +18,13 @@ class CXBlockViewController: UIViewController {
 
         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
+        
+        
+        self.declare { (json, isSuccess) in
+            if isSuccess {
+                print("success")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,14 +33,9 @@ class CXBlockViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func declare(completion: @escaping (_ json: AnyObject?, _ isSuccess: Bool) ->Void) {
+        completion(nil, true)
+        
     }
-    */
 
 }
