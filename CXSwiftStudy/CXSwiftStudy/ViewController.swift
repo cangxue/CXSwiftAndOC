@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func blockBtnClick(_ sender: Any) {
+        let vc = CXBlockViewController()
+        vc.title = "Block"
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
 
 }

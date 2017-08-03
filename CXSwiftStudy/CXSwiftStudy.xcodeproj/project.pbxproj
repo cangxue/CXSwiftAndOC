@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */; };
 		D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18748301F04F8000029B787 /* CollectionViewController.swift */; };
 		D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */; };
 		D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483C1E9E258D00B4DA26 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXBlockViewController.swift; sourceTree = "<group>"; };
 		D18748301F04F8000029B787 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D1BA48371E9E258D00B4DA26 /* CXSwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXSwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		D18748261F04F7E80029B787 /* block */ = {
 			isa = PBXGroup;
 			children = (
+				D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */,
 			);
 			path = block;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */,
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,
+				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
