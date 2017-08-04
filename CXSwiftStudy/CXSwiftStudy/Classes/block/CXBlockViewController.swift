@@ -34,6 +34,12 @@ typealias Nothing = () -> ()
  typealias Add = (Int, Int) -> (Int)
 
 class CXBlockViewController: UIViewController {
+    
+    
+    var completionHandlers: [() -> Void] = []
+    
+    var x = 10
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +47,7 @@ class CXBlockViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
         
-//        
+        
 //        self.declare { (json, isSuccess) in
 //            if isSuccess {
 //                print("success")
@@ -49,11 +55,20 @@ class CXBlockViewController: UIViewController {
 //        }
 //        
 //        self.typealiasBlock()
+//        
+//        self.addNumber { (num1, num2) -> (Int) in
+//            print("请打印\(num1 + num2)")
+//            return num1 + num2
+//        }
         
-        self.addNumber { (num1, num2) -> (Int) in
-            print("请打印\(num1 + num2)")
-            return num1 + num2
-        }
+        
+        self.doSomething()
+        
+        print(self.x)
+        
+        completionHandlers.first?()
+        print(self.x)
+        
         
         
     }
@@ -63,11 +78,26 @@ class CXBlockViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+//逃逸闭包@escaping：闭包在函数返回之后才被执行
     func declare(completion: @escaping (_ json: AnyObject?, _ isSuccess: Bool) ->Void) {
+        
+        
         completion(nil, true)
         
+        print("逃逸闭包");
+        
     }
+    
+    func someFunctionWithEscapingClosure(completionHandler:@escaping () -> Void)  {
+        
+        completionHandlers.append(completionHandler)
+    }
+    
+    func someFunctionWithNonescapingClosure(closure: () -> Void) {
+        closure()
+    }
+    
+    //声明block使用
     
     func typealiasBlock() {
         let addCloser: Add
@@ -92,5 +122,25 @@ class CXBlockViewController: UIViewController {
         
         print(tempNum * 2)
     }
+    
+    
+    func doSomething() {
+       
+        
+        someFunctionWithEscapingClosure {
+            //逃逸闭包，这意味着它需要显式地引用 self
+            self.x = 100
+        }
+        
+        
+        
+        someFunctionWithNonescapingClosure {
+            //非逃逸闭包，这意味着它可以隐式引用 self
+            x = 200
+        }
+    }
 
 }
+
+
+
