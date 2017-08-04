@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+
+    @IBAction func collectionBtnClick(_ sender: Any) {
+        let vc = CollectionViewController()
+        vc.title = "Collection"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func blockBtnClick(_ sender: Any) {
         let vc = CXBlockViewController()
         vc.title = "Block"
