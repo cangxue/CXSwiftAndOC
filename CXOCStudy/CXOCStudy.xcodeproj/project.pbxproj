@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */; };
+		D109AB431F34766900AB39D6 /* CXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB421F34766900AB39D6 /* CXPerson.m */; };
 		D18748211F00A8980029B787 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18748201F00A8980029B787 /* CollectionViewController.m */; };
 		D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */; };
 		D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D109AB3D1F34762100AB39D6 /* CXKVOOrKVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXKVOOrKVCViewController.h; sourceTree = "<group>"; };
+		D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXKVOOrKVCViewController.m; sourceTree = "<group>"; };
+		D109AB411F34766900AB39D6 /* CXPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPerson.h; sourceTree = "<group>"; };
+		D109AB421F34766900AB39D6 /* CXPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPerson.m; sourceTree = "<group>"; };
 		D187481F1F00A8980029B787 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		D18748201F00A8980029B787 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		D1A9D5C11F29CF9400DEB1BD /* BlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -49,9 +55,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D109AB3C1F34760100AB39D6 /* KVC:KVO */ = {
+			isa = PBXGroup;
+			children = (
+				D109AB3D1F34762100AB39D6 /* CXKVOOrKVCViewController.h */,
+				D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */,
+			);
+			path = "KVC:KVO";
+			sourceTree = "<group>";
+		};
+		D109AB401F34765500AB39D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D109AB411F34766900AB39D6 /* CXPerson.h */,
+				D109AB421F34766900AB39D6 /* CXPerson.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D18748141F00A84E0029B787 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D109AB401F34765500AB39D6 /* Model */,
+				D109AB3C1F34760100AB39D6 /* KVC:KVO */,
 				D18748151F00A84E0029B787 /* block */,
 				D18748161F00A84E0029B787 /* 内存 */,
 				D18748171F00A84E0029B787 /* 动画 */,
@@ -210,6 +236,7 @@
 		D1BA484D1E9E265800B4DA26 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CX;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CX;
 				TargetAttributes = {
@@ -259,9 +286,11 @@
 				D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */,
 				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,
+				D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */,
 				D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */,
 				D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */,
 				D1BA485A1E9E265800B4DA26 /* main.m in Sources */,
+				D109AB431F34766900AB39D6 /* CXPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

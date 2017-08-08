@@ -10,4 +10,6 @@
 
 @interface CXPerson : NSObject
 
+//@property (nonatomic, copy) NSString *name;
+
 @end

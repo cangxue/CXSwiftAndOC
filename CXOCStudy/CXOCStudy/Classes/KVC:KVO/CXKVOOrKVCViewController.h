@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CXPerson.h"
 
 @interface CXKVOOrKVCViewController : UIViewController
 
