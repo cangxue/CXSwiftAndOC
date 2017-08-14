@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "BlockViewController.h"
+#import "CXAutoLayoutViewController.h"
 
 @interface ViewController ()
 
@@ -31,6 +32,13 @@
     BlockViewController *blockVC = [[BlockViewController alloc] init];
     blockVC.title = @"Block";
     [self.navigationController pushViewController:blockVC animated:YES];
+}
+
+//AutoLayout
+- (IBAction)autoLayoutBtnClick:(id)sender {
+    CXAutoLayoutViewController *vc = [[CXAutoLayoutViewController alloc] init];
+    vc.title = @"AutoLayout";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

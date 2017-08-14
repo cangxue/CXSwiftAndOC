@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A8F7D24F1254DF2106AB84F /* libPods-CXOCStudy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48738AC6797F7CDE9F0BC002 /* libPods-CXOCStudy.a */; };
+		D1029AB01F4152A40079BE95 /* CXAutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1029AAF1F4152A40079BE95 /* CXAutoLayoutViewController.m */; };
 		D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */; };
 		D109AB431F34766900AB39D6 /* CXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB421F34766900AB39D6 /* CXPerson.m */; };
 		D18748211F00A8980029B787 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18748201F00A8980029B787 /* CollectionViewController.m */; };
@@ -24,6 +25,8 @@
 /* Begin PBXFileReference section */
 		48738AC6797F7CDE9F0BC002 /* libPods-CXOCStudy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXOCStudy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23526A7598BFFBBAD79C41E /* Pods-CXOCStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXOCStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXOCStudy/Pods-CXOCStudy.release.xcconfig"; sourceTree = "<group>"; };
+		D1029AAE1F4152A40079BE95 /* CXAutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAutoLayoutViewController.h; sourceTree = "<group>"; };
+		D1029AAF1F4152A40079BE95 /* CXAutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAutoLayoutViewController.m; sourceTree = "<group>"; };
 		D109AB3D1F34762100AB39D6 /* CXKVOOrKVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXKVOOrKVCViewController.h; sourceTree = "<group>"; };
 		D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXKVOOrKVCViewController.m; sourceTree = "<group>"; };
 		D109AB411F34766900AB39D6 /* CXPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPerson.h; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 		D1029AAD1F414F740079BE95 /* 自动布局 */ = {
 			isa = PBXGroup;
 			children = (
+				D1029AAE1F4152A40079BE95 /* CXAutoLayoutViewController.h */,
+				D1029AAF1F4152A40079BE95 /* CXAutoLayoutViewController.m */,
 			);
 			path = "自动布局";
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */,
 				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,
+				D1029AB01F4152A40079BE95 /* CXAutoLayoutViewController.m in Sources */,
 				D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */,
 				D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */,
 				D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */,

@@ -25,9 +25,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-eU-U8t">
                                 <rect key="frame" x="4" y="122" width="42" height="30"/>
                                 <state key="normal" title="集合"/>
-                                <connections>
-                                    <segue destination="2Ms-nt-DUA" kind="show" id="dfn-PJ-jyr"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCE-qz-Elr">
                                 <rect key="frame" x="58" y="179" width="250" height="98"/>
@@ -101,6 +98,14 @@
                                     <action selector="blockBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnF-XO-xZd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGB-QG-QpJ">
+                                <rect key="frame" x="6" y="160" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AutoLayout"/>
+                                <connections>
+                                    <action selector="autoLayoutBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ps2-zu-Rd2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -120,25 +125,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
-        </scene>
-        <!--集合-->
-        <scene sceneID="2xV-vb-ayP">
-            <objects>
-                <viewController storyboardIdentifier="CollectionViewControllerID" id="2Ms-nt-DUA" customClass="CollectionViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rWV-ml-8gt"/>
-                        <viewControllerLayoutGuide type="bottom" id="jeU-C4-hWq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EQm-CO-otP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="集合" id="XZI-vK-HSo"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RAV-mp-C68" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1814" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WkR-U2-Uxb">
