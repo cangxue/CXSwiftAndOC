@@ -7,6 +7,7 @@
 //
 
 #import "CXAutoLayoutViewController.h"
+#import "Masonry.h"
 
 @interface CXAutoLayoutViewController ()
 
@@ -16,22 +17,67 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self setNSlayoutConstraintsView];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//使用系统的NSLayoutConstraints布局
+- (void)setNSlayoutConstraintsView {
+    UIView *superview = self.view;
+    
+    UIView *view1 = [[UIView alloc] init];
+    view1.backgroundColor = [UIColor greenColor];
+    //默认自动会自动确定自己的位置，要自动布局必须设置为NO
+    view1.translatesAutoresizingMaskIntoConstraints = NO;
+    [superview addSubview:view1];
+    
+    UIEdgeInsets padding = UIEdgeInsetsMake(64 + 10, 10, 10, 10);
+    
+    [superview addConstraints:@[
+    //上
+    [NSLayoutConstraint constraintWithItem:view1
+                                 attribute:NSLayoutAttributeTop
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:superview
+                                 attribute:NSLayoutAttributeTop
+                                multiplier:1.0
+                                  constant:padding.top],
+    
+    //左
+    [NSLayoutConstraint constraintWithItem:view1
+                                 attribute:NSLayoutAttributeLeft
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:superview
+                                 attribute:NSLayoutAttributeLeft
+                                multiplier:1.0
+                                  constant:padding.left],
+    
+    //下
+    [NSLayoutConstraint constraintWithItem:view1
+                                 attribute:NSLayoutAttributeBottom
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:superview
+                                 attribute:NSLayoutAttributeBottom
+                                multiplier:1.0
+                                  constant:-padding.bottom],
+    
+    //右
+    [NSLayoutConstraint constraintWithItem:view1
+                                 attribute:NSLayoutAttributeRight
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:superview
+                                 attribute:NSLayoutAttributeRight
+                                multiplier:1
+                                  constant:-padding.right],
+     ]];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//使用masonry实现自动布局
+- (void)setMasnoryConstraintView {
+    
 }
-*/
 
 @end
