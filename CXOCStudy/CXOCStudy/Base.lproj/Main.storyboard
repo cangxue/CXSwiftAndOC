@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,32 +15,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="i5H-nB-Mjr"/>
+                        <viewControllerLayoutGuide type="bottom" id="PK6-Hl-TMl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-eU-U8t">
-                                <rect key="frame" x="0.0" y="139" width="222" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-eU-U8t">
+                                <rect key="frame" x="4" y="122" width="42" height="30"/>
                                 <state key="normal" title="集合"/>
                                 <connections>
                                     <segue destination="2Ms-nt-DUA" kind="show" id="dfn-PJ-jyr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4W-jS-KhL">
-                                <rect key="frame" x="4" y="84" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="block"/>
-                                <connections>
-                                    <action selector="blockBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnF-XO-xZd"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCE-qz-Elr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCE-qz-Elr">
                                 <rect key="frame" x="58" y="179" width="250" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="减肥">
                                         <attributes>
@@ -103,8 +94,26 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4W-jS-KhL">
+                                <rect key="frame" x="6" y="84" width="38" height="30"/>
+                                <state key="normal" title="block"/>
+                                <connections>
+                                    <action selector="blockBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnF-XO-xZd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cCE-qz-Elr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="6N0-fD-kf2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cCE-qz-Elr" secondAttribute="trailing" constant="51" id="EU3-sJ-R6P"/>
+                            <constraint firstItem="B4W-jS-KhL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="Ik9-IN-ckb"/>
+                            <constraint firstItem="B4W-jS-KhL" firstAttribute="centerX" secondItem="RaQ-eU-U8t" secondAttribute="centerX" id="Lgb-J1-WRv"/>
+                            <constraint firstItem="PK6-Hl-TMl" firstAttribute="top" secondItem="cCE-qz-Elr" secondAttribute="bottom" constant="390" id="QBe-lA-gIe"/>
+                            <constraint firstItem="RaQ-eU-U8t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-12" id="RuO-ej-DIo"/>
+                            <constraint firstItem="cCE-qz-Elr" firstAttribute="top" secondItem="i5H-nB-Mjr" secondAttribute="bottom" constant="115" id="TD7-NW-gbc"/>
+                            <constraint firstItem="B4W-jS-KhL" firstAttribute="top" secondItem="i5H-nB-Mjr" secondAttribute="bottom" constant="20" id="XcJ-c6-tyF"/>
+                            <constraint firstItem="RaQ-eU-U8t" firstAttribute="top" secondItem="B4W-jS-KhL" secondAttribute="bottom" constant="8" symbolic="YES" id="ki0-Sk-FVF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="bX9-7G-8YB"/>
                 </viewController>
@@ -117,8 +126,8 @@
             <objects>
                 <viewController storyboardIdentifier="CollectionViewControllerID" id="2Ms-nt-DUA" customClass="CollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dbe-Ut-auk"/>
-                        <viewControllerLayoutGuide type="bottom" id="lly-ov-KZU"/>
+                        <viewControllerLayoutGuide type="top" id="rWV-ml-8gt"/>
+                        <viewControllerLayoutGuide type="bottom" id="jeU-C4-hWq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EQm-CO-otP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -147,7 +156,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSE-fC-8Ms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120.8" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="120.80000000000001" y="-543.77811094452773"/>
         </scene>
     </scenes>
 </document>
