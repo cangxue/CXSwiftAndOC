@@ -13,6 +13,7 @@
 
 @interface CXKVOOrKVCViewController ()
 
+@property (nonatomic, strong) CXPerson *mainPerson;
 
 @end
 
@@ -23,11 +24,13 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self kvcMethod];
-    
+//    [self kvcMethod];
+
+    [self addObserverMethod];
 }
 
 #pragma mark - KVC:键值编码
+
 - (void)kvcMethod {
     CXPerson *person1 = [[CXPerson alloc] init];
     
@@ -101,9 +104,71 @@
 }
 
 #pragma makr - KVO键值观察
-- (void)kvoMethod {
+- (void)addObserverMethod {
+    
+    
+    _mainPerson = [[CXPerson alloc] init];
+    _mainPerson.name = @"cangxue";
+    NSLog(@"%@",_mainPerson.name);
+    
+    /**调用方法是里:
+     
+     　　object : 被观察对象
+     
+     　　observer: 观察对象
+     
+     　　forKeyPath里面带上property的name，如UIView的frame、center等等
+     
+     　　options: 有4个值，分别是：
+     
+     　　NSKeyValueObservingOptionNew 把更改之前的值提供给处理方法
+     
+     　　NSKeyValueObservingOptionOld 把更改之后的值提供给处理方法
+     
+     　　NSKeyValueObservingOptionInitial 把初始化的值提供给处理方法，一旦注册，立马就会调用一次。通常它会带有新值，而不会带有旧值。
+     
+     　　NSKeyValueObservingOptionPrior 分2次调用。在值改变之前和值改变之后。
+     
+     　　context: 可以带入一些参数，其实这个挺好用的，任何类型都可以，自己强转就好了。
+     */
+    
+    [_mainPerson addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionPrior context:@"这是改变名字的"];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self kvoMethod];
+    });
     
 }
 
+//添加监听
+- (void)kvoMethod {
+    _mainPerson.name = @"new cangxue";
+}
+
+//重写observerValueForKeyPath方法
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    /**处理方法里：
+     
+     　　keyPath: 对应forKeyPath
+     
+     　　object:  被观察的对象
+     
+     　　change:  对应options里的NSKeyValueObservingOptionNew、NSKeyValueObservingOptionOld等
+     
+     　　context： 对应context
+     */
+    
+    if ([keyPath isEqualToString:@"name"]) {
+        NSString *newStr = [change objectForKey:@"new"];
+        NSLog(@"我的%@变为%@",keyPath, newStr);
+        NSLog(@"%@",context);
+    }
+}
+
+//销毁
+- (void)dealloc {
+    [_mainPerson removeObserver:self forKeyPath:@"name"];
+}
 
 @end
