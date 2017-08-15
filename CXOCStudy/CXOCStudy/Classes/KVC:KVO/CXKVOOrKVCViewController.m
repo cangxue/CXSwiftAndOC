@@ -88,12 +88,14 @@
     NSString *nameStr = [person1 valueForKey:@"name"];
     //调用_age
     NSString *ageStr = [person1 valueForKey:@"age"];
+    //调用isSex
+    NSString *sexStr = [person1 valueForKey:@"sex"];
     //没有namee
     NSString *noKeyStr = [person1 valueForKey:@"namee"];
     //keypath获取值
     NSString *keyPathStr = [person1 valueForKeyPath:@"account.balance"];
     
-    NSLog(@"\n person1 name = %@,\n age= %d,\n balance = %.2f,\n tel = %@",nameStr, [ageStr intValue], [keyPathStr floatValue], telStr);
+    NSLog(@"\n person1 name = %@,\n sex = %@,\n age= %d,\n balance = %.2f,\n tel = %@",nameStr,sexStr, [ageStr intValue], [keyPathStr floatValue], telStr);
     
     NSLog(@"%@",noKeyStr);
 }
