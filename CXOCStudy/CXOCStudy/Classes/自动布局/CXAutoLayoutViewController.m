@@ -92,6 +92,9 @@
     UIView *view4 = [[UIView alloc] init];
     view4.backgroundColor = [UIColor redColor];
     
+    UIView *view5 = [[UIView alloc] init];
+    view5.backgroundColor = [UIColor yellowColor];
+    
     [superview addSubview:view1];
     
     [superview addSubview:view2];
@@ -100,8 +103,11 @@
     
     [superview addSubview:view4];
     
+    [superview addSubview:view5];
+    
     UIEdgeInsets padding = UIEdgeInsetsMake(64 + 10, 10, 10, 10);
 
+    /*** mas_makeConstraints ***/
     
     [view1 mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.top.equalTo(superview.mas_top).with.offset(padding.top);
@@ -136,6 +142,33 @@
         make.trailing.equalTo(view3.mas_trailing);
         make.height.equalTo(view3.mas_height);
     }];
+    
+    [view5 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.equalTo(view2);
+        make.bottom.equalTo(view1.mas_bottom);
+        make.right.equalTo(view1.mas_right);
+        
+    }];
+    
+    /*** mas_remakeConstraints ***/
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [view4 mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.height.equalTo(@200);
+            
+            make.top.equalTo(view3.mas_bottom).with.offset(padding.bottom);
+            make.leading.equalTo(view2.mas_leading);
+            make.trailing.equalTo(view3.mas_trailing);
+        }];
+        
+        [view5 mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(view4.mas_width);
+            make.height.equalTo(view2.mas_height);
+            
+            make.bottom.and.right.offset(-20);
+        }];
+    });
+    
     
     
 }
