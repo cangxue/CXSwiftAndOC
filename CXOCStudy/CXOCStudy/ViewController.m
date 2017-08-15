@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BlockViewController.h"
 #import "CXAutoLayoutViewController.h"
+#import "CXKVOOrKVCViewController.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,13 @@
 - (IBAction)autoLayoutBtnClick:(id)sender {
     CXAutoLayoutViewController *vc = [[CXAutoLayoutViewController alloc] init];
     vc.title = @"AutoLayout";
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+//KVC／KVO
+- (IBAction)kvcOrKvoBtnClick:(id)sender {
+    CXKVOOrKVCViewController *vc = [[CXKVOOrKVCViewController alloc] init];
+    vc.title = @"KVC／KVO";
     [self.navigationController pushViewController:vc animated:YES];
 }
 
