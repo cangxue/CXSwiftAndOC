@@ -49,7 +49,7 @@ typedef void(^PrintBlock)(NSString *printStr);
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self cycleMethod];
+    [self accessVariableMethod];
     
 }
 
@@ -176,6 +176,39 @@ typedef void(^PrintBlock)(NSString *printStr);
     self.printBlock(@"循环引用");
 }
 
-
+#pragma mark - 注意
+//变量调用
+- (void)accessVariableMethod {
+    
+    NSInteger outsideVariable = 10;
+    
+    //blockObject 在实现时会对 outside 变量进行只读拷贝，在 block 块内使用该只读拷贝
+    //如果，我们想要让 blockObject 修改或同步使用 outside 变量就需要用 __block 来修饰 outside 变量。
+//    __block NSInteger outsideVariable = 10;
+    
+    
+    NSMutableArray * outsideArray = [[NSMutableArray alloc] init];
+    
+    self.printBlock = ^(NSString *printStr) {
+        NSLog(@"%@ = %ld",printStr,(long)outsideVariable);
+        
+        [outsideArray addObject:@"AddedInsideBlock"];
+    };
+    
+    outsideVariable = 30;
+    
+    self.printBlock(@"outsideVariable");
+    
+    NSLog(@"outsideArray count is  %lu", (unsigned long)outsideArray.count);
+    
+    
+    /**
+     a)，在上面的 block 中，我们往 outsideArray 数组中添加了值，但并未修改 outsideArray 自身，这是允许的，因为拷贝的是 outsideArray 自身。
+     
+     b)，对于 static 变量，全局变量，在 block 中是有读写权限的，因为在 block 的内部实现中，拷贝的是指向这些变量的指针。
+     
+     c)， __block 变量的内部实现要复杂许多，__block 变量其实是一个结构体对象，拷贝的是指向该结构体对象的指针。
+     */
+}
 
 @end
