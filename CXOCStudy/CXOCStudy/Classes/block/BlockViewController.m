@@ -29,6 +29,7 @@
  
  */
 
+
 #import "BlockViewController.h"
 
 typedef void(^PrintBlock)(NSString *printStr);
@@ -39,6 +40,8 @@ typedef void(^PrintBlock)(NSString *printStr);
 
 @property (nonatomic, copy, nullable) PrintBlock printBlock;
 
+@property (nonatomic, copy) NSString *item;
+
 @end
 
 @implementation BlockViewController
@@ -46,10 +49,11 @@ typedef void(^PrintBlock)(NSString *printStr);
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self testAccessVariable];
+    [self cycleMethod];
     
 }
 
+#pragma mark - 各种block变量定义
 /** block声明 **/
 - (void)declareMethod {
     
@@ -97,5 +101,81 @@ typedef void(^PrintBlock)(NSString *printStr);
     
     blockObject();
 }
+
+#pragma mark - 循环引用
+- (void)cycleMethod {
+    
+    /*
+     self持有printBlock，而堆上的printBlock又会持有self，所以会导致循环引用
+     */
+//    self.printBlock = ^(NSString *printStr) {
+//        self.item = printStr;
+//    };
+    
+    /*
+     可以通过使用将strong（强引用）用weak（弱引用）代替来解决循环引用
+     */
+//    __weak typeof(self) weakSelf = self;
+//    self.printBlock = ^(NSString *printStr) {
+//        weakSelf.item = printStr;
+//    };
+    
+    
+    /*
+     weakSelf与其缺陷
+     情况：
+     1、若从A push到B，10s之内没有pop回A的话，B中item = @“循环引用”。
+     
+     2、若从A push到B，10s之内pop回A的话，B会立即执行dealloc，从而导致B中item = (null)。这种情况就是使用weakSelf的缺陷，可能会导致内存提前回收
+     */
+//    __weak typeof(self) weakSelf = self;
+//    self.printBlock = ^(NSString *printStr) {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            weakSelf.item = printStr;
+//        });
+//    };
+
+    
+    /*
+     weakSelf和strongSelf
+     理解：
+     1、这么做和直接用self有什么区别，为什么不会有循环引用：外部的weakSelf是为了打破环，从而使得没有循环引用，而内部的strongSelf仅仅是个局部变量，存在栈中，会在block执行结束后回收，不会再造成循环引用。
+     
+     2、这么做和使用weakSelf有什么区别：唯一的区别就是多了一个strongSelf，而这里的strongSelf会使ClassB的对象引用计数＋1，使得ClassB pop到A的时候，并不会执行dealloc，因为引用计数还不为0，strongSelf仍持有ClassB，而在block执行完，局部的strongSelf才会回收，此时ClassB dealloc。
+     */
+    __weak typeof(self) weakSelf = self;
+    self.printBlock = ^(NSString *printStr) {
+        
+        __strong typeof(self) strongSelf = weakSelf;
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            strongSelf.item = printStr;
+            
+            NSLog(@"%@",strongSelf.item);
+        });
+    };
+    
+    
+    /*
+     宏定义
+     @weakify和@strongify
+     对weakSelf 和 strongSelf进行宏定义偏于引用，CXHeader.h
+     */
+    @weakify(self);
+    self.printBlock = ^(NSString *printStr) {
+        
+        @strongify(self);
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.item = printStr;
+            NSLog(@"%@",self.item);
+        });
+    };
+    
+    
+    self.printBlock(@"循环引用");
+}
+
+
 
 @end

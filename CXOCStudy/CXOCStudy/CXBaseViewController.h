@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CXHeader.h"
 
 @interface CXBaseViewController : ViewController
 
