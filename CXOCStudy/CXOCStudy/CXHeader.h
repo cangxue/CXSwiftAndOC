@@ -9,6 +9,7 @@
 #ifndef CXHeader_h
 #define CXHeader_h
 
+/* 基础设置 */
 
 //设置颜色值
 #define kColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
@@ -38,4 +39,90 @@
 
 
 
-#endif /* CXHeader_h */
+
+
+
+/*   weakSelf/strongSelf宏定义   */
+
+//YYKit中的
+#ifndef weakify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+#endif
+#endif
+#endif
+
+#ifndef strongify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+#endif
+#endif
+#endif
+
+
+//传统写法
+//#ifndef    weakify
+//#if __has_feature(objc_arc)
+//
+//#define weakify( x ) \
+//_Pragma("clang diagnostic push") \
+//_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+//autoreleasepool{} __weak __typeof__(x) __weak_##x##__ = x; \
+//_Pragma("clang diagnostic pop")
+//
+//#else
+//
+//#define weakify( x ) \
+//_Pragma("clang diagnostic push") \
+//_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+//autoreleasepool{} __block __typeof__(x) __block_##x##__ = x; \
+//_Pragma("clang diagnostic pop")
+//
+//#endif
+//#endif
+//
+//#ifndef    strongify
+//#if __has_feature(objc_arc)
+//
+//#define strongify( x ) \
+//_Pragma("clang diagnostic push") \
+//_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+//try{} @finally{} __typeof__(x) x = __weak_##x##__; \
+//_Pragma("clang diagnostic pop")
+//
+//#else
+//
+//#define strongify( x ) \
+//_Pragma("clang diagnostic push") \
+//_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+//try{} @finally{} __typeof__(x) x = __block_##x##__; \
+//_Pragma("clang diagnostic pop")
+//
+//#endif
+//#endif
+
+
+
+
+#endif
+
+
+
