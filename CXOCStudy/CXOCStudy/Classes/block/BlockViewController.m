@@ -34,6 +34,8 @@
 
 typedef void(^PrintBlock)(NSString *printStr);
 
+typedef NSString* (^InlineBlockProject)(id self, NSInteger paramInteger);
+
 @interface BlockViewController ()
 
 @property (nonatomic, copy, nullable) void (^InputBlock)(NSString *inputStr);
@@ -42,6 +44,8 @@ typedef void(^PrintBlock)(NSString *printStr);
 
 @property (nonatomic, copy) NSString *item;
 
+@property (nonatomic, assign) NSInteger memberVariable;
+
 @end
 
 @implementation BlockViewController
@@ -49,7 +53,7 @@ typedef void(^PrintBlock)(NSString *printStr);
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self accessVariableMethod];
+    [self inlineBlockObjectMethod];
     
 }
 
@@ -176,8 +180,7 @@ typedef void(^PrintBlock)(NSString *printStr);
     self.printBlock(@"循环引用");
 }
 
-#pragma mark - 注意
-//变量调用
+#pragma mark - 变量调用
 - (void)accessVariableMethod {
     
     NSInteger outsideVariable = 10;
@@ -190,12 +193,17 @@ typedef void(^PrintBlock)(NSString *printStr);
     NSMutableArray * outsideArray = [[NSMutableArray alloc] init];
     
     self.printBlock = ^(NSString *printStr) {
+        NSInteger insideVariable = 20;
+        NSLog(@"%@ = %ld",printStr,(long)insideVariable);
+        insideVariable = 30;
+        NSLog(@"%@ = %ld",printStr,(long)insideVariable);
+        
         NSLog(@"%@ = %ld",printStr,(long)outsideVariable);
         
         [outsideArray addObject:@"AddedInsideBlock"];
     };
     
-    outsideVariable = 30;
+    
     
     self.printBlock(@"outsideVariable");
     
@@ -209,6 +217,104 @@ typedef void(^PrintBlock)(NSString *printStr);
      
      c)， __block 变量的内部实现要复杂许多，__block 变量其实是一个结构体对象，拷贝的是指向该结构体对象的指针。
      */
+    
+    
 }
+
+#pragma mark - 独立Block/内联Block
+
+// 含self
+typedef NSString* (^SelfParamBlock)(id self, NSInteger paramInteger);
+// 不含self
+typedef NSString* (^ParamBlock)(NSInteger paramInteger);
+
+
+
+/**
+ *独立Block
+ 1、对于独立Block中，局部变量只能从中读取,不能写入。
+ 2、独立（independent） block 不能直接访问 self，只能通过将 self 当作参数传递到 block 中才能使用，并且此时的 self 只能通过 setter 或 getter 方法访问其属性，不能使用句点式方法。但内联 block 不受此限制。
+ */
+
+// Independent：非内联block函数／独立block函数
+SelfParamBlock selfParamBlock = ^(id self, NSInteger paramInteger) {
+    //不能使用句点式方法,只能通过 setter 或 getter 方法访问其属性
+    //    NSLog(@" >> self %@, memberVariable %ld", self, (long)self.memberVariable);//error
+    [self setMemberVariable:30];
+    NSLog(@" >> self %@, memberVariable %ld", self, (long)[self memberVariable]);
+    
+    
+    NSInteger localInteger = 10;
+    NSLog(@"local integer = %ld",(long)localInteger);
+    localInteger = 20;
+    NSLog(@"local integer = %ld",(long)localInteger);
+    
+    
+    NSString *result = @"调用了含self的独立block";
+    return result;
+};
+
+
+ParamBlock paramBlock = ^(NSInteger paramInteger) {
+    
+    //独立block函数不能直接访问 self，只能通过将 self 当作参数传递到 block 中才能使用
+    //    NSLog(@" >> self %@, memberVariable %ld", self, (long)self.memberVariable);//error
+    
+    NSString *result = @"调用了不含self的独立block";
+    
+    return result;
+};
+
+- (void)independentBlockObjectMethod {
+    NSString *tempStr = selfParamBlock(self,10);
+    NSLog(@"%@",tempStr);
+
+    NSLog(@"%@",paramBlock(20));
+}
+
+
+/**
+ * 内联Block
+ 1、对于内联 Block Objects,那些在 BlockObject 执行过程中定义的局部变量是可读写
+ 的,换句话说,对于 Block Objects 自身的局部变量来说,Block Objects 有个读写存
+ 取。
+ 
+ 2、对于内联 Block中。局部变量只能读取，不能写入，除非用__block修饰
+ 
+ */
+- (void)inlineBlockObjectMethod {
+    
+    NSUInteger outsideVariable = 10;
+
+    __block NSUInteger block_outsideVariable = 20;
+    
+    ParamBlock inlineParamBlock = ^(NSInteger paramInteger) {
+        
+        NSLog(@" >> self %@, memberVariable %ld", self, (long)[self memberVariable]);
+        self.memberVariable = 30;
+        NSLog(@" >> self %@, memberVariable %ld", self, (long)self.memberVariable);
+        
+        NSInteger localInteger = 10;
+        NSLog(@"local integer = %ld",(long)localInteger);
+        localInteger = 20;
+        NSLog(@"local integer = %ld",(long)localInteger);
+        
+        //局部变量只能从中读取,不能写入
+//        outsideVariable = 20;
+        NSLog(@"outsideVariable = %ld",(long)outsideVariable);
+        
+        block_outsideVariable = 20;
+        NSLog(@"outsideVariable = %ld",(long)block_outsideVariable);
+        
+        
+        NSString *result = @"调用了不含self的内联block";
+        
+        return result;
+    };
+    
+    NSLog(@"%@",inlineParamBlock(20));
+    
+}
+
 
 @end
