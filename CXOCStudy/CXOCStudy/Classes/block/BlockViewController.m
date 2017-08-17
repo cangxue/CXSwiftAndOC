@@ -180,7 +180,7 @@ typedef NSString* (^InlineBlockProject)(id self, NSInteger paramInteger);
     self.printBlock(@"循环引用");
 }
 
-#pragma mark - 变量调用
+#pragma mark - 捕获外界变量
 - (void)accessVariableMethod {
     
     NSInteger outsideVariable = 10;
