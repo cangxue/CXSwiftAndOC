@@ -32,6 +32,10 @@
 
 #import "BlockViewController.h"
 
+//全局静态变量
+static int static_global_val = 2;
+
+
 typedef void(^PrintBlock)(NSString *printStr);
 
 typedef NSString* (^InlineBlockProject)(id self, NSInteger paramInteger);
@@ -46,6 +50,10 @@ typedef NSString* (^InlineBlockProject)(id self, NSInteger paramInteger);
 
 @property (nonatomic, assign) NSInteger memberVariable;
 
+//全局变量
+@property (nonatomic, assign) int global_val;
+
+
 @end
 
 @implementation BlockViewController
@@ -53,6 +61,9 @@ typedef NSString* (^InlineBlockProject)(id self, NSInteger paramInteger);
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.memberVariable = 10;
+    NSLog(@"内存地址：%x",&_memberVariable);//地址
+    NSLog(@"指针所指向对象的地址：%p",_memberVariable);//指针
     [self inlineBlockObjectMethod];
     
 }
@@ -288,6 +299,9 @@ ParamBlock paramBlock = ^(NSInteger paramInteger) {
 
     __block NSUInteger block_outsideVariable = 20;
     
+    
+    
+    
     ParamBlock inlineParamBlock = ^(NSInteger paramInteger) {
         
         NSLog(@" >> self %@, memberVariable %ld", self, (long)[self memberVariable]);
@@ -314,6 +328,24 @@ ParamBlock paramBlock = ^(NSInteger paramInteger) {
     
     NSLog(@"%@",inlineParamBlock(20));
     
+
+    
+}
+
+#pragma mark - 静态变量/全局变量调用
+- (void)staticVaribleMethod {
+    
+    //静态变量／全局变量block中可以读写
+    self.global_val  = 1;
+    static int static_val = 3;//局部静态变量
+    void (^block)() = ^ {
+        _global_val = 10;
+        static_global_val = 20;
+        static_val = 30;
+    };
+    NSLog(@"%d-%d-%d",_global_val,static_global_val,static_val);
+    block ();
+    NSLog(@"%d-%d-%d",_global_val,static_global_val,static_val);
 }
 
 
