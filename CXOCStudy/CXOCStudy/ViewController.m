@@ -10,6 +10,7 @@
 #import "BlockViewController.h"
 #import "CXAutoLayoutViewController.h"
 #import "CXKVOOrKVCViewController.h"
+#import "CXMemoryViewController.h"
 
 @interface ViewController ()
 
@@ -48,5 +49,14 @@
     vc.title = @"KVC／KVO";
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+//Memory
+- (IBAction)memoryBtnClick:(id)sender {
+    CXMemoryViewController *vc =[[CXMemoryViewController alloc] init];
+    vc.title = @"Memory";
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
 
 @end

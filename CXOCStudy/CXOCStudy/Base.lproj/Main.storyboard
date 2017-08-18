@@ -52,6 +52,14 @@
                                     <action selector="kvcOrKvoBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vLA-Da-nbd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xf6-eh-bqG">
+                                <rect key="frame" x="6" y="236" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Memory"/>
+                                <connections>
+                                    <action selector="memoryBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eg2-pB-Mxo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
