@@ -42,4 +42,6 @@
 /* 显示用户信息 */
 - (void)showMessage;
 
+- (void)setObject:(id __strong)obj;
+
 @end

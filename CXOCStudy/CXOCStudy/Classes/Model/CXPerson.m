@@ -9,7 +9,9 @@
 #import "CXPerson.h"
 
 @interface CXPerson ()
-
+{
+    id __strong obj_;
+}
 @end
 
 @implementation CXPerson
@@ -59,6 +61,8 @@
     return tempStr;
 }
 
-
+- (void)setObject:(id __strong)obj {
+    obj_ = obj;
+}
 
 @end
