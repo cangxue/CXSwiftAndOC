@@ -10,6 +10,11 @@
 #import "CXPerson.h"
 
 @interface CXMemoryViewController ()
+{
+    id __strong obj0;
+    id __strong obj1;
+    
+}
 
 @property (nonatomic, copy) NSMutableArray *mainMutableArray;
 
@@ -19,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
 }
 
@@ -51,6 +57,89 @@
 //    NSLog(@"retain count = %lu", (unsigned long)[person2 retainCount]);
     
     
+}
+
+#pragma mark - 强引用
+- (void)strongObjectMethod {
+    /* 对象A
+     * obj0持有对象A的强引用
+     */
+    obj0 = [[CXPerson alloc] init];
+    
+    /* 对象B
+     * obj1持有对象B的强引用
+     */
+    
+    obj1 = [[CXPerson alloc] init];
+    
+    //obj2不持有任何对象
+    id __strong obj2 = nil;
+    
+    /*
+     * obj0持有有obj1赋值的对象B的强引用
+     * 因为obj0被赋值，所以原先持有的对对象A的强引用失效
+     * 对象A的所有者不存在因此废弃对象A
+     *
+     * 此时，持有对象B的强引用的变量为：obj0, obj1
+     */
+    obj0 = obj1;
+    
+    
+    /*
+     * obj2持有由obj0赋值的对象B的强引用
+     *
+     * 此时，持有对象B的强引用的变量为：obj0, obj1， obj2
+     */
+    obj2 = obj0;
+    
+    /*
+     * 因为nil被赋值予了obj1,所以对对象B的强引用失效。
+     *
+     * 此时，持有对象B的强引用的变量为：obj0, obj2
+     */
+    obj1 = nil;
+    
+    
+    /*
+     * 因为nil被赋值予了obj2和obj0,所以对对象B的强引用失效。
+     *
+     * 此时，持有对象B的强引用的变量没有了
+     * 对象B的所有者不存在，因此废弃对象B。
+     */
+    obj2 = nil;
+    obj0 = nil;
+    
+    /*
+     * __strong修饰符的变量，不仅只在变量作用域中，在赋值上也能够
+     * 正确的管理对象的所有者
+     */
+    
+    
+    /**************************************/
+    
+    /*
+     * test 持有CXPerson对象的强引用
+     */
+    id __strong test = [[CXPerson alloc] init];
+    
+    
+    test = [[NSObject alloc] init];
+    /*
+     * CXPerson对象的test持有NSObject对象的强引用。
+     *
+     * 因为test变量超出其作用域，强引用失效
+     * 所以自动释放CXPerson对象
+     * CXperson对象的所有者不存在，因此废弃该对象。
+     *
+     * 废弃CXPerson对象的同时，CXPerson对象的boj_成员也被诶起，
+     * NSObject对象的强引用失效，
+     * 自动释放NSObject对象。
+     * NSObject对象的所有者不存在，因此废弃该对象。
+     */
+    
+    
+    id __strong obj5; // 等价于id __strong obj5 = nil;
+
 }
 
 
