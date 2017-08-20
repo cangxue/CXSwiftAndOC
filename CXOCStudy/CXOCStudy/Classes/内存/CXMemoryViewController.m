@@ -123,7 +123,7 @@
     id __strong test = [[CXPerson alloc] init];
     
     
-    test = [[NSObject alloc] init];
+    [test setObject:[[NSObject alloc] init]];
     /*
      * CXPerson对象的test持有NSObject对象的强引用。
      *
@@ -149,7 +149,62 @@
      ****** 不必再次键入release，所以不会执行 *********
      非自己持有的对象无法释放;
      */
+    
+    
+    /********************************/
+    
+    //内存泄漏
+    
+    id test0 = [[CXPerson alloc] init];//对象A
+    /*
+     * test0持有CXPerson对象A的强引用
+     */
+    
+    id test1 = [[CXPerson alloc] init];//对象B
+    /*
+     * test1持有CXPerson对象B的强引用
+     */
+    
+    [test0 setObject:obj1];
+    /*
+     * 对象A 的obj_成员变量持有对象B的强引用
+     *
+     * 此时持有对象B的强引用的变量为对象A的obj_和test1；
+     */
+    
+    [test1 setObject:test0];
+    /*
+     * 对象B 的obj_成员变量持有对象A的强引用
+     *
+     * 此时持有对象B的强引用的变量为对象A的obj_和test0；
+     */
+    
+    /*
+     * 因为test0 变量超出其作用域，强引用失效
+     * 所以自动释放对象A
+     *
+     * 因为test1 变量超出其作用域，强引用失效
+     * 所以自动释放对象B
+     *
+     * 此时，持有对象A的强引用的变量为对象B的obj_
+     *
+     * 此时，持有对象B的强引用的变量为对象A的obj_
+     *
+     * 发生内存泄漏！
+     *
+     * 类成员变量的循环引用
+     */
+    
+    
+    id test3 = [[CXPerson alloc] init];
+    [test3 setObject:test3];
+    /*
+     * 对自身的强引用引起循环引用
+     * 自引用
+     */
 }
+
+
 
 
 @end
