@@ -349,10 +349,48 @@
      * 因为引用计数为1，对象仍然存在，发生内存泄漏
      *
      */
-    
-    
-    
 
+}
+
+- (void)arrayMethod {
+    /*********** __strong修饰符变量 **************/
+    id objs[10];
+    objs[0] = [[NSObject alloc] init];
+    objs[1] = [NSMutableArray array];
+    
+    //动态数组中使用附有__strong修饰符的变量
+    //1.声明动态数组用指针
+    id __strong *array = nil;
+    
+    //2.使用类名
+    NSObject * __strong *array1 = nil;
+    
+    //3.使用calloc函数确保想分配的附有__strong修饰符变量的容量占有的内存块
+    //分配内存
+    array = (id __strong *)calloc(10, sizeof(id));
+    /*
+     *分配了10个所需的内存块
+     *使用附有__strong修饰符的变量前必须先将其初始化为nil，所以这里使用使分配区域初始化为0的calloc函数来分配内存
+     */
+    array1[0] = [[NSObject alloc] init];
+    
+    array1 = (id __strong *)malloc(sizeof(id) * 0);
+    /*
+     * 由malloc函数分配的内存区域没有被初始化为0，因此nil会被赋值给附有__strong修饰符的并被赋值了随机地址的变量中，从而释放了一个不存在的对象
+     *
+     * 分配内存时推荐使用calloc
+     */
+    
+    for (NSUInteger i = 0; i < 10; i++) {
+        array[i] = nil;
+    }
+    free(array);
+    /*
+     * 在动态数组中，操作附有__strong修饰符的变量，需要自己释放所有的元素
+     * 直接使用free(array)废弃了数组中内存块，数组各元素所赋值的对象不能再次释放，从而引起内存泄漏
+     * 因为动态数组中，编译器不能确定数组的生存周期，所以无法处理
+     * 先将所有元素赋值为nil，使得元素所赋值对象的强引用失效，从而释放对象，之后使用free函数废弃内存块
+     */
 }
 
 
