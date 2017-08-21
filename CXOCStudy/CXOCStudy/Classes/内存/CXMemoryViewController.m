@@ -298,7 +298,34 @@
     CFRelease(cfObject1);
     
     
-       
+    /*************** CFBridgingRelease ／ __bridge_transfer转换 *************/
+    CFMutableArrayRef cfObject2 = CFArrayCreateMutable(kCFAllocatorDefault, 0, NULL);
+    printf("retain coutn = %ld", CFGetRetainCount(cfObject2));//1
+    /*
+     * Core Foundation 框架生成并持有对象，对象的引用计数为1
+     */
+    
+    id obje2 = CFBridgingRelease(cfObject2);
+//    id obje1 = (__bridge_transfer id)cfObject1;//等价于上面
+    /*
+     * 通过CFBridgingRelease赋值，变量obje1持有对象强引用的同时对象通过CFRelease释放。
+     */
+    
+    printf("retain coutn = %ld", CFGetRetainCount(cfObject2));//1
+    /*
+     * 因为只有变量obje1持有对生成并持有对象的强引用，故引用计数为1
+     *
+     * 另外，因为经由CFBridgingRelease转换后，赋值给变量cfObject1中的指针也指向任然存在的对象，所以可以正常使用。
+     */
+    
+    NSLog(@"class = %@",obje2);//0
+    /*
+     * 因为只有变量obje1超出其作用域，所以其强引用失效，对象得到释放，无所有者的对象随之被废弃
+     */
+    
+    
+
+      
     
 
 }
