@@ -243,5 +243,44 @@
 }
 
 
+- (void)bridgeObjectMethod {
+    
+    /*************** CFBridgingRetain ／ __bridge_retained 转换 *************/
+    //将生成并持有的NSMutableArray对象作为Core Foundation对象来处理
+    CFMutableArrayRef cfObject = NULL;
+    
+    id obj = [[NSMutableArray alloc] init];
+    /*
+     * 变量obj持有对生成并持有对象的强引用
+     */
+    
+    cfObject = CFBridgingRetain(obj);
+//    cfObject = (__bridge_retained id)obj;//等价于上面
+    /*
+     * 通过CFBridgingRetain，将对象CFRetain，赋值给变量cfObject
+     */
+    
+    CFShow(cfObject);
+    printf("retain count = %ld",CFGetRetainCount(cfObject));//2
+    /*
+     * 通过变量obj的强引用和通过CFBridgingRetain，引用计数为2；
+     */
+    
+    
+    printf("retain count = %ld",CFGetRetainCount(cfObject));//1
+    /*
+     * 因为变量obj超出其作用域，所以其强引用失效，引用计数为1
+     */
+    CFRelease(cfObject);//0
+    /*
+     * 因为将对象CFRelease，所以其引用计数为0，故改对象被废弃
+     */
+
+    
+    
+    
+
+}
+
 
 @end
