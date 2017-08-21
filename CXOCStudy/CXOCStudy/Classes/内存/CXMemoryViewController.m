@@ -325,7 +325,32 @@
     
     
 
-      
+    /*************** __bridge转换代替CFBridgingRelease *************/
+    CFMutableArrayRef cfObject3 = CFArrayCreateMutable(kCFAllocatorDefault, 0, NULL);
+    printf("retain coutn = %ld", CFGetRetainCount(cfObject2));//1
+    /*
+     * Core Foundation 框架生成并持有对象，对象的引用计数为1
+     */
+    
+    id obj3 = (__bridge id)cfObject3;
+    /*
+     * 因为赋值给附有__strong修饰符的变量中，所以发生强引用
+     */
+    
+    printf("retain coutn = %ld", CFGetRetainCount(cfObject3));//2
+    /*
+     * 因为变量obj持有对象强引用且对象没有进行CFRelease,所以引用计数为2
+     */
+    
+    NSLog(@"class = %@", obj3);//1
+    /*
+     * 因为变量obj超出其作用域，所以其强引用失效，对象得以释放。
+     *
+     * 因为引用计数为1，对象仍然存在，发生内存泄漏
+     *
+     */
+    
+    
     
 
 }
