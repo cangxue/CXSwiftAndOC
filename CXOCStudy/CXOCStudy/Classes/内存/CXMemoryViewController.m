@@ -275,9 +275,30 @@
     /*
      * 因为将对象CFRelease，所以其引用计数为0，故改对象被废弃
      */
-
     
     
+    /*************** __bridge转换代替CFBridgingRetain *************/
+    CFMutableArrayRef cfObject1 = NULL;
+    
+    id obj1 = [[NSMutableArray alloc] init];
+    /*
+     * 变量obj1持有对生成并持有对象的强引用
+     */
+    cfObject1 = (__bridge CFMutableArrayRef) obj1;
+    CFShow(cfObject1);
+    printf("retain count = %ld",CFGetRetainCount(cfObject1));//1
+    /*
+     * 因为__bridge转换不该变对象的持有状况，所以只有通过obj的强引用，引用计数为1
+     *
+     * 因为变量obj超出其作用域，所以其强引用失效，对象得到释放，无持有者的对象被废弃
+     *
+     * 此后对对象的访问出错！（悬垂指针）
+     */
+    printf("retain count = %ld",CFGetRetainCount(cfObject1));//出错
+    CFRelease(cfObject1);
+    
+    
+       
     
 
 }
