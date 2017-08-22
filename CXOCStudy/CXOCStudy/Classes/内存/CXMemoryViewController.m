@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self bridgeObjectMethod];
     
 }
 
@@ -249,44 +250,53 @@
     //将生成并持有的NSMutableArray对象作为Core Foundation对象来处理
     CFMutableArrayRef cfObject = NULL;
     
-    id obj = [[NSMutableArray alloc] init];
-    /*
-     * 变量obj持有对生成并持有对象的强引用
-     */
+    {
+        id obj = [[NSMutableArray alloc] init];
+        /*
+         * 变量obj持有对生成并持有对象的强引用
+         */
+        
+        cfObject = CFBridgingRetain(obj);
+    //    cfObject = (__bridge_retained id)obj;//等价于上面
+        /*
+         * 通过CFBridgingRetain，将对象CFRetain，赋值给变量cfObject
+         */
+        
+        
+        CFShow(cfObject);
+        printf("retain count = %ld",CFGetRetainCount(cfObject));//2
+        /*
+         * 通过变量obj的强引用和通过CFBridgingRetain，引用计数为2；
+         */
     
-    cfObject = CFBridgingRetain(obj);
-//    cfObject = (__bridge_retained id)obj;//等价于上面
-    /*
-     * 通过CFBridgingRetain，将对象CFRetain，赋值给变量cfObject
-     */
-    
-    CFShow(cfObject);
-    printf("retain count = %ld",CFGetRetainCount(cfObject));//2
-    /*
-     * 通过变量obj的强引用和通过CFBridgingRetain，引用计数为2；
-     */
-    
-    
+    }
     printf("retain count = %ld",CFGetRetainCount(cfObject));//1
-    /*
-     * 因为变量obj超出其作用域，所以其强引用失效，引用计数为1
-     */
+    
     CFRelease(cfObject);//0
     /*
+     * 因为变量obj超出其作用域，所以其强引用失效，引用计数为1
+     *
      * 因为将对象CFRelease，所以其引用计数为0，故改对象被废弃
+     *
+     * 此后对对象的访问出错！（悬垂指针）
      */
+    
+//     printf("retain count = %ld",CFGetRetainCount(cfObject1));//出错
     
     
     /*************** __bridge转换代替CFBridgingRetain *************/
     CFMutableArrayRef cfObject1 = NULL;
     
-    id obj1 = [[NSMutableArray alloc] init];
-    /*
-     * 变量obj1持有对生成并持有对象的强引用
-     */
-    cfObject1 = (__bridge CFMutableArrayRef) obj1;
-    CFShow(cfObject1);
-    printf("retain count = %ld",CFGetRetainCount(cfObject1));//1
+    {
+    
+        id obj1 = [[NSMutableArray alloc] init];
+        /*
+         * 变量obj1持有对生成并持有对象的强引用
+         */
+        cfObject1 = (__bridge CFMutableArrayRef) obj1;
+        CFShow(cfObject1);
+        printf("retain count = %ld",CFGetRetainCount(cfObject1));//1
+    }
     /*
      * 因为__bridge转换不该变对象的持有状况，所以只有通过obj的强引用，引用计数为1
      *
@@ -294,61 +304,80 @@
      *
      * 此后对对象的访问出错！（悬垂指针）
      */
-    printf("retain count = %ld",CFGetRetainCount(cfObject1));//出错
-    CFRelease(cfObject1);
+//    printf("retain count = %ld",CFGetRetainCount(cfObject1));//出错
+//    CFRelease(cfObject1);//出错
     
     
     /*************** CFBridgingRelease ／ __bridge_transfer转换 *************/
+    
+    
     CFMutableArrayRef cfObject2 = CFArrayCreateMutable(kCFAllocatorDefault, 0, NULL);
-    printf("retain coutn = %ld", CFGetRetainCount(cfObject2));//1
-    /*
-     * Core Foundation 框架生成并持有对象，对象的引用计数为1
-     */
     
-    id obje2 = CFBridgingRelease(cfObject2);
-//    id obje1 = (__bridge_transfer id)cfObject1;//等价于上面
-    /*
-     * 通过CFBridgingRelease赋值，变量obje1持有对象强引用的同时对象通过CFRelease释放。
-     */
+    {
+        
+        printf("retain coutn = %ld", CFGetRetainCount(cfObject2));//1
+        /*
+         * Core Foundation 框架生成并持有对象，对象的引用计数为1
+         */
+        
+//        id obje2 = CFBridgingRelease(cfObject2);
+        id obje2 = (__bridge_transfer id)cfObject2;//等价于上面
+        /*
+         * 通过CFBridgingRelease赋值，变量obje1持有对象强引用的同时对象通过CFRelease释放。
+         */
+        
+        printf("retain coutn = %ld", CFGetRetainCount(cfObject2));//1
+        /*
+         * 因为只有变量obje1持有对生成并持有对象的强引用，故引用计数为1
+         *
+         * 另外，因为经由CFBridgingRelease转换后，赋值给变量cfObject1中的指针也指向任然存在的对象，所以可以正常使用。
+         */
+        
+        NSLog(@"class = %@",obje2);
+        
+        printf("retain coutn = %ld", CFGetRetainCount(cfObject2));//1
+        
+    }
     
-    printf("retain coutn = %ld", CFGetRetainCount(cfObject2));//1
-    /*
-     * 因为只有变量obje1持有对生成并持有对象的强引用，故引用计数为1
-     *
-     * 另外，因为经由CFBridgingRelease转换后，赋值给变量cfObject1中的指针也指向任然存在的对象，所以可以正常使用。
-     */
-    
-    NSLog(@"class = %@",obje2);//0
+//    printf("retain coutn = %ld", CFGetRetainCount(cfObject2));//错误
     /*
      * 因为只有变量obje1超出其作用域，所以其强引用失效，对象得到释放，无所有者的对象随之被废弃
      */
     
     
+    
 
     /*************** __bridge转换代替CFBridgingRelease *************/
     CFMutableArrayRef cfObject3 = CFArrayCreateMutable(kCFAllocatorDefault, 0, NULL);
-    printf("retain coutn = %ld", CFGetRetainCount(cfObject2));//1
-    /*
-     * Core Foundation 框架生成并持有对象，对象的引用计数为1
-     */
     
-    id obj3 = (__bridge id)cfObject3;
-    /*
-     * 因为赋值给附有__strong修饰符的变量中，所以发生强引用
-     */
+    {
+        printf("retain coutn = %ld", CFGetRetainCount(cfObject3));//1
+        /*
+         * Core Foundation 框架生成并持有对象，对象的引用计数为1
+         */
+        
+        id obj3 = (__bridge id)cfObject3;
+        /*
+         * 因为赋值给附有__strong修饰符的变量中，所以发生强引用
+         */
+        
+        printf("retain coutn = %ld", CFGetRetainCount(cfObject3));//2
+        /*
+         * 因为变量obj持有对象强引用且对象没有进行CFRelease,所以引用计数为2
+         */
+        NSLog(@"class = %@", obj3);//1
+        
+        
+    }
     
-    printf("retain coutn = %ld", CFGetRetainCount(cfObject3));//2
-    /*
-     * 因为变量obj持有对象强引用且对象没有进行CFRelease,所以引用计数为2
-     */
-    
-    NSLog(@"class = %@", obj3);//1
     /*
      * 因为变量obj超出其作用域，所以其强引用失效，对象得以释放。
      *
      * 因为引用计数为1，对象仍然存在，发生内存泄漏
      *
      */
+    
+    printf("retain coutn = %ld", CFGetRetainCount(cfObject3));//2
 
 }
 
