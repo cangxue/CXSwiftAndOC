@@ -11,6 +11,7 @@
 #import "CXAutoLayoutViewController.h"
 #import "CXKVOOrKVCViewController.h"
 #import "CXMemoryViewController.h"
+#import "CXGCDViewController.h"
 
 @interface ViewController ()
 
@@ -57,6 +58,11 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (IBAction)threadBtnClick:(id)sender {
+    CXGCDViewController *vc =[[CXGCDViewController alloc] init];
+    vc.title = @"GCD";
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 @end

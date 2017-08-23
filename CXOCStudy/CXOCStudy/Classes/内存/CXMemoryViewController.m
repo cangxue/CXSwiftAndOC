@@ -434,10 +434,10 @@
         objc_release(obj);
      */
     
-    id __strong obj1 = [NSMutableArray array];
-    id obj = objc_msgSend(NSMutableArray, @selector(array));
-    objc_retainAutoreleaseReturnVlaue(obj);
-    objc_release(obj);
+//    id __strong obj1 = [NSMutableArray array];
+//    id obj = objc_msgSend(NSMutableArray, @selector(array));
+//    objc_retainAutoreleaseReturnVlaue(obj);
+//    objc_release(obj);
     
     
 }

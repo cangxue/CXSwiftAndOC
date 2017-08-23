@@ -14,6 +14,7 @@
 		D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */; };
 		D109AB431F34766900AB39D6 /* CXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB421F34766900AB39D6 /* CXPerson.m */; };
 		D18748211F00A8980029B787 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18748201F00A8980029B787 /* CollectionViewController.m */; };
+		D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */; };
 		D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */; };
 		D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */; };
 		D1BA485A1E9E265800B4DA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA48591E9E265800B4DA26 /* main.m */; };
@@ -39,6 +40,8 @@
 		D109AB421F34766900AB39D6 /* CXPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPerson.m; sourceTree = "<group>"; };
 		D187481F1F00A8980029B787 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		D18748201F00A8980029B787 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		D18BA6FB1F4D515D007ED286 /* CXGCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXGCDViewController.h; sourceTree = "<group>"; };
+		D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXGCDViewController.m; sourceTree = "<group>"; };
 		D1A9D5C11F29CF9400DEB1BD /* BlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
 		D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		D1A9D5C41F29D73D00DEB1BD /* CXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXBaseViewController.h; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 		D18748191F00A84E0029B787 /* 多线程 */ = {
 			isa = PBXGroup;
 			children = (
+				D18BA6FB1F4D515D007ED286 /* CXGCDViewController.h */,
+				D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */,
 			);
 			path = "多线程";
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 				D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */,
 				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,
+				D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */,
 				D1029AB01F4152A40079BE95 /* CXAutoLayoutViewController.m in Sources */,
 				D1029AE11F46BEB10079BE95 /* CXMemoryViewController.m in Sources */,
 				D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */,
