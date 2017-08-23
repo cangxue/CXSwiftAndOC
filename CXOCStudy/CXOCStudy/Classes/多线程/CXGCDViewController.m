@@ -90,9 +90,57 @@
         
         return milestone;
     };
+    
     dispatch_after(getDispatchTimeByDate([NSDate new]), dispatch_get_main_queue(), ^{
         NSLog(@"延时执行");
     });
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"5s后执行");
+    });
+    
 }
+
+#pragma mark - Dispatch Group
+- (void)groupMethod {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    
+    
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"first");
+    });
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"second");
+    });
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"third");
+    });
+    
+    //将执行的Block追加到Disaptch Queue中
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"main");
+    });
+    
+    //等待全部处理执行结束：等待时间：永久等待
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC);
+    long result = dispatch_group_wait(group, time);
+    if (result == 0) {
+        NSLog(@"全部处理执行结束");
+    } else {
+        NSLog(@"某个处理执行中");
+    }
+    
+    long foreverResult = dispatch_group_wait(group, DISPATCH_TIME_FOREVER);//恒为0
+    long newResult = dispatch_group_wait(group, DISPATCH_TIME_NOW);//不用等待判断是否结束
+    
+    
+    NSLog(@"%ld  %ld",foreverResult, newResult);
+    
+    //推荐使用dispatch_group_notify
+    
+}
+
 @end
