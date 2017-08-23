@@ -29,11 +29,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4h-lC-O36">
-                                <rect key="frame" x="20" y="159" width="38" height="30"/>
+                                <rect key="frame" x="17" y="128" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="block"/>
                                 <connections>
                                     <action selector="blockBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwB-CF-Du1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr7-rg-cLQ">
+                                <rect key="frame" x="17" y="166" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="定位"/>
+                                <connections>
+                                    <action selector="locationBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3j-5l-6EB"/>
                                 </connections>
                             </button>
                         </subviews>

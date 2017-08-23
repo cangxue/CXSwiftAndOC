@@ -35,6 +35,12 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func locationBtnClick(_ sender: Any) {
+        let vc = CXLocationViewController()
+        vc.title = "Location"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 
 }
 

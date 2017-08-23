@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */; };
 		D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18748301F04F8000029B787 /* CollectionViewController.swift */; };
+		D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */; };
 		D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */; };
 		D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483C1E9E258D00B4DA26 /* ViewController.swift */; };
 		D1BA48401E9E258D00B4DA26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BA483E1E9E258D00B4DA26 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXBlockViewController.swift; sourceTree = "<group>"; };
 		D18748301F04F8000029B787 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXLocationViewController.swift; sourceTree = "<group>"; };
 		D1BA48371E9E258D00B4DA26 /* CXSwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXSwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1BA483C1E9E258D00B4DA26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		D18748251F04F7E80029B787 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D18BA6F81F4C73D4007ED286 /* 定位 */,
 				D18748261F04F7E80029B787 /* block */,
 				D18748271F04F7E80029B787 /* 内存 */,
 				D18748281F04F7E80029B787 /* 动画 */,
@@ -128,6 +131,14 @@
 			path = "集合";
 			sourceTree = "<group>";
 		};
+		D18BA6F81F4C73D4007ED286 /* 定位 */ = {
+			isa = PBXGroup;
+			children = (
+				D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */,
+			);
+			path = "定位";
+			sourceTree = "<group>";
+		};
 		D1BA482E1E9E258D00B4DA26 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +203,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 862YF45JD7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -234,6 +250,7 @@
 				D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */,
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,
+				D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */,
 				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 862YF45JD7;
 				INFOPLIST_FILE = CXSwiftStudy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CX.CXSwiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,7 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 862YF45JD7;
 				INFOPLIST_FILE = CXSwiftStudy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CX.CXSwiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
