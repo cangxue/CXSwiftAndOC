@@ -143,4 +143,27 @@
     
 }
 
+#pragma mark - dispatch_barrier_async
+- (void)barrierMethod {
+    dispatch_queue_t queue = dispatch_queue_create("Barrier", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        NSLog(@"first");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"second");
+    });
+    
+    dispatch_barrier_async(queue, ^{
+        NSLog(@"等一等");
+    });
+    
+    
+    dispatch_async(queue, ^{
+        NSLog(@"third");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"fourth");
+    });
+}
+
 @end
