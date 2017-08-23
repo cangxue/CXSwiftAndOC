@@ -8,11 +8,13 @@
 
 #import "CXMemoryViewController.h"
 #import "CXPerson.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
 
 @interface CXMemoryViewController ()
 {
-    id __strong obj0;
-    id __strong obj1;
+    id __strong sobj0;
+    id __strong sobj1;
     
 }
 
@@ -65,13 +67,13 @@
     /* 对象A
      * obj0持有对象A的强引用
      */
-    obj0 = [[CXPerson alloc] init];
+    sobj0 = [[CXPerson alloc] init];
     
     /* 对象B
      * obj1持有对象B的强引用
      */
     
-    obj1 = [[CXPerson alloc] init];
+    sobj1 = [[CXPerson alloc] init];
     
     //obj2不持有任何对象
     id __strong obj2 = nil;
@@ -83,7 +85,7 @@
      *
      * 此时，持有对象B的强引用的变量为：obj0, obj1
      */
-    obj0 = obj1;
+    sobj0 = sobj1;
     
     
     /*
@@ -91,14 +93,14 @@
      *
      * 此时，持有对象B的强引用的变量为：obj0, obj1， obj2
      */
-    obj2 = obj0;
+    obj2 = sobj0;
     
     /*
      * 因为nil被赋值予了obj1,所以对对象B的强引用失效。
      *
      * 此时，持有对象B的强引用的变量为：obj0, obj2
      */
-    obj1 = nil;
+    sobj1 = nil;
     
     
     /*
@@ -108,7 +110,7 @@
      * 对象B的所有者不存在，因此废弃对象B。
      */
     obj2 = nil;
-    obj0 = nil;
+    sobj0 = nil;
     
     /*
      * __strong修饰符的变量，不仅只在变量作用域中，在赋值上也能够
@@ -166,7 +168,7 @@
      * test1持有CXPerson对象B的强引用
      */
     
-    [test0 setObject:obj1];
+    [test0 setObject:sobj1];
     /*
      * 对象A 的obj_成员变量持有对象B的强引用
      *
@@ -420,6 +422,24 @@
      * 因为动态数组中，编译器不能确定数组的生存周期，所以无法处理
      * 先将所有元素赋值为nil，使得元素所赋值对象的强引用失效，从而释放对象，之后使用free函数废弃内存块
      */
+}
+
+- (void)ARCMethod {
+   /********************  __strong修饰符 ******************/
+    id __strong obj = [[CXPerson alloc] init];
+    /*编译器模拟代码*/
+    /*
+        id obj1 = objc_msgSend(CXPerson, @selector(alloc));
+        objc_msgSend(obj, @selector(init));
+        objc_release(obj);
+     */
+    
+    id __strong obj1 = [NSMutableArray array];
+    id obj = objc_msgSend(NSMutableArray, @selector(array));
+    objc_retainAutoreleaseReturnVlaue(obj);
+    objc_release(obj);
+    
+    
 }
 
 
