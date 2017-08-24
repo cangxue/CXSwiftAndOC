@@ -60,7 +60,7 @@
 
 - (IBAction)threadBtnClick:(id)sender {
     CXGCDViewController *vc =[[CXGCDViewController alloc] init];
-    vc.title = @"GCD";
+    vc.title = @"Memory";
     [self.navigationController pushViewController:vc animated:YES];
 }
 

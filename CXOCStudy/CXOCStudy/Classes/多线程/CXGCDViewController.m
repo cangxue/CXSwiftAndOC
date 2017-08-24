@@ -230,5 +230,74 @@
     });
 }
 
+#pragma mark - dispatch_semaphore
+- (void)semaphoreMethod {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(3);
+
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < 10; i ++) {
+        dispatch_async(queue, ^{
+            /*
+             * 等待dispatch semaphore
+             * 会使传入的信号量的值减1
+             *
+             * 一直等待，直到dispatch semaphore 的计数值达到大于等于1
+             * 如果dsema信号量的值大于0，该函数所处线程就继续执行下面的语句，并且将信号量的值减1；
+             * 如果desema的值为0，那么这个函数就阻塞当前线程等待timeout（注意timeout的类型为dispatch_time_t，
+             * 当其返回0时表示在timeout之前，该函数所处的线程被成功唤醒。
+             */
+            long wait = dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            NSLog(@"wait %ld",wait);
+            
+            /*
+             * 由于dispatch semaphore 的计数值达到大于等于1
+             * 所以将dispatch semaphore 的计数值减去1
+             * dispatch_semaphore_wait函数执行返回
+             *
+             * 即执行到此时的dispatch semaphore的计数值恒为0
+             *
+             * 由于可访问NSMutableArray类对象的线程只有1个
+             * 可安全进行更新
+             */
+            [array addObject:[NSNumber numberWithInt:i]];
+            
+            /*
+             * 通过dispatch_semaphore_signal函数将计数值加1
+             *
+             * 当返回值为0时表示当前并没有线程等待其处理的信号量，其处理的信号量的值加1即可。
+             * 当返回值不为0时，表示其当前有（一个或多个）线程等待其处理的信号量，并且该函数唤醒了一个等待的线程（当线程有优先级时，唤醒优先级最高的线程；否则随机唤醒）
+             */
+            long signal = dispatch_semaphore_signal(semaphore);
+            NSLog(@"signal %ld",signal);
+            
+            NSLog(@"done %lu",(unsigned long)array.count);
+            
+        });
+
+        if (array.count > 0) {
+            NSLog(@"done %lu",(unsigned long)array.count);
+        }
+    }
+    
+   /*  关于信号量，一般可以用停车来比喻。
+       停车场剩余4个车位，那么即使同时来了四辆车也能停的下。如果此时来了五辆车，那么就有一辆需要等待。
+    
+    　　信号量的值就相当于剩余车位的数目
+       dispatch_semaphore_wait函数就相当于来了一辆车
+       dispatch_semaphore_signal就相当于走了一辆车。 
+       停车位的剩余数目在初始化的时候就已经指明了（dispatch_semaphore_create（long value）），
+    
+    　　调用一次dispatch_semaphore_signal，剩余的车位就增加一个；调用一次dispatch_semaphore_wait剩余车位就减少一个；
+    
+    　　当剩余车位为0时，再来车（即调用dispatch_semaphore_wait）就只能等待。有可能同时有几辆车等待一个停车位。有些车主
+    
+    　　没有耐心，给自己设定了一段等待时间，这段时间内等不到停车位就走了，如果等到了就开进去停车。而有些车主就像把车停在这，
+    
+    　　所以就一直等下去。
+    */
+
+}
 
 @end
