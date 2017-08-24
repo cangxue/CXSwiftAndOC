@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self createMethod];
+    [self semaphoreMethod];
     
 }
 
@@ -164,6 +164,71 @@
     dispatch_async(queue, ^{
         NSLog(@"fourth");
     });
+    
+    dispatch_sync(queue, ^{
+        NSLog(@"同步执行");
+    });
 }
+
+#pragma mark - disaptch_apply
+- (void)applyMethod {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_apply(10, queue, ^(size_t index) {
+        NSLog(@"%ld", index);
+    });
+    NSLog(@"done");
+    
+    NSArray *array = @[@"first", @"second", @"third"];
+    dispatch_queue_t arryaQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_apply(array.count, arryaQueue, ^(size_t index) {
+        NSLog(@"%@",array[index]);
+    });
+    
+    
+    dispatch_async(queue, ^{
+        /*
+         * 等待dispatch_apply函数中全部处理执行结束
+         * 类似一个for循环
+         */
+        dispatch_apply(array.count, queue, ^(size_t index) {
+            /*
+             * 并列处理包含在NSArray对象的全部对象
+             */
+            NSLog(@"%@",array[index]);
+        });
+        
+        /*
+         * dispatch_apply函数中处理全部执行结束
+         *
+         * 在 Main Dispatch Queue 中异步执行
+         */
+        dispatch_async(dispatch_get_main_queue(), ^{
+            /*
+             * 在Main Dispatch Queue中执行处理
+             */
+
+            NSLog(@"done");
+        });
+    });
+}
+
+#pragma mark - dispatch_suspend/dispatch_resume
+- (void)resumeMethod {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        NSLog(@"暂停");
+    });
+    dispatch_suspend(queue);//暂停
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        dispatch_resume(queue);//继续
+    });
+    
+    dispatch_async(queue, ^{
+        NSLog(@"继续");
+    });
+}
+
 
 @end
