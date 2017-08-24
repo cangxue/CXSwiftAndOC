@@ -300,4 +300,83 @@
 
 }
 
+
+#pragma mark - dispatch_once
+- (void)onceMethod {
+    // 只执行一次
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        /*
+         * 初始化
+         */
+    });
+}
+
+
+#pragma mark - Dispatch I/O
+- (void)IOrOMethod {
+    //Apple System Log API里的源代码（地址：http://opensource.apple.com/source/Libc/Libc-763.11/gen/asl.c
+    
+//    创建一个调度I / O通道。
+    
+    /*
+     @Parameters
+     
+     * type  通道类型 （Dispatch I/O Channel Types.）
+     
+         #define DISPATCH_IO_STREAM 0
+         读写操作按顺序依次顺序进行。在读或写开始时，操作总是在文件指针位置读或写数据。读和写操作可以在同一个信道上同时进行。
+         
+         #define DISPATCH_IO_RANDOM 1
+         随机访问文件。读和写操作可以同时执行这种类型的通道,文件描述符必须是可寻址的。
+     
+     fd 文件描述符
+     
+     queue  The dispatch queue
+     
+     cleanup_handler 发生错误时用来执行处理的 Block
+     */
+    
+    //1.创建一个调度I / O通道，并将其与指定的文件描述符关联。
+    dispatch_io_t dispatch_io_create( dispatch_io_type_t type, dispatch_fd_t fd, dispatch_queue_t queue, void (^cleanup_handler)(int error));
+    
+    //2.创建一个具有关联路径名的调度I / O通道。
+    dispatch_io_t dispatch_io_create_with_path( dispatch_io_type_t type, const char* path, int oflag, mode_t mode, dispatch_queue_t queue, void (^cleanup_handler)(int error));
+    
+    //3.从现有的信道创建一个新的调度I / O信道。
+    dispatch_io_t dispatch_io_create_with_io( dispatch_io_type_t type, dispatch_io_t io, dispatch_queue_t queue, void (^cleanup_handler)(int error));
+    
+//    读写操作
+    //1.在指定的信道上调度异步读操作。
+    void dispatch_io_read( dispatch_io_t channel, off_t offset, size_t length, dispatch_queue_t queue, dispatch_io_handler_t io_handler);
+    /*
+     *  dispatch_io_read 函数使用 Global Dispatch Queue 开始并列读取,每当各个分割的文件块读取结束时,将含有 Dispatch Data 传递给 dispatch 函数指定的读取结束时回调用的 Block。
+     
+     * @Parameters
+     
+         channel 通道
+         
+         offset 对于DISPATCH_IO_RANDOM 类型的通道,此参数指定要读取的信道的偏移量。
+         
+         对于DISPATCH_IO_STREAM 类型的通道,此参数将被忽略，数据从当前位置读取。
+         length 从通道读取的字节数。指定size_max继续读取数据直到达到一个EOF。
+     
+     * 如果处理程序与所做的参数设置为是的，一个空的数据对象，和一个0的错误代码，它意味着该通道达到了文件的结尾。
+     
+     */
+    
+    //2.为指定的信道调度一个异步写操作。
+    //该函数将指定的数据并提交io_handler块队列在操作的进度报告。如果处理程序的所做的参数设置为“不”，则意味着只有部分数据被写入。如果所做的参数设置为是的，这意味着写操作完成，处理程序将不会再次提交。如果操作成功，则处理程序的错误参数设置为0。
+    void dispatch_io_write( dispatch_io_t channel, off_t offset, dispatch_data_t data, dispatch_queue_t queue, dispatch_io_handler_t io_handler);
+    
+    
+//    设置一次读取的大小
+    //1.设置一次读取的最大字节
+    void dispatch_io_set_high_water( dispatch_io_t channel, size_t high_water);
+    //2.设置一次读取的最小字节
+    void dispatch_io_set_low_water( dispatch_io_t channel, size_t low_water);
+}
+
+
+
 @end
