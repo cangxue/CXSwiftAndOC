@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self semaphoreMethod];
+    [self lockMethod];
+    
     
 }
 
@@ -375,6 +376,49 @@
     void dispatch_io_set_high_water( dispatch_io_t channel, size_t high_water);
     //2.设置一次读取的最小字节
     void dispatch_io_set_low_water( dispatch_io_t channel, size_t low_water);
+}
+
+#pragma mark - 锁
+- (void)lockMethod {
+    /**********使用synchronized方式*************/
+    //线程1
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @synchronized (self) {
+            NSLog(@"打印1");
+            sleep(2);
+            
+            NSLog(@"打印2");
+        }
+        sleep(2);
+         NSLog(@"打印22");
+    });
+    //线程2
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @synchronized (self) {
+            NSLog(@"打印4");
+        }
+    });
+    
+    /*
+     *线程2会等待线程1执行完成@synchronized(obj){}块后，再执行
+     */
+    
+    /**********使用sNSLock方式*************/
+    //申明锁对象
+    NSLock *lock = [[NSLock alloc] init];
+    //线程1
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [lock lock];
+        NSLog(@"lock1");
+        sleep(5);
+        [lock unlock];
+    });
+    //线程2
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [lock lock];
+        NSLog(@"lock2");
+        [lock unlock];
+    });
 }
 
 
