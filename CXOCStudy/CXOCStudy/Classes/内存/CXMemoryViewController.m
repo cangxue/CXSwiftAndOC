@@ -426,7 +426,7 @@
 
 - (void)ARCMethod {
    /********************  __strong修饰符 ******************/
-    id __strong obj = [[CXPerson alloc] init];
+//    id __strong obj = [[CXPerson alloc] init];
     /*编译器模拟代码*/
     /*
         id obj1 = objc_msgSend(CXPerson, @selector(alloc));
@@ -439,6 +439,13 @@
 //    objc_retainAutoreleaseReturnVlaue(obj);
 //    objc_release(obj);
     
+    
+    int x = 5;
+    int *y = &x;
+    
+    NSLog(@"X: %d  - Y:%ld", x, y);
+    
+    NSLog(@"X: %d  -  Y:%d",x, *y);
     
 }
 

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CXHeader.h"
+#import "CXPerson.h"
 
 @interface CXBaseViewController : ViewController
 
