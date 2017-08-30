@@ -12,6 +12,7 @@
 #import "CXKVOOrKVCViewController.h"
 #import "CXMemoryViewController.h"
 #import "CXGCDViewController.h"
+#import "CXThreadViewController.h"
 
 @interface ViewController ()
 
@@ -59,7 +60,9 @@
 }
 
 - (IBAction)threadBtnClick:(id)sender {
-    CXGCDViewController *vc =[[CXGCDViewController alloc] init];
+//    CXGCDViewController *vc =[[CXGCDViewController alloc] init];
+    CXThreadViewController *vc = [[CXThreadViewController alloc] init];
+    
     vc.title = @"Memory";
     [self.navigationController pushViewController:vc animated:YES];
 }

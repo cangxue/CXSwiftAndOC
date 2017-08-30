@@ -18,8 +18,6 @@
     [super viewDidLoad];
     
     [self lockMethod];
-    
-    
 }
 
 - (void)createMethod {
@@ -382,6 +380,7 @@
 - (void)lockMethod {
     /**********使用synchronized方式*************/
     //线程1
+   
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         @synchronized (self) {
             NSLog(@"打印1");

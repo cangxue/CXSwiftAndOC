@@ -17,6 +17,7 @@
 		D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */; };
 		D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */; };
 		D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */; };
+		D1B512101F56AF4300ABD3E9 /* CXThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B5120F1F56AF4300ABD3E9 /* CXThreadViewController.m */; };
 		D1BA485A1E9E265800B4DA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA48591E9E265800B4DA26 /* main.m */; };
 		D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA485C1E9E265800B4DA26 /* AppDelegate.m */; };
 		D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA485F1E9E265800B4DA26 /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		D1A9D5C41F29D73D00DEB1BD /* CXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXBaseViewController.h; sourceTree = "<group>"; };
 		D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXBaseViewController.m; sourceTree = "<group>"; };
 		D1A9D5C71F29DE8700DEB1BD /* CXHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHeader.h; sourceTree = "<group>"; };
+		D1B5120E1F56AF4300ABD3E9 /* CXThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXThreadViewController.h; sourceTree = "<group>"; };
+		D1B5120F1F56AF4300ABD3E9 /* CXThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXThreadViewController.m; sourceTree = "<group>"; };
 		D1BA48551E9E265800B4DA26 /* CXOCStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXOCStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BA48591E9E265800B4DA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1BA485B1E9E265800B4DA26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 			children = (
 				D18BA6FB1F4D515D007ED286 /* CXGCDViewController.h */,
 				D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */,
+				D1B5120E1F56AF4300ABD3E9 /* CXThreadViewController.h */,
+				D1B5120F1F56AF4300ABD3E9 /* CXThreadViewController.m */,
 			);
 			path = "多线程";
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				D1029AB01F4152A40079BE95 /* CXAutoLayoutViewController.m in Sources */,
 				D1029AE11F46BEB10079BE95 /* CXMemoryViewController.m in Sources */,
 				D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */,
+				D1B512101F56AF4300ABD3E9 /* CXThreadViewController.m in Sources */,
 				D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */,
 				D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */,
 				D1BA485A1E9E265800B4DA26 /* main.m in Sources */,
