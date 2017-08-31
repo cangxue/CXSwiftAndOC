@@ -20,6 +20,7 @@
 		D1B512101F56AF4300ABD3E9 /* CXThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B5120F1F56AF4300ABD3E9 /* CXThreadViewController.m */; };
 		D1B512131F56B49C00ABD3E9 /* CXOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B512121F56B49C00ABD3E9 /* CXOperationViewController.m */; };
 		D1B512161F56B8D600ABD3E9 /* CXOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B512151F56B8D600ABD3E9 /* CXOperation.m */; };
+		D1B512191F57DEF400ABD3E9 /* CXRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B512181F57DEF400ABD3E9 /* CXRunLoopViewController.m */; };
 		D1BA485A1E9E265800B4DA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA48591E9E265800B4DA26 /* main.m */; };
 		D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA485C1E9E265800B4DA26 /* AppDelegate.m */; };
 		D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA485F1E9E265800B4DA26 /* ViewController.m */; };
@@ -56,6 +57,8 @@
 		D1B512121F56B49C00ABD3E9 /* CXOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXOperationViewController.m; sourceTree = "<group>"; };
 		D1B512141F56B8D600ABD3E9 /* CXOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXOperation.h; sourceTree = "<group>"; };
 		D1B512151F56B8D600ABD3E9 /* CXOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXOperation.m; sourceTree = "<group>"; };
+		D1B512171F57DEF400ABD3E9 /* CXRunLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXRunLoopViewController.h; sourceTree = "<group>"; };
+		D1B512181F57DEF400ABD3E9 /* CXRunLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXRunLoopViewController.m; sourceTree = "<group>"; };
 		D1BA48551E9E265800B4DA26 /* CXOCStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXOCStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BA48591E9E265800B4DA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1BA485B1E9E265800B4DA26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				D1B5120F1F56AF4300ABD3E9 /* CXThreadViewController.m */,
 				D1B512111F56B49C00ABD3E9 /* CXOperationViewController.h */,
 				D1B512121F56B49C00ABD3E9 /* CXOperationViewController.m */,
+				D1B512171F57DEF400ABD3E9 /* CXRunLoopViewController.h */,
+				D1B512181F57DEF400ABD3E9 /* CXRunLoopViewController.m */,
 			);
 			path = "多线程";
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				D1B512161F56B8D600ABD3E9 /* CXOperation.m in Sources */,
 				D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */,
 				D1BA485A1E9E265800B4DA26 /* main.m in Sources */,
+				D1B512191F57DEF400ABD3E9 /* CXRunLoopViewController.m in Sources */,
 				D109AB431F34766900AB39D6 /* CXPerson.m in Sources */,
 				D1B512131F56B49C00ABD3E9 /* CXOperationViewController.m in Sources */,
 			);
