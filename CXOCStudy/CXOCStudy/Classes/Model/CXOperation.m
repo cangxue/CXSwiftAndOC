@@ -10,4 +10,10 @@
 
 @implementation CXOperation
 
+- (void)main {
+    for (int i = 0; i < 2; ++i) {
+        NSLog(@"1-----%@",[NSThread currentThread]);
+    }
+}
+
 @end
