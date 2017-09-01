@@ -15,6 +15,7 @@
 #import "CXThreadViewController.h"
 #import "CXRunLoopViewController.h"
 #import "CXRunLoopViewController.h"
+#import "CXRuntimeViewController.h"
 
 @interface ViewController ()
 
@@ -60,6 +61,7 @@
     vc.title = @"Memory";
     [self.navigationController pushViewController:vc animated:YES];
 }
+
 //thread
 - (IBAction)threadBtnClick:(id)sender {
 //    CXGCDViewController *vc =[[CXGCDViewController alloc] init];
@@ -69,5 +71,11 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+//runtime
+- (IBAction)runtimeBtnClick:(id)sender {
+    CXRuntimeViewController *vc = [[CXRuntimeViewController alloc] init];
+    vc.title = @"Runtime";
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

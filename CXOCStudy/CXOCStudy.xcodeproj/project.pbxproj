@@ -21,6 +21,7 @@
 		D1B512131F56B49C00ABD3E9 /* CXOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B512121F56B49C00ABD3E9 /* CXOperationViewController.m */; };
 		D1B512161F56B8D600ABD3E9 /* CXOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B512151F56B8D600ABD3E9 /* CXOperation.m */; };
 		D1B512191F57DEF400ABD3E9 /* CXRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B512181F57DEF400ABD3E9 /* CXRunLoopViewController.m */; };
+		D1B5121D1F59598300ABD3E9 /* CXRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B5121C1F59598300ABD3E9 /* CXRuntimeViewController.m */; };
 		D1BA485A1E9E265800B4DA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA48591E9E265800B4DA26 /* main.m */; };
 		D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA485C1E9E265800B4DA26 /* AppDelegate.m */; };
 		D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA485F1E9E265800B4DA26 /* ViewController.m */; };
@@ -59,6 +60,8 @@
 		D1B512151F56B8D600ABD3E9 /* CXOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXOperation.m; sourceTree = "<group>"; };
 		D1B512171F57DEF400ABD3E9 /* CXRunLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXRunLoopViewController.h; sourceTree = "<group>"; };
 		D1B512181F57DEF400ABD3E9 /* CXRunLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXRunLoopViewController.m; sourceTree = "<group>"; };
+		D1B5121B1F59598300ABD3E9 /* CXRuntimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXRuntimeViewController.h; sourceTree = "<group>"; };
+		D1B5121C1F59598300ABD3E9 /* CXRuntimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXRuntimeViewController.m; sourceTree = "<group>"; };
 		D1BA48551E9E265800B4DA26 /* CXOCStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXOCStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BA48591E9E265800B4DA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1BA485B1E9E265800B4DA26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 		D18748141F00A84E0029B787 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D1B5121A1F59597100ABD3E9 /* Runtime */,
 				D1029AAD1F414F740079BE95 /* 自动布局 */,
 				D109AB401F34765500AB39D6 /* Model */,
 				D109AB3C1F34760100AB39D6 /* KVC:KVO */,
@@ -234,6 +238,15 @@
 				D18748201F00A8980029B787 /* CollectionViewController.m */,
 			);
 			path = "集合";
+			sourceTree = "<group>";
+		};
+		D1B5121A1F59597100ABD3E9 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				D1B5121B1F59598300ABD3E9 /* CXRuntimeViewController.h */,
+				D1B5121C1F59598300ABD3E9 /* CXRuntimeViewController.m */,
+			);
+			path = Runtime;
 			sourceTree = "<group>";
 		};
 		D1BA484C1E9E265800B4DA26 = {
@@ -413,6 +426,7 @@
 				D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */,
 				D1029AB01F4152A40079BE95 /* CXAutoLayoutViewController.m in Sources */,
 				D1029AE11F46BEB10079BE95 /* CXMemoryViewController.m in Sources */,
+				D1B5121D1F59598300ABD3E9 /* CXRuntimeViewController.m in Sources */,
 				D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */,
 				D1B512101F56AF4300ABD3E9 /* CXThreadViewController.m in Sources */,
 				D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */,
