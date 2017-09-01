@@ -32,6 +32,8 @@
     self.backgroundThread = [[NSThread alloc] initWithTarget:self selector:@selector(backgroundThreadRun) object:nil];
     [self.backgroundThread start];
     
+    [self observerMethod];
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
