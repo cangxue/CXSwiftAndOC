@@ -443,7 +443,7 @@
     int x = 5;
     int *y = &x;
     
-    NSLog(@"X: %d  - Y:%ld", x, y);
+    NSLog(@"X: %d  - Y:%d", x, y);
     
     NSLog(@"X: %d  -  Y:%d",x, *y);
     

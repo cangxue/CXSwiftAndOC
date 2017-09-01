@@ -43,7 +43,7 @@
 
 #pragma mark - 定义定时器
 - (void)addTimer {
-   NSTimer *timer = [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(run) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(run) userInfo:nil repeats:YES];
     
     // 将定时器添加到当前RunLoop的NSDefaultRunLoopMode下
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
@@ -54,7 +54,6 @@
      所以我们的NSTimer就不工作了。
      但当我们松开鼠标的时候，RunLoop就结束UITrackingRunLoopMode模式，
      又切换回NSDefaultRunLoopMode模式，所以NSTimer就又开始正常工作了
-     
      */
     
     // 将定时器添加到当前RunLoop的NSRunLoopCommonModes下
@@ -63,8 +62,6 @@
     
     //NSTimer会自动被加入到了RunLoop的NSDefaultRunLoopMode模式下
     [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(run) userInfo:nil repeats:YES];
-    
-    
 }
 
 #pragma mark - 观察者
