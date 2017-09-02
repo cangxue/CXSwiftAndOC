@@ -8,6 +8,8 @@
 
 #import "CXRuntimeViewController.h"
 
+#import <objc/runtime.h>
+
 @interface CXRuntimeViewController ()
 
 @end
