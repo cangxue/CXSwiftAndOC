@@ -8,7 +8,9 @@
 
 #import "CXRuntimeViewController.h"
 
-#import <objc/runtime.h>
+//#import <objc/runtime.h>
+#import "CXPerson.h"
+#import <objc/message.h>
 
 @interface CXRuntimeViewController ()
 
@@ -19,8 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
 }
 
-
+#pragma mark - 发送消息，调用私有方法
+- (void)privateMethod {
+    CXPerson *person = objc_msgSend(objc_getClass("CXPerson"), sel_registerName("alloc"));
+}
 
 @end
