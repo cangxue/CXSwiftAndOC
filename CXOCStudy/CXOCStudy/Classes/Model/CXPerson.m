@@ -65,4 +65,19 @@
     obj_ = obj;
 }
 
+/******** runtime **********/
+- (void)printMessage1 {
+    NSLog(@"无参无返回值方法");
+}
+- (void)printMessage2:(NSString *)message {
+    NSLog(@"%@", message);
+}
+- (NSString *)printMessage3 {
+    return @"带返回值，但是不带参数的方法";
+}
+- (NSString *)printMessage4:(NSString *)message {
+    return message;
+}
+
+
 @end

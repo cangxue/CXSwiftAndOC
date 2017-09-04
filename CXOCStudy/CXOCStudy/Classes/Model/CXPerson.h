@@ -44,4 +44,11 @@
 
 - (void)setObject:(id __strong)obj;
 
+
+/*** runtime ***/
+- (void)printMessage1;
+- (void)printMessage2:(NSString *)message;
+- (NSString *)printMessage3;
+- (NSString *)printMessage4:(NSString *)message;
+
 @end
