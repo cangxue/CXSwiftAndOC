@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CXClass : NSObject
+@interface CXClass : NSObject <NSCopying, NSCoding>
+
+@property (nonatomic, strong) NSArray *array;
+
+@property (nonatomic, copy) NSString *string;
+
+- (void)method1;
+
+- (void)method2;
+
++ (void)classMethod1;
+
 
 @end
