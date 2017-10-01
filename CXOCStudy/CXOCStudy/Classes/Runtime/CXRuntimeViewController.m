@@ -144,6 +144,55 @@
 
 #pragma mark - 动态创建类和对象
 - (void)addClassMethod {
+    /******* 动态创建类 ********/
+    Class cls = objc_allocateClassPair(CXClass.class, "MySubClass", 0);
+    
+    class_addMethod(cls, @selector(submethod1), (IMP)imp_submethod1, "v@:");
+    class_replaceMethod(cls, @selector(method1), (IMP)imp_submethod1, "v@:");
+    class_addIvar(cls, "_ivar1", sizeof(NSString *), log(sizeof(NSString *)), "i");
+    objc_property_attribute_t type = {"T", "@\"NSString\""};
+    objc_property_attribute_t ownership = { "C", "" };
+    objc_property_attribute_t backingivar = { "V", "_ivar1"};
+    objc_property_attribute_t attrs[] = {type, ownership, backingivar};
+    class_addProperty(cls, "property2", attrs, 3);
+    objc_registerClassPair(cls);
+    
+    id instance = [[cls alloc] init];
+    [instance performSelector:@selector(submethod1)];
+    [instance performSelector:@selector(method1)];
+    
+    
+    /******* 动态创建对象 ********/
+    id theObject = class_createInstance(NSString.class, sizeof(unsigned));
+    id theObject = class_cre
+    
+    id str1 = [theObject init];
+    NSLog(@"%@", [str1 class]);
+    id str2 = [[NSString alloc] initWithString:@"test"];
+    NSLog(@"%@", [str2 class]);
+    
+    /******* 实例操作函数 ********/
+    NSObject *a = [[NSObject alloc] init];
+    id newB = object_copy(a, class_getInstanceSize(CXClass.class));
+    object_setClass(newB, CXClass.class);
+    object_dispose(a);
+    
+    int numClasses;
+    Class * classes = NULL;
+    numClasses = objc_getClassList(NULL, 0);
+    if (numClasses > 0) {
+        classes = malloc(sizeof(Class) * numClasses);
+        numClasses = objc_getClassList(classes, numClasses);
+        NSLog(@"number of classes: %d", numClasses);
+        for (int i = 0; i < numClasses; i++) {
+            Class cls = classes[i];
+            NSLog(@"class name: %s", class_getName(cls));
+        }
+        free(classes);
+    }
+}
+
+- (void)submethod1 {
     
 }
 
