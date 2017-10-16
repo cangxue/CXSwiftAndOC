@@ -132,8 +132,6 @@ class CXBlockViewController: UIViewController {
             self.x = 100
         }
         
-        
-        
         someFunctionWithNonescapingClosure {
             //非逃逸闭包，这意味着它可以隐式引用 self
             x = 200
