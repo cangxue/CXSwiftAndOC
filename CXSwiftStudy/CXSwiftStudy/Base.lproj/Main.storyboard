@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8vc-sK-LeH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8vc-sK-LeH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,38 +21,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX5-HS-DaL">
-                                <rect key="frame" x="24" y="90" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="集合"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gxq-VR-NQS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="collectionBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yg2-KS-4f0"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uQR-6i-Ovy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="y5U-kC-vRe"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4h-lC-O36">
-                                <rect key="frame" x="17" y="128" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="block"/>
-                                <connections>
-                                    <action selector="blockBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwB-CF-Du1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr7-rg-cLQ">
-                                <rect key="frame" x="17" y="166" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="定位"/>
-                                <connections>
-                                    <action selector="locationBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3j-5l-6EB"/>
-                                </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gxq-VR-NQS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5J1-Ft-nqm"/>
+                            <constraint firstItem="gxq-VR-NQS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nf5-uk-dZU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gxq-VR-NQS" secondAttribute="bottom" id="RMl-h7-zgh"/>
+                            <constraint firstAttribute="trailing" secondItem="gxq-VR-NQS" secondAttribute="trailing" id="oie-ab-nlY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="主页" id="HdU-nl-Y9f"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="gxq-VR-NQS" id="TaO-aB-foG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="-544"/>
+            <point key="canvasLocation" x="1016.8" y="-545.57721139430294"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y1f-Hu-NB1">
@@ -59,7 +53,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8vc-sK-LeH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4OL-EE-p0u">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
