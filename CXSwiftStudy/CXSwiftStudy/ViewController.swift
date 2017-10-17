@@ -67,7 +67,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         var vc = UIViewController()
         switch indexPath.row {
         case 0:
-            vc = CollectionViewController()
+            vc = BasicViewController()
             
         default:
             vc = UIViewController()
