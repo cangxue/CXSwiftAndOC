@@ -10,7 +10,7 @@ import UIKit
 
 class BasicViewController: UIViewController {
     
-    let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+    let names = ["111", "222", "333", "444", "555"]
     
 
     override func viewDidLoad() {
@@ -18,8 +18,15 @@ class BasicViewController: UIViewController {
 
         self.view.backgroundColor = UIColor.white
         
-        var reversedNames = names.sorted(by: backward)
+        let reversedNames = names.sorted(by: backward)
         if reversedNames.count > 0 {
+            
+        }
+        
+        let showNames = names.sorted { (s1: String, s2: String) -> Bool in
+            return s1 < s2
+        }
+        if showNames.count > 0 {
             
         }
         
