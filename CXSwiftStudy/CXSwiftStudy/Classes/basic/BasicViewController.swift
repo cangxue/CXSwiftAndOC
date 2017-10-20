@@ -30,11 +30,14 @@ class BasicViewController: UIViewController {
             
         }
         
+        if backward("aa", "bb") {
+            print("aa > bb")
+        }
+        
     }
 
     func backward(_ s1: String, _ s2: String) -> Bool {
         return s1 > s2
     }
-    
     
 }

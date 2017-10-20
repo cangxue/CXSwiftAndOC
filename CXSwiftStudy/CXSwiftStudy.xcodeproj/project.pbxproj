@@ -48,7 +48,7 @@
 			children = (
 				D188A0D81F95D640007800A3 /* basic */,
 				D18BA6F81F4C73D4007ED286 /* 定位 */,
-				D18748261F04F7E80029B787 /* block */,
+				D18748261F04F7E80029B787 /* 闭包 */,
 				D18748271F04F7E80029B787 /* 内存 */,
 				D18748281F04F7E80029B787 /* 动画 */,
 				D18748291F04F7E80029B787 /* 单元测试 */,
@@ -62,12 +62,12 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		D18748261F04F7E80029B787 /* block */ = {
+		D18748261F04F7E80029B787 /* 闭包 */ = {
 			isa = PBXGroup;
 			children = (
 				D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */,
 			);
-			path = block;
+			path = "闭包";
 			sourceTree = "<group>";
 		};
 		D18748271F04F7E80029B787 /* 内存 */ = {

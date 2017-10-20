@@ -31,7 +31,7 @@ import UIKit
  */
 typealias Nothing = () -> ()
 
- typealias Add = (Int, Int) -> (Int)
+typealias Add = (Int, Int) -> (Int)
 
 class CXBlockViewController: UIViewController {
     
