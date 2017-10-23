@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+// 文件管理
+#import "CXFileManagerViewController.h"
+
 #import "BlockViewController.h"
 #import "CXAutoLayoutViewController.h"
 #import "CXKVOOrKVCViewController.h"
@@ -17,7 +20,11 @@
 #import "CXRunLoopViewController.h"
 #import "CXRuntimeViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *mainTalbleView;
+
+@property (nonatomic, copy) NSMutableArray *showArray;
 
 @end
 
@@ -25,57 +32,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-//block
-- (IBAction)blockBtnClick:(id)sender {
-    BlockViewController *blockVC = [[BlockViewController alloc] init];
-    blockVC.title = @"Block";
-    [self.navigationController pushViewController:blockVC animated:YES];
+#pragma mark - UITableViewDataSource/Delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.showArray.count;
 }
 
-//AutoLayout
-- (IBAction)autoLayoutBtnClick:(id)sender {
-    CXAutoLayoutViewController *vc = [[CXAutoLayoutViewController alloc] init];
-    vc.title = @"AutoLayout";
-    [self.navigationController pushViewController:vc animated:YES];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
+    }
+    cell.textLabel.text = _showArray[indexPath.row];
+    return cell;
 }
 
-//KVC／KVO
-- (IBAction)kvcOrKvoBtnClick:(id)sender {
-    CXKVOOrKVCViewController *vc = [[CXKVOOrKVCViewController alloc] init];
-    vc.title = @"KVC／KVO";
-    [self.navigationController pushViewController:vc animated:YES];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Class  class = NSClassFromString(_showArray[indexPath.row]);
+    UIViewController *VC = class.new;
+    VC.title = _showArray[indexPath.row];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
-//Memory
-- (IBAction)memoryBtnClick:(id)sender {
-    CXMemoryViewController *vc =[[CXMemoryViewController alloc] init];
-    vc.title = @"Memory";
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-//thread
-- (IBAction)threadBtnClick:(id)sender {
-//    CXGCDViewController *vc =[[CXGCDViewController alloc] init];
-    CXRunLoopViewController *vc = [[CXRunLoopViewController alloc] init];
-    
-    vc.title = @"Thread";
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-//runtime
-- (IBAction)runtimeBtnClick:(id)sender {
-    CXRuntimeViewController *vc = [[CXRuntimeViewController alloc] init];
-    vc.title = @"Runtime";
-    [self.navigationController pushViewController:vc animated:YES];
+- (NSMutableArray *)showArray {
+    if (!_showArray) {
+        _showArray = [NSMutableArray arrayWithObjects:@"CXFileManagerViewController", nil];
+    }
+    return _showArray;
 }
 
 @end
