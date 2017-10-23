@@ -14,6 +14,7 @@
 		D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */; };
 		D109AB431F34766900AB39D6 /* CXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB421F34766900AB39D6 /* CXPerson.m */; };
 		D15D8F741F5E5C7F005F5E21 /* CXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D15D8F731F5E5C7F005F5E21 /* CXClass.m */; };
+		D16AA0B61F9DB9C100B4BAE2 /* CXFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16AA0B51F9DB9C100B4BAE2 /* CXFileManagerViewController.m */; };
 		D18748211F00A8980029B787 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18748201F00A8980029B787 /* CollectionViewController.m */; };
 		D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */; };
 		D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */; };
@@ -46,6 +47,8 @@
 		D109AB421F34766900AB39D6 /* CXPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPerson.m; sourceTree = "<group>"; };
 		D15D8F721F5E5C7F005F5E21 /* CXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXClass.h; sourceTree = "<group>"; };
 		D15D8F731F5E5C7F005F5E21 /* CXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXClass.m; sourceTree = "<group>"; };
+		D16AA0B41F9DB9C100B4BAE2 /* CXFileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXFileManagerViewController.h; sourceTree = "<group>"; };
+		D16AA0B51F9DB9C100B4BAE2 /* CXFileManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXFileManagerViewController.m; sourceTree = "<group>"; };
 		D187481F1F00A8980029B787 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		D18748201F00A8980029B787 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		D18BA6FB1F4D515D007ED286 /* CXGCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXGCDViewController.h; sourceTree = "<group>"; };
@@ -138,9 +141,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D16AA0B31F9DB99800B4BAE2 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				D16AA0B41F9DB9C100B4BAE2 /* CXFileManagerViewController.h */,
+				D16AA0B51F9DB9C100B4BAE2 /* CXFileManagerViewController.m */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
 		D18748141F00A84E0029B787 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D16AA0B31F9DB99800B4BAE2 /* FileManager */,
 				D1B5121A1F59597100ABD3E9 /* Runtime */,
 				D1029AAD1F414F740079BE95 /* 自动布局 */,
 				D109AB401F34765500AB39D6 /* Model */,
@@ -431,6 +444,7 @@
 				D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */,
 				D15D8F741F5E5C7F005F5E21 /* CXClass.m in Sources */,
 				D1029AB01F4152A40079BE95 /* CXAutoLayoutViewController.m in Sources */,
+				D16AA0B61F9DB9C100B4BAE2 /* CXFileManagerViewController.m in Sources */,
 				D1029AE11F46BEB10079BE95 /* CXMemoryViewController.m in Sources */,
 				D1B5121D1F59598300ABD3E9 /* CXRuntimeViewController.m in Sources */,
 				D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */,
