@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+
+#import "CXTempViewController.h"
 // 文件管理
 #import "CXFileManagerViewController.h"
+
 
 #import "BlockViewController.h"
 #import "CXAutoLayoutViewController.h"
@@ -58,7 +61,7 @@
 
 - (NSMutableArray *)showArray {
     if (!_showArray) {
-        _showArray = [NSMutableArray arrayWithObjects:@"CXFileManagerViewController", nil];
+        _showArray = [NSMutableArray arrayWithObjects:@"CXTempViewController", @"CXFileManagerViewController", nil];
     }
     return _showArray;
 }

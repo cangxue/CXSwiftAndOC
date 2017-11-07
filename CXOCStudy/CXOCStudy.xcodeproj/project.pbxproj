@@ -20,6 +20,7 @@
 		D162DA901FB1951200B8886A /* CXBurgerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA8F1FB1951200B8886A /* CXBurgerFactory.m */; };
 		D162DA991FB1980400B8886A /* CXBigCheeseBurgerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA981FB1980400B8886A /* CXBigCheeseBurgerFactory.m */; };
 		D162DA9C1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA9B1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.m */; };
+		D162DAA01FB1A69200B8886A /* CXTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA9F1FB1A69200B8886A /* CXTempViewController.m */; };
 		D16AA0B61F9DB9C100B4BAE2 /* CXFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16AA0B51F9DB9C100B4BAE2 /* CXFileManagerViewController.m */; };
 		D18748211F00A8980029B787 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18748201F00A8980029B787 /* CollectionViewController.m */; };
 		D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */; };
@@ -65,6 +66,8 @@
 		D162DA981FB1980400B8886A /* CXBigCheeseBurgerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXBigCheeseBurgerFactory.m; sourceTree = "<group>"; };
 		D162DA9A1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSmallCheeseBurgerFactory.h; sourceTree = "<group>"; };
 		D162DA9B1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXSmallCheeseBurgerFactory.m; sourceTree = "<group>"; };
+		D162DA9E1FB1A69200B8886A /* CXTempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXTempViewController.h; sourceTree = "<group>"; };
+		D162DA9F1FB1A69200B8886A /* CXTempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXTempViewController.m; sourceTree = "<group>"; };
 		D16AA0B41F9DB9C100B4BAE2 /* CXFileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXFileManagerViewController.h; sourceTree = "<group>"; };
 		D16AA0B51F9DB9C100B4BAE2 /* CXFileManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXFileManagerViewController.m; sourceTree = "<group>"; };
 		D187481F1F00A8980029B787 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
@@ -347,6 +350,8 @@
 				D1BA485C1E9E265800B4DA26 /* AppDelegate.m */,
 				D1BA485E1E9E265800B4DA26 /* ViewController.h */,
 				D1BA485F1E9E265800B4DA26 /* ViewController.m */,
+				D162DA9E1FB1A69200B8886A /* CXTempViewController.h */,
+				D162DA9F1FB1A69200B8886A /* CXTempViewController.m */,
 				D1A9D5C41F29D73D00DEB1BD /* CXBaseViewController.h */,
 				D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */,
 				D1A9D5C71F29DE8700DEB1BD /* CXHeader.h */,
@@ -494,6 +499,7 @@
 				D1029ABB1F42CE230079BE95 /* CXAccount.m in Sources */,
 				D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */,
 				D162DA9C1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.m in Sources */,
+				D162DAA01FB1A69200B8886A /* CXTempViewController.m in Sources */,
 				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,
 				D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */,

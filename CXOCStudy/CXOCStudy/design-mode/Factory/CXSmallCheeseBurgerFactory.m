@@ -13,7 +13,7 @@
 + (CXCheeseBurger *)printCheeseBurgerNameAndPrice {
     CXCheeseBurger *cheeseBurger = [[CXCheeseBurger alloc] init];
     cheeseBurger.name = @"small cheese burder";
-    cheeseBurger.price = 6.0;
+    cheeseBurger.price = 6.00;
     return cheeseBurger;
 }
 @end
