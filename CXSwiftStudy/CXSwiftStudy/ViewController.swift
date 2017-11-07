@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.showArray = ["basic"]
+        self.showArray = ["CXTempViewController"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,16 +64,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var vc = UIViewController()
-        switch indexPath.row {
-        case 0:
-            vc = BasicViewController()
-            
-        default:
-            vc = UIViewController()
+        //1:动态获取命名空间
+        guard   let name = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
+            return
         }
         
-        vc.title = self.showArray[indexPath.row]
-        self.navigationController?.pushViewController(vc, animated: true)
+        let VCName = self.showArray[indexPath.row]
+        
+        let cls: AnyClass? = NSClassFromString(name + "." + VCName) //VCName:表示试图控制器的类名
+        
+        // Swift中如果想通过一个Class来创建一个对象, 必须告诉系统这个Class的确切类型
+        guard let typeClass = cls as? UIViewController.Type else {
+            return
+        }
+        
+        let childController = typeClass.init()
+        
+        childController.title = self.showArray[indexPath.row]
+        self.navigationController?.pushViewController(childController, animated: true)
     }
 }
