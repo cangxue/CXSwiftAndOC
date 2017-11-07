@@ -18,6 +18,14 @@ class BasicViewController: UIViewController {
 
         self.view.backgroundColor = UIColor.white
         
+        let once1 = CXSingleton.sharedInstance
+        once1.height = 30
+        let once2 = CXSingleton.sharedInstance
+//        once2.height = 30
+        
+        print(once1.height, once2.height)
+        
+        
         let reversedNames = names.sorted(by: backward)
         if reversedNames.count > 0 {
             

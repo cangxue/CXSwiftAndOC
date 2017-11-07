@@ -173,7 +173,6 @@
 		D18748141F00A84E0029B787 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D162DA791FB02DD800B8886A /* design-mode */,
 				D16AA0B31F9DB99800B4BAE2 /* FileManager */,
 				D1B5121A1F59597100ABD3E9 /* Runtime */,
 				D1029AAD1F414F740079BE95 /* 自动布局 */,
@@ -309,6 +308,7 @@
 		D1BA48571E9E265800B4DA26 /* CXOCStudy */ = {
 			isa = PBXGroup;
 			children = (
+				D162DA791FB02DD800B8886A /* design-mode */,
 				D18748141F00A84E0029B787 /* Classes */,
 				D1BA485B1E9E265800B4DA26 /* AppDelegate.h */,
 				D1BA485C1E9E265800B4DA26 /* AppDelegate.m */,
