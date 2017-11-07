@@ -15,6 +15,11 @@
 		D109AB431F34766900AB39D6 /* CXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB421F34766900AB39D6 /* CXPerson.m */; };
 		D15D8F741F5E5C7F005F5E21 /* CXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D15D8F731F5E5C7F005F5E21 /* CXClass.m */; };
 		D162DA7D1FB02E3E00B8886A /* CXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA7C1FB02E3E00B8886A /* CXSingleton.m */; };
+		D162DA841FB192F800B8886A /* CXBurger.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA831FB192F800B8886A /* CXBurger.m */; };
+		D162DA871FB193A600B8886A /* CXCheeseBurger.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA861FB193A600B8886A /* CXCheeseBurger.m */; };
+		D162DA901FB1951200B8886A /* CXBurgerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA8F1FB1951200B8886A /* CXBurgerFactory.m */; };
+		D162DA991FB1980400B8886A /* CXBigCheeseBurgerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA981FB1980400B8886A /* CXBigCheeseBurgerFactory.m */; };
+		D162DA9C1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA9B1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.m */; };
 		D16AA0B61F9DB9C100B4BAE2 /* CXFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16AA0B51F9DB9C100B4BAE2 /* CXFileManagerViewController.m */; };
 		D18748211F00A8980029B787 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18748201F00A8980029B787 /* CollectionViewController.m */; };
 		D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */; };
@@ -50,6 +55,16 @@
 		D15D8F731F5E5C7F005F5E21 /* CXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXClass.m; sourceTree = "<group>"; };
 		D162DA7B1FB02E3E00B8886A /* CXSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSingleton.h; sourceTree = "<group>"; };
 		D162DA7C1FB02E3E00B8886A /* CXSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXSingleton.m; sourceTree = "<group>"; };
+		D162DA821FB192F800B8886A /* CXBurger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXBurger.h; sourceTree = "<group>"; };
+		D162DA831FB192F800B8886A /* CXBurger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXBurger.m; sourceTree = "<group>"; };
+		D162DA851FB193A600B8886A /* CXCheeseBurger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXCheeseBurger.h; sourceTree = "<group>"; };
+		D162DA861FB193A600B8886A /* CXCheeseBurger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXCheeseBurger.m; sourceTree = "<group>"; };
+		D162DA8E1FB1951200B8886A /* CXBurgerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXBurgerFactory.h; sourceTree = "<group>"; };
+		D162DA8F1FB1951200B8886A /* CXBurgerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXBurgerFactory.m; sourceTree = "<group>"; };
+		D162DA971FB1980400B8886A /* CXBigCheeseBurgerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXBigCheeseBurgerFactory.h; sourceTree = "<group>"; };
+		D162DA981FB1980400B8886A /* CXBigCheeseBurgerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXBigCheeseBurgerFactory.m; sourceTree = "<group>"; };
+		D162DA9A1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSmallCheeseBurgerFactory.h; sourceTree = "<group>"; };
+		D162DA9B1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXSmallCheeseBurgerFactory.m; sourceTree = "<group>"; };
 		D16AA0B41F9DB9C100B4BAE2 /* CXFileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXFileManagerViewController.h; sourceTree = "<group>"; };
 		D16AA0B51F9DB9C100B4BAE2 /* CXFileManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXFileManagerViewController.m; sourceTree = "<group>"; };
 		D187481F1F00A8980029B787 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
@@ -147,6 +162,7 @@
 		D162DA791FB02DD800B8886A /* design-mode */ = {
 			isa = PBXGroup;
 			children = (
+				D162DA811FB1899F00B8886A /* Factory */,
 				D162DA7A1FB02DF900B8886A /* Singleton */,
 			);
 			path = "design-mode";
@@ -159,6 +175,23 @@
 				D162DA7C1FB02E3E00B8886A /* CXSingleton.m */,
 			);
 			path = Singleton;
+			sourceTree = "<group>";
+		};
+		D162DA811FB1899F00B8886A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D162DA821FB192F800B8886A /* CXBurger.h */,
+				D162DA831FB192F800B8886A /* CXBurger.m */,
+				D162DA851FB193A600B8886A /* CXCheeseBurger.h */,
+				D162DA861FB193A600B8886A /* CXCheeseBurger.m */,
+				D162DA8E1FB1951200B8886A /* CXBurgerFactory.h */,
+				D162DA8F1FB1951200B8886A /* CXBurgerFactory.m */,
+				D162DA971FB1980400B8886A /* CXBigCheeseBurgerFactory.h */,
+				D162DA981FB1980400B8886A /* CXBigCheeseBurgerFactory.m */,
+				D162DA9A1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.h */,
+				D162DA9B1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.m */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		D16AA0B31F9DB99800B4BAE2 /* FileManager */ = {
@@ -460,10 +493,13 @@
 			files = (
 				D1029ABB1F42CE230079BE95 /* CXAccount.m in Sources */,
 				D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */,
+				D162DA9C1FB19C4300B8886A /* CXSmallCheeseBurgerFactory.m in Sources */,
 				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,
 				D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */,
 				D15D8F741F5E5C7F005F5E21 /* CXClass.m in Sources */,
+				D162DA991FB1980400B8886A /* CXBigCheeseBurgerFactory.m in Sources */,
+				D162DA871FB193A600B8886A /* CXCheeseBurger.m in Sources */,
 				D1029AB01F4152A40079BE95 /* CXAutoLayoutViewController.m in Sources */,
 				D16AA0B61F9DB9C100B4BAE2 /* CXFileManagerViewController.m in Sources */,
 				D1029AE11F46BEB10079BE95 /* CXMemoryViewController.m in Sources */,
@@ -471,10 +507,12 @@
 				D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */,
 				D1B512101F56AF4300ABD3E9 /* CXThreadViewController.m in Sources */,
 				D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */,
+				D162DA901FB1951200B8886A /* CXBurgerFactory.m in Sources */,
 				D1B512161F56B8D600ABD3E9 /* CXOperation.m in Sources */,
 				D162DA7D1FB02E3E00B8886A /* CXSingleton.m in Sources */,
 				D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */,
 				D1BA485A1E9E265800B4DA26 /* main.m in Sources */,
+				D162DA841FB192F800B8886A /* CXBurger.m in Sources */,
 				D1B512191F57DEF400ABD3E9 /* CXRunLoopViewController.m in Sources */,
 				D109AB431F34766900AB39D6 /* CXPerson.m in Sources */,
 				D1B512131F56B49C00ABD3E9 /* CXOperationViewController.m in Sources */,
