@@ -10,6 +10,8 @@
 
 @interface CXSingleton : NSObject
 
+@property (nonatomic, copy) NSString *single_name;
+
 + (instancetype)sharedInstance;
 
 @end
