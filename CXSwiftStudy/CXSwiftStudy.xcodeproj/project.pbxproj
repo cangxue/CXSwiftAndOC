@@ -11,6 +11,7 @@
 		D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DA7F1FB05D5000B8886A /* CXSingleton.swift */; };
 		D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAA11FB1AA5C00B8886A /* CXFactory.swift */; };
 		D162DAA41FB1AFE100B8886A /* CXTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAA31FB1AFE100B8886A /* CXTempViewController.swift */; };
+		D162DAC41FB4AD8B00B8886A /* CXDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAC31FB4AD8B00B8886A /* CXDesignViewController.swift */; };
 		D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18748301F04F8000029B787 /* CollectionViewController.swift */; };
 		D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */; };
 		D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */; };
@@ -26,6 +27,7 @@
 		D162DA7F1FB05D5000B8886A /* CXSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSingleton.swift; sourceTree = "<group>"; };
 		D162DAA11FB1AA5C00B8886A /* CXFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFactory.swift; sourceTree = "<group>"; };
 		D162DAA31FB1AFE100B8886A /* CXTempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTempViewController.swift; sourceTree = "<group>"; };
+		D162DAC31FB4AD8B00B8886A /* CXDesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDesignViewController.swift; sourceTree = "<group>"; };
 		D18748301F04F8000029B787 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXLocationViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				D162DA7F1FB05D5000B8886A /* CXSingleton.swift */,
 				D162DAA11FB1AA5C00B8886A /* CXFactory.swift */,
+				D162DAC31FB4AD8B00B8886A /* CXDesignViewController.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,
 				D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */,
+				D162DAC41FB4AD8B00B8886A /* CXDesignViewController.swift in Sources */,
 				D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */,
 				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
 			);
