@@ -11,6 +11,8 @@
 #import "CXTempViewController.h"
 // 文件管理
 #import "CXFileManagerViewController.h"
+// 工厂模式
+#import "CXFactoryViewController.h"
 
 
 #import "BlockViewController.h"
@@ -61,7 +63,7 @@
 
 - (NSMutableArray *)showArray {
     if (!_showArray) {
-        _showArray = [NSMutableArray arrayWithObjects:@"CXTempViewController", @"CXFileManagerViewController", nil];
+        _showArray = [NSMutableArray arrayWithObjects:@"CXFactoryViewController", @"CXFileManagerViewController", nil];
     }
     return _showArray;
 }
