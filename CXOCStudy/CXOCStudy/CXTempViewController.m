@@ -8,8 +8,12 @@
 
 #import "CXTempViewController.h"
 
-#import "CXBigCheeseBurgerFactory.h"
-#import "CXSmallCheeseBurgerFactory.h"
+#import "CXSimpleFactory.h"
+#import "CXRedButton.h"
+#import "CXFactory.h"
+#import "CXAbstractRedFactory.h"
+#import "CXRedTextField.h"
+
 @interface CXTempViewController ()
 
 @end
@@ -19,11 +23,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CXCheeseBurger *burger = [CXBigCheeseBurgerFactory printCheeseBurgerNameAndPrice];
-    NSLog(@"%@ price is %.2f", burger.name, burger.price);
+    //简单工厂模式
+    CXButton *simple_button = [CXSimpleFactory createProduct:@"CXButton"];
+    [simple_button display];
     
-    CXCheeseBurger *smallBurger = [CXSmallCheeseBurgerFactory printCheeseBurgerNameAndPrice];
-    NSLog(@"%@ price is %.2f", smallBurger.name, smallBurger.price);
+    //工厂模式
+    CXFactory *factory = [[CXFactory alloc] init];
+    CXRedButton *redBtn = [factory createProduct:@"CXRedButton"];
+    [redBtn display];
+    
+    //抽象工厂模式
+    CXAbstractRedFactory *abstract_factory = [[CXAbstractRedFactory alloc] init];
+    CXRedButton *abstract_btn = [abstract_factory createButtonProduct];
+    [abstract_btn display];
+    CXRedTextField *abstract_field = [abstract_factory createTextFieldProduct];
+    [abstract_field display];
 }
 
 

@@ -15,14 +15,27 @@ class CXTempViewController: UIViewController {
 
         self.view.backgroundColor = UIColor.white
         
+        //简单工厂模式
+        print("============= 简单工厂模式 =================")
+        let cheeseBurger = CXCheeseBurgerFactory().createFood()
+        cheeseBurger.printFood()
+        print(cheeseBurger.type)
         
-        let cheeseBurger = CXBigCheeseBurgerFactory().printCheeseBurgerNameAndPrice()
-        print("\(cheeseBurger.name) price is \(cheeseBurger.price)")
+        let chipsSnack = CXChipsSnackFactory().createFood()
+        chipsSnack.printFood()
+        print(chipsSnack.type)
         
-        let smallCheeseBurger = CXSmallCheeseBurgerFactory().printCheeseBurgerNameAndPrice()
-        print("\(smallCheeseBurger.name) price is \(smallCheeseBurger.price)")
+        //抽象工厂模式
+        print("============= 抽象工厂模式 =================")
+        let burger = CXBurgerFactory().createFoodAndParameters(type: "Cheese")
+        burger.printFood()
+        print(burger.type)
+        
+        let snack = CXFoodFactory().createFoodAndParameters(type: "Chips")
+        snack.printFood()
+        print(snack.type)
     }
-
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
