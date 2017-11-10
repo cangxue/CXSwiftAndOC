@@ -1,22 +1,21 @@
 //
-//  CXTempViewController.swift
+//  CXBaseViewController.swift
 //  CXSwiftStudy
 //
-//  Created by xiaoma on 2017/11/7.
+//  Created by xiaoma on 2017/11/10.
 //  Copyright © 2017年 CX. All rights reserved.
 //
 
 import UIKit
 
-class CXTempViewController: UIViewController {
+class CXBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.white
-        
     }
- 
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -8,112 +8,74 @@
 
 import UIKit
 
-class CXFood: NSObject {
-    var name = "food"
-    var price = 0.00
-    var type = "FOOD"
-    
-    func printFood() {
-        print("\(self.name) price is \(self.price)")
-    }
-}
-/************** Burger产品类 *******************/
+
+/************** 产品类 *******************/
 //抽象产品类
-class CXBurger: CXFood {
-    override init() {
-        super.init()
-        self.type = "BURGER"
+class CXButton: NSObject {
+    func display() {
+        print("显示button")
     }
 }
 //具体产品类
-class CXCheeseBurger: CXBurger {
-    override init() {
-        super.init()
-        self.name = "cheese burger"
-        self.price = 12.00
+class CXRedButton: CXButton {
+    override func display() {
+        print("显示红色button")
     }
 }
 
-/************** Snack产品类 *******************/
 //抽象产品类
-class CXSnack: CXFood {
-    override init() {
-        super.init()
-        self.type = "SNACK"
+class CXTextField: NSObject {
+    func display() {
+        print("显示text field")
     }
 }
 //具体产品类
-class CXChipsSnack: CXSnack {
-    override init() {
-        super.init()
-        self.name = "chip snack"
-        self.price = 6.00
+class CXRedTextField: CXTextField {
+    override func display() {
+        print("显示红色text field")
     }
 }
 
 /************** 工厂类 *******************/
-//抽象工厂类
-class CXFoodFactory: NSObject {
-    func createFood() -> CXFood {
-        let food = CXFood()
-        return food
+//简单工厂模式
+class CXSimpleFactory: NSObject {
+    static func create(className: CXButton) -> CXButton {
+        
+        let objIns = className
+        return objIns
+    }
+}
+
+//工厂模式
+class CXFactory: NSObject {
+    func create(className: CXButton) -> CXButton {
+        let objIns = className
+        return objIns
+    }
+}
+
+//抽象工厂模式
+class CXAbstractFactory: NSObject {
+    func createButton() -> CXButton {
+        let objIns = CXButton()
+        return objIns
     }
     
-    func createFoodAndParameters(type: String) -> CXFood {
-        let food = CXFood()
-        return food
+    func createTextField() -> CXTextField {
+        let objIns = CXTextField()
+        return objIns
     }
 }
 
 //抽象工厂类
-class CXBurgerFactory: CXFoodFactory {
-    override func createFood() -> CXBurger {
-        let burger = CXBurger()
-        return burger
+class CXAbstractRedFactory: CXAbstractFactory {
+    override func createButton() -> CXRedButton {
+        let redBtn = CXRedButton()
+        return redBtn
     }
     
-    override func createFoodAndParameters(type: String) -> CXFood {
-        if type == "Cheese" {
-            let cheese = CXCheeseBurger.init()
-            return cheese
-        } else {
-            let burger = CXBurger()
-            return burger
-        }
+    override func createTextField() -> CXRedTextField {
+        let redField = CXRedTextField()
+        return redField
     }
 }
-
-//抽象工厂类
-class CXSnackFactory: CXFoodFactory {
-    override func createFood() -> CXSnack {
-        let snack = CXSnack()
-        return snack
-    }
-    
-    override func createFoodAndParameters(type: String) -> CXFood {
-        if type == "Chips" {
-            let chips = CXChipsSnack.init()
-            return chips
-        } else {
-            let burger = CXBurger()
-            return burger
-        }
-    }
-}
-
-//具体工厂类
-class CXCheeseBurgerFactory: CXBurgerFactory {
-    override func createFood() -> CXCheeseBurger {
-        let cheese = CXCheeseBurger.init()
-        return cheese
-    }
-}
-
-//具体工厂类
-class CXChipsSnackFactory: CXFoodFactory {
-    override func createFood() -> CXChipsSnack {
-        let chips = CXChipsSnack.init()
-        return chips
-    }
-}
-

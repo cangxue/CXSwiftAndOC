@@ -12,6 +12,7 @@
 		D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAA11FB1AA5C00B8886A /* CXFactory.swift */; };
 		D162DAA41FB1AFE100B8886A /* CXTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAA31FB1AFE100B8886A /* CXTempViewController.swift */; };
 		D162DAC41FB4AD8B00B8886A /* CXDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAC31FB4AD8B00B8886A /* CXDesignViewController.swift */; };
+		D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAC51FB584FC00B8886A /* CXBaseViewController.swift */; };
 		D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18748301F04F8000029B787 /* CollectionViewController.swift */; };
 		D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */; };
 		D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */; };
@@ -28,6 +29,7 @@
 		D162DAA11FB1AA5C00B8886A /* CXFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFactory.swift; sourceTree = "<group>"; };
 		D162DAA31FB1AFE100B8886A /* CXTempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTempViewController.swift; sourceTree = "<group>"; };
 		D162DAC31FB4AD8B00B8886A /* CXDesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDesignViewController.swift; sourceTree = "<group>"; };
+		D162DAC51FB584FC00B8886A /* CXBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBaseViewController.swift; sourceTree = "<group>"; };
 		D18748301F04F8000029B787 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXLocationViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				D18748251F04F7E80029B787 /* Classes */,
 				D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */,
 				D1BA483C1E9E258D00B4DA26 /* ViewController.swift */,
+				D162DAC51FB584FC00B8886A /* CXBaseViewController.swift */,
 				D162DAA31FB1AFE100B8886A /* CXTempViewController.swift */,
 				D1BA483E1E9E258D00B4DA26 /* Main.storyboard */,
 				D1BA48411E9E258D00B4DA26 /* Assets.xcassets */,
@@ -287,6 +290,7 @@
 				D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */,
 				D162DAC41FB4AD8B00B8886A /* CXDesignViewController.swift in Sources */,
 				D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */,
+				D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */,
 				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

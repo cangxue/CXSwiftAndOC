@@ -8,28 +8,36 @@
 
 import UIKit
 
-class CXDesignViewController: UIViewController {
+class CXDesignViewController: CXBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.factory_design()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // 工厂模式
+    func factory_design() {
+        
+        //简单工厂模式
+        print("============= 简单工厂模式 =================")
+        let simpleFactory = CXSimpleFactory.create(className: CXRedButton())
+        simpleFactory.display()
+        
+        
+        //工厂模式
+        print("============= 工厂模式 =================")
+        let factory = CXFactory()
+        let redBtn = factory.create(className: CXRedButton());
+        redBtn.display()
+        
+        //抽象工厂模式
+        print("============= 抽象工厂模式 =================")
+        let abstractFactory = CXAbstractRedFactory()
+        let absBtn = abstractFactory.createButton()
+        absBtn.display()
+        let absField = abstractFactory.createTextField()
+        absField.display()
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }
