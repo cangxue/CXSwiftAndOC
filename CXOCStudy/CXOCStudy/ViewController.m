@@ -8,18 +8,6 @@
 
 #import "ViewController.h"
 
-
-
-#import "BlockViewController.h"
-#import "CXAutoLayoutViewController.h"
-#import "CXKVOOrKVCViewController.h"
-#import "CXMemoryViewController.h"
-#import "CXGCDViewController.h"
-#import "CXThreadViewController.h"
-#import "CXRunLoopViewController.h"
-#import "CXRunLoopViewController.h"
-#import "CXRuntimeViewController.h"
-
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *mainTalbleView;
@@ -58,7 +46,7 @@
 
 - (NSMutableArray *)showArray {
     if (!_showArray) {
-        _showArray = [NSMutableArray arrayWithObjects:@"CXSingletonViewController", @"CXFactoryViewController", @"CXFileManagerViewController", nil];
+        _showArray = [NSMutableArray arrayWithObjects:@"CXDesignViewController", nil];
     }
     return _showArray;
 }
