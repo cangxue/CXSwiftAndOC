@@ -18,4 +18,5 @@ class CXSingleton: NSObject {
     private override init() {
         // 初始化一些内容
     }
+    
 }

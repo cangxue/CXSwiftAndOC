@@ -13,9 +13,18 @@ class CXDesignViewController: CXBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.factory_design()
+        self.singleton()
     }
-    // 工厂模式
+    //单例模式
+    func singleton() {
+        let singleton = CXSingleton.sharedInstance
+        singleton.height = 20
+        print(singleton.height)
+        CXSingleton.sharedInstance.height = 30
+        print(singleton.height)
+        
+    }
+    //工厂模式
     func factory_design() {
         
         //简单工厂模式
