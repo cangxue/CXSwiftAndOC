@@ -12,16 +12,22 @@ class CXDesignViewController: CXBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.singleton()
+        self.builder_design()
     }
-    //单例模式
-    func singleton() {
-        let singleton = CXSingleton.sharedInstance
-        singleton.height = 20
-        print(singleton.height)
-        CXSingleton.sharedInstance.height = 30
-        print(singleton.height)
+    //创建者模式
+    func builder_design() {
+        //方法一
+        let order_builder = CXBuilder()
+        order_builder.addBurger(xBurger: cheeseBurger())
+        order_builder.addSnack(xSnack: chips())
+        order_builder.addBeverage(xBeverage: coke())
+        let order_1 = order_builder.build()
+        order_1.show()
+        
+        //方法二
+        let builderDirector = OrderDirector(orderBuilder: order_builder)
+        let order_2 = builderDirector.createOrder(burger: spicyChickenBurger(), snack: chickenWings(), beverage: milk())
+        order_2.show()
         
     }
     //工厂模式
@@ -46,7 +52,15 @@ class CXDesignViewController: CXBaseViewController {
         absBtn.display()
         let absField = abstractFactory.createTextField()
         absField.display()
-    
+    }
+    //单例模式
+    func singleton_design() {
+        let singleton = CXSingleton.sharedInstance
+        singleton.height = 20
+        print(singleton.height)
+        CXSingleton.sharedInstance.height = 30
+        print(singleton.height)
+        
     }
 
 }

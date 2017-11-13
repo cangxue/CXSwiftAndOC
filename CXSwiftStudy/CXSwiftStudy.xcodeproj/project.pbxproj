@@ -16,6 +16,7 @@
 		D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18748301F04F8000029B787 /* CollectionViewController.swift */; };
 		D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */; };
 		D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */; };
+		D1A533131FB94EBE00C801EA /* CXBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A533121FB94EBE00C801EA /* CXBuilder.swift */; };
 		D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */; };
 		D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483C1E9E258D00B4DA26 /* ViewController.swift */; };
 		D1BA48401E9E258D00B4DA26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BA483E1E9E258D00B4DA26 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		D18748301F04F8000029B787 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXLocationViewController.swift; sourceTree = "<group>"; };
+		D1A533121FB94EBE00C801EA /* CXBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBuilder.swift; sourceTree = "<group>"; };
 		D1BA48371E9E258D00B4DA26 /* CXSwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXSwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1BA483C1E9E258D00B4DA26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +58,10 @@
 		D162DA7E1FB05CA400B8886A /* design-mode */ = {
 			isa = PBXGroup;
 			children = (
+				D162DAC31FB4AD8B00B8886A /* CXDesignViewController.swift */,
 				D162DA7F1FB05D5000B8886A /* CXSingleton.swift */,
 				D162DAA11FB1AA5C00B8886A /* CXFactory.swift */,
-				D162DAC31FB4AD8B00B8886A /* CXDesignViewController.swift */,
+				D1A533121FB94EBE00C801EA /* CXBuilder.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 		D1BA482F1E9E258D00B4DA26 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CX;
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CX;
@@ -285,6 +289,7 @@
 				D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */,
 				D162DAA41FB1AFE100B8886A /* CXTempViewController.swift in Sources */,
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
+				D1A533131FB94EBE00C801EA /* CXBuilder.swift in Sources */,
 				D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,
 				D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */,
