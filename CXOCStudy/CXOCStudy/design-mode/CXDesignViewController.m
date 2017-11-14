@@ -15,6 +15,11 @@
 #import "CXFactory.h"
 #import "CXAbstractRedFactory.h"
 #import "CXRedTextField.h"
+//建造者模式
+#import "CXBuilder.h"
+#import "CXCheeseBurger.h"
+#import "CXChipsSnack.h"
+#import "CXOrderDirector.h"
 
 @interface CXDesignViewController ()
 
@@ -25,15 +30,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self cx_builder];
 }
-
-#pragma mark - 单例模式
-- (void)cx_singleton {
-    CXSingleton *singleton = [CXSingleton sharedInstance];
-    singleton.single_name = @"111";
-    NSLog(@"%@",singleton.single_name);
-    [CXSingleton sharedInstance].single_name = @"222";
-    NSLog(@"%@",singleton.single_name);
+#pragma mark - 建造者模式
+- (void)cx_builder {
+    //concreteBuilder
+    CXCheeseBurger *cheeseBurger = [[CXCheeseBurger alloc] init];
+    CXChipsSnack *chipsSnack = [[CXChipsSnack alloc] init];
+    
+    //builder
+    CXBuilder *builder = [[CXBuilder alloc] init];
+    builder.burger = cheeseBurger;
+    builder.snack = chipsSnack;
+    
+    //product
+    CXOrder *order1 = [builder build];
+    NSLog(@"\n%@\n%@",order1.burger.name, order1.snack.name);
+    
+    //director
+    CXOrder *order2 = [CXOrderDirector creatOrder:builder burger:cheeseBurger snack:chipsSnack];
+    NSLog(@"\n%@\n%@",order2.burger.name, order2.snack.name);
 }
 #pragma mark - 工厂模式
 - (void)cx_factory {
@@ -53,5 +69,14 @@
     CXRedTextField *abstract_field = [abstract_factory createTextFieldProduct];
     [abstract_field display];
 }
+#pragma mark - 单例模式
+- (void)cx_singleton {
+    CXSingleton *singleton = [CXSingleton sharedInstance];
+    singleton.single_name = @"111";
+    NSLog(@"%@",singleton.single_name);
+    [CXSingleton sharedInstance].single_name = @"222";
+    NSLog(@"%@",singleton.single_name);
+}
+
 
 @end
