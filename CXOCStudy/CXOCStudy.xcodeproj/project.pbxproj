@@ -13,6 +13,7 @@
 		D1029AE11F46BEB10079BE95 /* CXMemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1029AE01F46BEB10079BE95 /* CXMemoryViewController.m */; };
 		D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */; };
 		D109AB431F34766900AB39D6 /* CXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB421F34766900AB39D6 /* CXPerson.m */; };
+		D10DE39D1FBC2DDF00EC07F2 /* CXPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = D10DE39C1FBC2DDF00EC07F2 /* CXPrototype.m */; };
 		D15D8F741F5E5C7F005F5E21 /* CXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D15D8F731F5E5C7F005F5E21 /* CXClass.m */; };
 		D162DA7D1FB02E3E00B8886A /* CXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA7C1FB02E3E00B8886A /* CXSingleton.m */; };
 		D162DAA01FB1A69200B8886A /* CXTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA9F1FB1A69200B8886A /* CXTempViewController.m */; };
@@ -63,6 +64,8 @@
 		D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXKVOOrKVCViewController.m; sourceTree = "<group>"; };
 		D109AB411F34766900AB39D6 /* CXPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPerson.h; sourceTree = "<group>"; };
 		D109AB421F34766900AB39D6 /* CXPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPerson.m; sourceTree = "<group>"; };
+		D10DE39B1FBC2DDF00EC07F2 /* CXPrototype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXPrototype.h; sourceTree = "<group>"; };
+		D10DE39C1FBC2DDF00EC07F2 /* CXPrototype.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXPrototype.m; sourceTree = "<group>"; };
 		D15D8F721F5E5C7F005F5E21 /* CXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXClass.h; sourceTree = "<group>"; };
 		D15D8F731F5E5C7F005F5E21 /* CXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXClass.m; sourceTree = "<group>"; };
 		D162DA7B1FB02E3E00B8886A /* CXSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSingleton.h; sourceTree = "<group>"; };
@@ -195,9 +198,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D10DE39A1FBC2DB400EC07F2 /* Prototype */ = {
+			isa = PBXGroup;
+			children = (
+				D10DE39B1FBC2DDF00EC07F2 /* CXPrototype.h */,
+				D10DE39C1FBC2DDF00EC07F2 /* CXPrototype.m */,
+			);
+			path = Prototype;
+			sourceTree = "<group>";
+		};
 		D162DA791FB02DD800B8886A /* design-mode */ = {
 			isa = PBXGroup;
 			children = (
+				D10DE39A1FBC2DB400EC07F2 /* Prototype */,
 				D167720E1FB995E20076D0D1 /* Builder */,
 				D162DA811FB1899F00B8886A /* Factory */,
 				D162DA7A1FB02DF900B8886A /* Singleton */,
@@ -566,6 +579,7 @@
 				D162DAA01FB1A69200B8886A /* CXTempViewController.m in Sources */,
 				D16772231FBA84A00076D0D1 /* CXOrderDirector.m in Sources */,
 				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
+				D10DE39D1FBC2DDF00EC07F2 /* CXPrototype.m in Sources */,
 				D16772111FB9962F0076D0D1 /* CXBurger.m in Sources */,
 				D162DAC91FB5980200B8886A /* CXDesignViewController.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,

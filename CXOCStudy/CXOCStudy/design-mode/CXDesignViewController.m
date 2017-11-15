@@ -20,6 +20,8 @@
 #import "CXCheeseBurger.h"
 #import "CXChipsSnack.h"
 #import "CXOrderDirector.h"
+//原型模式
+#import "CXPrototype.h"
 
 @interface CXDesignViewController ()
 
@@ -30,7 +32,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self cx_builder];
+    [self cx_prototype];
+}
+#pragma mark - 原型模式
+- (void)cx_prototype {
+    CXPrototype *prototype = [[CXPrototype alloc] init];
+    prototype.background = [NSMutableArray arrayWithObjects:@"1", @"1", @"1", @"1", nil];
+    prototype.content = @"Dog";
+    NSLog(@"Original %p %@",prototype, prototype.content);
+    NSLog(@"===================");
+    
+    //copy
+    CXPrototype *copy_prototype = prototype;
+    copy_prototype.content = @"Cat";
+    NSLog(@"Original %p %@",prototype, prototype.content);
+     NSLog(@"Copy %p %@",copy_prototype, copy_prototype.content);
+    NSLog(@"===================");
+    
+    //deep copy
+    CXPrototype *deep_copy_protyope = prototype.copy;
+    deep_copy_protyope.content = @"Duck";
+    NSLog(@"Original %p %@",prototype, prototype.content);
+    NSLog(@"Copy %p %@",copy_prototype, copy_prototype.content);
+    NSLog(@"Deep %p %@",deep_copy_protyope, deep_copy_protyope.content);
+    
 }
 #pragma mark - 建造者模式
 - (void)cx_builder {
