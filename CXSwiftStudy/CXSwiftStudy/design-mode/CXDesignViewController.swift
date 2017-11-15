@@ -12,7 +12,28 @@ class CXDesignViewController: CXBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.builder_design()
+        self.prototype_design()
+    }
+    //原型模式
+    func prototype_design() {
+        //Original
+        let dog_layer = CXSimpleLayer(background: [0, 0, 0, 0], content: "dog");
+        dog_layer.content = "Dog"
+        dog_layer.background = [0, 0, 255, 0]
+        print("Original Background: \(dog_layer.background) \nOriginal Painting: \(dog_layer.content)")
+        print("====================")
+        //copy
+        let shall_copy_layer = dog_layer
+        shall_copy_layer.background = [0, 0, 111, 0]
+        print("Original Background: \(dog_layer.background) \nOriginal Painting: \(dog_layer.content)")
+        print("Shall Background: \(shall_copy_layer.background) \nOriginal Painting: \(shall_copy_layer.content)")
+        print("====================")
+        //deep copy
+        let deep_copy_layer = dog_layer.copy() as! (CXSimpleLayer)
+        deep_copy_layer.background = [0, 0, 222, 0]
+        print("Original Background: \(dog_layer.background) \nOriginal Painting: \(dog_layer.content)")
+        print("Shall Background: \(shall_copy_layer.background) \nOriginal Painting: \(shall_copy_layer.content)")
+        print("Deep Background: \(deep_copy_layer.background) \nOriginal Painting: \(deep_copy_layer.content)")
     }
     //创建者模式
     func builder_design() {
