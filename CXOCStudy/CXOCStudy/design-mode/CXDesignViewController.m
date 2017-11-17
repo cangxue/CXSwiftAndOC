@@ -22,8 +22,10 @@
 #import "CXOrderDirector.h"
 //原型模式
 #import "CXPrototype.h"
+//代理模式
+#import "CXProxy.h"
 
-@interface CXDesignViewController ()
+@interface CXDesignViewController () <TicketDelegate>
 
 @end
 
@@ -32,7 +34,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self cx_prototype];
+    [self cx_proxy];
+}
+#pragma mark - 代理模式
+- (void)cx_proxy {
+    CXProxy *proxy = [[CXProxy alloc] init];
+    proxy.delegate = self;
+    [proxy responseDelegate];
+}
+- (void)buyTicket {
+    NSLog(@"买了票");
+}
+- (void)showTicketNumber {
+    NSLog(@"123456");
 }
 #pragma mark - 原型模式
 - (void)cx_prototype {
