@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D10DE39F1FBD926600EC07F2 /* CXProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10DE39E1FBD926600EC07F2 /* CXProxy.swift */; };
 		D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */; };
 		D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DA7F1FB05D5000B8886A /* CXSingleton.swift */; };
 		D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAA11FB1AA5C00B8886A /* CXFactory.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D10DE39E1FBD926600EC07F2 /* CXProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXProxy.swift; sourceTree = "<group>"; };
 		D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXBlockViewController.swift; sourceTree = "<group>"; };
 		D162DA7F1FB05D5000B8886A /* CXSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSingleton.swift; sourceTree = "<group>"; };
 		D162DAA11FB1AA5C00B8886A /* CXFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFactory.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				D162DAA11FB1AA5C00B8886A /* CXFactory.swift */,
 				D1A533121FB94EBE00C801EA /* CXBuilder.swift */,
 				D16772241FBAE31F0076D0D1 /* CXPrototype.swift */,
+				D10DE39E1FBD926600EC07F2 /* CXProxy.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				D162DAA41FB1AFE100B8886A /* CXTempViewController.swift in Sources */,
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
 				D1A533131FB94EBE00C801EA /* CXBuilder.swift in Sources */,
+				D10DE39F1FBD926600EC07F2 /* CXProxy.swift in Sources */,
 				D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,
 				D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */,

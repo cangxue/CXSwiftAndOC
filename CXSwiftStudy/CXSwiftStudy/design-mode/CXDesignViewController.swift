@@ -8,11 +8,40 @@
 
 import UIKit
 
-class CXDesignViewController: CXBaseViewController {
+class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
+    func buyTicket() {
+        print("自己买票")
+    }
+    
+    func showTicketNumber() {
+        print("222222")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.prototype_design()
+        self.proxy_design()
+        
+        let person = ProxyPerson()
+        person.delegate = self
+    }
+    //代理模式
+    func proxy_design() {
+        //买票的人
+        let person = ProxyPerson()
+        //会买票的黄牛
+        let tout = ProxyTout()
+        
+        //调用代理方法
+        person.delegate = self
+        person.delegate?.buyTicket()
+        person.delegate?.showTicketNumber!()
+        
+        person.delegate = tout //人的代理设置为黄牛
+        person.delegate?.buyTicket() //黄牛买了一张火车票
+        person.delegate?.showTicketNumber!()
+        
+        
+        
     }
     //原型模式
     func prototype_design() {
