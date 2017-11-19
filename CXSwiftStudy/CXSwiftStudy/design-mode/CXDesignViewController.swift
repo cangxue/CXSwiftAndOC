@@ -19,10 +19,18 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.proxy_design()
+        self.derocator_design()
         
         let person = ProxyPerson()
         person.delegate = self
+    }
+    //装饰器模式
+    func derocator_design() {
+        let coke = drink_coke()
+        print("Name: \(coke.name ?? "ice"), price: \(coke.price ?? 2.0)")
+        
+        let ice_coke = IceDecerator()
+        print("Name: \(ice_coke.getDrinkName(drink: coke)), price: \(ice_coke.getDrinkPrice(drink: coke))")
     }
     //代理模式
     func proxy_design() {
