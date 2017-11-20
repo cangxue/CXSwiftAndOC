@@ -26,11 +26,18 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     }
     //装饰器模式
     func derocator_design() {
-        let coke = drink_coke()
-        print("Name: \(coke.name ?? "ice"), price: \(coke.price ?? 2.0)")
+        let hero = BlindMonk()
+        hero.learnSkills()
         
-        let ice_coke = IceDecerator()
-        print("Name: \(ice_coke.getDrinkName(drink: coke)), price: \(ice_coke.getDrinkPrice(drink: coke))")
+        let skill_decorator = SkillsDecorator()
+        skill_decorator.hero = hero
+        skill_decorator.learnSkills()
+        
+        let skill_q_decorator = Skill_QDecorator()
+        skill_q_decorator.hero = hero
+        skill_q_decorator.skillName = "天音波/回音击"
+        skill_q_decorator.learnSkills()
+        
     }
     //代理模式
     func proxy_design() {

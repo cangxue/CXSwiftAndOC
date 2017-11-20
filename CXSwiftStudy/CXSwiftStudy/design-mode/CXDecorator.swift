@@ -8,50 +8,37 @@
 
 import UIKit
 
-class Drink: NSObject {
-    var name: String?
-    var price: Double?
-    var type = "DRINK"
+class Hero: NSObject {
+    var name: String = "英雄"
+    func learnSkills() {
+        print("学习技能接口");
+    }
 }
-class drink_coke: Drink {
+
+class BlindMonk: Hero {
     override init() {
         super.init()
-        self.name = "coke"
-        self.price = 4.0
+        self.name = "盲僧";
     }
-}
-class drink_milk: Drink {
-    override init() {
-        super.init()
-        self.name = "milk"
-        self.price = 5.0
+    
+    override func learnSkills() {
+        print("盲僧学习技能")
     }
 }
 
-
-class Decorator: NSObject {
+class SkillsDecorator: Hero {
+    var hero = Hero()
     
-    func getDrinkName(drink: Drink) -> String {
-        let str = "one"
-        return str
-    }
-    
-    func getDrinkPrice(drink: Drink) -> Double {
-        let dou = 3.0
-        return dou
-        
+    override func learnSkills() {
+        print("\(self.hero.name)学习全技能")
     }
 }
 
-class IceDecerator: Decorator {
-
+class Skill_QDecorator: SkillsDecorator {
+    var skillName: String = "Q技能"
     
-    override func getDrinkName(drink: Drink) -> String{
-        return drink.name! + "+ice"
-    }
-    
-    override func getDrinkPrice(drink: Drink) -> Double {
-        return drink.price! + 0.5
+    override func learnSkills() {
+        print("\(self.hero.name)学习了技能Q：\(self.skillName)")
     }
 }
 
