@@ -24,6 +24,11 @@
 #import "CXPrototype.h"
 //代理模式
 #import "CXProxy.h"
+//装饰器模式
+#import "CXHero.h"
+#import "CXBlindMonk.h"
+#import "CXSkillDecorator.h"
+#import "CXSkill_QDecorator.h"
 
 @interface CXDesignViewController () <TicketDelegate>
 
@@ -34,7 +39,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self cx_proxy];
+    [self cx_decorator];
+}
+#pragma mark - 装饰器模式
+- (void)cx_decorator {
+    CXBlindMonk *hero = [[CXBlindMonk alloc] init];
+    [hero learnSkills];
+    
+    CXSkill_QDecorator *skill_q = [[CXSkill_QDecorator alloc] initWithSkillName:@"天音波/回音击"];
+    skill_q.hero = hero;
+    [skill_q learnSkills];
+    
+    NSLog(@"=================");
+    
+    CXHero *hero2 = [[CXHero alloc] init];
+    hero2.name = @"蜘蛛";
+    [hero2 learnSkills];
+    
+    CXSkill_QDecorator *skill_q2 = [[CXSkill_QDecorator alloc] initWithSkillName:@"束缚"];
+    skill_q2.hero = hero2;
+    [skill_q2 learnSkills];
 }
 #pragma mark - 代理模式
 - (void)cx_proxy {

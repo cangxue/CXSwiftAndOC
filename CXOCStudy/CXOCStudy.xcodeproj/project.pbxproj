@@ -50,6 +50,10 @@
 		D1BA48631E9E265800B4DA26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BA48611E9E265800B4DA26 /* Main.storyboard */; };
 		D1BA48651E9E265800B4DA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BA48641E9E265800B4DA26 /* Assets.xcassets */; };
 		D1BA48681E9E265800B4DA26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BA48661E9E265800B4DA26 /* LaunchScreen.storyboard */; };
+		D1D5B25F1FC27FF5001AA6DC /* CXHero.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B25E1FC27FF5001AA6DC /* CXHero.m */; };
+		D1D5B2621FC28074001AA6DC /* CXBlindMonk.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B2611FC28074001AA6DC /* CXBlindMonk.m */; };
+		D1D5B2651FC280F5001AA6DC /* CXSkillDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B2641FC280F5001AA6DC /* CXSkillDecorator.m */; };
+		D1D5B26B1FC281A3001AA6DC /* CXSkill_QDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B26A1FC281A3001AA6DC /* CXSkill_QDecorator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +142,14 @@
 		D1BA48641E9E265800B4DA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BA48671E9E265800B4DA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BA48691E9E265800B4DA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1D5B25D1FC27FF5001AA6DC /* CXHero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHero.h; sourceTree = "<group>"; };
+		D1D5B25E1FC27FF5001AA6DC /* CXHero.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXHero.m; sourceTree = "<group>"; };
+		D1D5B2601FC28074001AA6DC /* CXBlindMonk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXBlindMonk.h; sourceTree = "<group>"; };
+		D1D5B2611FC28074001AA6DC /* CXBlindMonk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXBlindMonk.m; sourceTree = "<group>"; };
+		D1D5B2631FC280F5001AA6DC /* CXSkillDecorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSkillDecorator.h; sourceTree = "<group>"; };
+		D1D5B2641FC280F5001AA6DC /* CXSkillDecorator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXSkillDecorator.m; sourceTree = "<group>"; };
+		D1D5B2691FC281A3001AA6DC /* CXSkill_QDecorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSkill_QDecorator.h; sourceTree = "<group>"; };
+		D1D5B26A1FC281A3001AA6DC /* CXSkill_QDecorator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXSkill_QDecorator.m; sourceTree = "<group>"; };
 		F97011665520BF738C7A78F1 /* Pods-CXOCStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXOCStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXOCStudy/Pods-CXOCStudy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +234,7 @@
 		D162DA791FB02DD800B8886A /* design-mode */ = {
 			isa = PBXGroup;
 			children = (
+				D1D5B24D1FC271C5001AA6DC /* Decorator */,
 				D10DE3A01FBEAE1F00EC07F2 /* Proxy */,
 				D10DE39A1FBC2DB400EC07F2 /* Prototype */,
 				D167720E1FB995E20076D0D1 /* Builder */,
@@ -461,6 +474,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D1D5B24D1FC271C5001AA6DC /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5B25D1FC27FF5001AA6DC /* CXHero.h */,
+				D1D5B25E1FC27FF5001AA6DC /* CXHero.m */,
+				D1D5B2601FC28074001AA6DC /* CXBlindMonk.h */,
+				D1D5B2611FC28074001AA6DC /* CXBlindMonk.m */,
+				D1D5B2631FC280F5001AA6DC /* CXSkillDecorator.h */,
+				D1D5B2641FC280F5001AA6DC /* CXSkillDecorator.m */,
+				D1D5B2691FC281A3001AA6DC /* CXSkill_QDecorator.h */,
+				D1D5B26A1FC281A3001AA6DC /* CXSkill_QDecorator.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -595,6 +623,7 @@
 				D10DE39D1FBC2DDF00EC07F2 /* CXPrototype.m in Sources */,
 				D16772111FB9962F0076D0D1 /* CXBurger.m in Sources */,
 				D162DAC91FB5980200B8886A /* CXDesignViewController.m in Sources */,
+				D1D5B2651FC280F5001AA6DC /* CXSkillDecorator.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,
 				D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */,
 				D15D8F741F5E5C7F005F5E21 /* CXClass.m in Sources */,
@@ -613,7 +642,10 @@
 				D16772201FB9982C0076D0D1 /* CXOrder.m in Sources */,
 				D162DABC1FB4A8DD00B8886A /* CXAbstractRedFactory.m in Sources */,
 				D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */,
+				D1D5B26B1FC281A3001AA6DC /* CXSkill_QDecorator.m in Sources */,
+				D1D5B25F1FC27FF5001AA6DC /* CXHero.m in Sources */,
 				D1BA485A1E9E265800B4DA26 /* main.m in Sources */,
+				D1D5B2621FC28074001AA6DC /* CXBlindMonk.m in Sources */,
 				D16772171FB9971D0076D0D1 /* CXSnack.m in Sources */,
 				D16772141FB996E70076D0D1 /* CXCheeseBurger.m in Sources */,
 				D1B512191F57DEF400ABD3E9 /* CXRunLoopViewController.m in Sources */,
