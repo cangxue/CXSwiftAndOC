@@ -17,6 +17,7 @@
 		D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAC51FB584FC00B8886A /* CXBaseViewController.swift */; };
 		D16772251FBAE31F0076D0D1 /* CXPrototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16772241FBAE31F0076D0D1 /* CXPrototype.swift */; };
 		D177B5C01FC4093B00214E62 /* CXFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177B5BF1FC4093B00214E62 /* CXFacade.swift */; };
+		D177B5C21FC479C900214E62 /* CXComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177B5C11FC479C900214E62 /* CXComposite.swift */; };
 		D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18748301F04F8000029B787 /* CollectionViewController.swift */; };
 		D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */; };
 		D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */; };
@@ -40,6 +41,7 @@
 		D162DAC51FB584FC00B8886A /* CXBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBaseViewController.swift; sourceTree = "<group>"; };
 		D16772241FBAE31F0076D0D1 /* CXPrototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXPrototype.swift; sourceTree = "<group>"; };
 		D177B5BF1FC4093B00214E62 /* CXFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFacade.swift; sourceTree = "<group>"; };
+		D177B5C11FC479C900214E62 /* CXComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXComposite.swift; sourceTree = "<group>"; };
 		D18748301F04F8000029B787 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXLocationViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				D146F2EC1FC17C660014F0F2 /* CXDecorator.swift */,
 				D1D5B26C1FC31F8B001AA6DC /* CXAdapter.swift */,
 				D177B5BF1FC4093B00214E62 /* CXFacade.swift */,
+				D177B5C11FC479C900214E62 /* CXComposite.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
 				D1A533131FB94EBE00C801EA /* CXBuilder.swift in Sources */,
 				D10DE39F1FBD926600EC07F2 /* CXProxy.swift in Sources */,
+				D177B5C21FC479C900214E62 /* CXComposite.swift in Sources */,
 				D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */,
 				D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,

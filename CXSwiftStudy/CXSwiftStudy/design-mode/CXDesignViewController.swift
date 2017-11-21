@@ -19,10 +19,39 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.facade_design()
         
-        let person = ProxyPerson()
-        person.delegate = self
+        self.composite_design()
+    }
+    //组合模式
+    func composite_design() {
+        let root = ConcreateCompany(name: "HeadQuarter")
+        root.add(company: HRDepartment(name: "HQ HR"))
+        root.add(company: FinanceDepartment(name: "HQ Finance"))
+        root.add(company: RdDepartment(name: "HQ R&D"))
+        
+        let comp = ConcreateCompany(name: "East Branch")
+        comp.add(company: HRDepartment(name: "East.Br HR"))
+        comp.add(company: FinanceDepartment(name: "East.Br Finance"))
+        comp.add(company: RdDepartment(name: "East.Br R&D"))
+        root.add(company: comp)
+        
+        let comp1 = ConcreateCompany(name: "Northast Branch")
+        comp1.add(company: HRDepartment(name: "Northeast.Br HR"))
+        comp1.add(company: FinanceDepartment(name: "Northeast.Br Finance"))
+        comp1.add(company: RdDepartment(name: "Northeast.Br R&D"))
+        comp.add(company: comp1)
+        
+        
+        let comp2 = ConcreateCompany(name: "Southeast Branch")
+        comp2.add(company: HRDepartment(name: "Southeast.Br HR"))
+        comp2.add(company: FinanceDepartment(name: "Southeast.Br Finance"))
+        comp2.add(company: RdDepartment(name: "Southeast.Br R&D"))
+        comp.add(company: comp2)
+        
+        root.display(depth: 1)
+        
+        root.listDuty()
+        
     }
     //门面模式
     func facade_design() {
