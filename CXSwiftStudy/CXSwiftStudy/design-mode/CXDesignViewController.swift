@@ -19,10 +19,15 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.adapter_design()
+        self.facade_design()
         
         let person = ProxyPerson()
         person.delegate = self
+    }
+    //门面模式
+    func facade_design() {
+        let facde = CXFacade()
+        facde.runAll()
     }
     //适配器模式
     func adapter_design() {
