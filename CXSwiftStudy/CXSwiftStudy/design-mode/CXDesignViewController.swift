@@ -19,10 +19,16 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.derocator_design()
+        self.adapter_design()
         
         let person = ProxyPerson()
         person.delegate = self
+    }
+    //适配器模式
+    func adapter_design() {
+        let media_adapter = MediaAdapter()
+        media_adapter.play(fileName: "alone.mp4")
+        
     }
     //装饰器模式
     func derocator_design() {
