@@ -20,7 +20,26 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.composite_design()
+        self.flyweight_design()
+    }
+    //享元模式
+    func flyweight_design() {
+        let coffee_factory = CoffeeFactory()
+        
+        let customer_1 = Customer(name: "A Client", coffee_factory: coffee_factory)
+        let customer_2 = Customer(name: "B Client", coffee_factory: coffee_factory)
+        let customer_3 = Customer(name: "C Client", coffee_factory: coffee_factory)
+        
+        let c1_capp = customer_1.order(coffee_name: "cappuccino")
+        c1_capp.show()
+        let c2_mocha = customer_2.order(coffee_name: "mocha")
+        c2_mocha.show()
+        let c3_capp = customer_3.order(coffee_name: "cappuccino")
+        c3_capp.show()
+        
+        print("Num of Coffee Instance: \(coffee_factory.getCoffeeCount())")
+        
+        
     }
     //组合模式
     func composite_design() {

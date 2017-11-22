@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D10DE39F1FBD926600EC07F2 /* CXProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10DE39E1FBD926600EC07F2 /* CXProxy.swift */; };
+		D111F8B51FC55CEF000F4EF7 /* CXFlyweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111F8B41FC55CEF000F4EF7 /* CXFlyweight.swift */; };
 		D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */; };
 		D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D146F2EC1FC17C660014F0F2 /* CXDecorator.swift */; };
 		D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DA7F1FB05D5000B8886A /* CXSingleton.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		D10DE39E1FBD926600EC07F2 /* CXProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXProxy.swift; sourceTree = "<group>"; };
+		D111F8B41FC55CEF000F4EF7 /* CXFlyweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFlyweight.swift; sourceTree = "<group>"; };
 		D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXBlockViewController.swift; sourceTree = "<group>"; };
 		D146F2EC1FC17C660014F0F2 /* CXDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDecorator.swift; sourceTree = "<group>"; };
 		D162DA7F1FB05D5000B8886A /* CXSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSingleton.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				D1D5B26C1FC31F8B001AA6DC /* CXAdapter.swift */,
 				D177B5BF1FC4093B00214E62 /* CXFacade.swift */,
 				D177B5C11FC479C900214E62 /* CXComposite.swift */,
+				D111F8B41FC55CEF000F4EF7 /* CXFlyweight.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				D162DAC41FB4AD8B00B8886A /* CXDesignViewController.swift in Sources */,
 				D177B5C01FC4093B00214E62 /* CXFacade.swift in Sources */,
 				D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */,
+				D111F8B51FC55CEF000F4EF7 /* CXFlyweight.swift in Sources */,
 				D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */,
 				D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */,
 				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
