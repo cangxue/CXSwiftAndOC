@@ -20,7 +20,25 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.bridge_design()
+        self.strategy_design()
+    }
+    //策略模式
+    func strategy_design() {
+        let customer_x = CXCustomer()
+        customer_x.customer_name = "CUSTOMER_X"
+        customer_x.info = "Welcome to our new party"
+        customer_x.email = "customer@xemail.com"
+        customer_x.phone = "123456"
+        
+        let email_sender = EmailSender()
+        email_sender.setCode(code: customer_x.email)
+        customer_x.setBrdWay(send_way: email_sender)
+        customer_x.send()
+        
+        let text_sender = TextSender()
+        text_sender.setCode(code: customer_x.phone)
+        customer_x.setBrdWay(send_way: text_sender)
+        customer_x.send()
     }
     //桥梁模式
     func bridge_design() {
