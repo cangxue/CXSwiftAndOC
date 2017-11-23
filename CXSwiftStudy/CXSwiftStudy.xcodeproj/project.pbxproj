@@ -14,6 +14,7 @@
 		D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D146F2EC1FC17C660014F0F2 /* CXDecorator.swift */; };
 		D15059DB1FC674620084DC0C /* CXStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15059DA1FC674620084DC0C /* CXStrategy.swift */; };
 		D15059DD1FC6A9C80084DC0C /* CXResponsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15059DC1FC6A9C80084DC0C /* CXResponsibility.swift */; };
+		D15059DF1FC6BF3F0084DC0C /* CXCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15059DE1FC6BF3F0084DC0C /* CXCommand.swift */; };
 		D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DA7F1FB05D5000B8886A /* CXSingleton.swift */; };
 		D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAA11FB1AA5C00B8886A /* CXFactory.swift */; };
 		D162DAA41FB1AFE100B8886A /* CXTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAA31FB1AFE100B8886A /* CXTempViewController.swift */; };
@@ -42,6 +43,7 @@
 		D146F2EC1FC17C660014F0F2 /* CXDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDecorator.swift; sourceTree = "<group>"; };
 		D15059DA1FC674620084DC0C /* CXStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXStrategy.swift; sourceTree = "<group>"; };
 		D15059DC1FC6A9C80084DC0C /* CXResponsibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXResponsibility.swift; sourceTree = "<group>"; };
+		D15059DE1FC6BF3F0084DC0C /* CXCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXCommand.swift; sourceTree = "<group>"; };
 		D162DA7F1FB05D5000B8886A /* CXSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSingleton.swift; sourceTree = "<group>"; };
 		D162DAA11FB1AA5C00B8886A /* CXFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFactory.swift; sourceTree = "<group>"; };
 		D162DAA31FB1AFE100B8886A /* CXTempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTempViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				D111F8B61FC57179000F4EF7 /* CXBridge.swift */,
 				D15059DA1FC674620084DC0C /* CXStrategy.swift */,
 				D15059DC1FC6A9C80084DC0C /* CXResponsibility.swift */,
+				D15059DE1FC6BF3F0084DC0C /* CXCommand.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */,
 				D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */,
 				D111F8B71FC57179000F4EF7 /* CXBridge.swift in Sources */,
+				D15059DF1FC6BF3F0084DC0C /* CXCommand.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,
 				D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */,
 				D162DAC41FB4AD8B00B8886A /* CXDesignViewController.swift in Sources */,

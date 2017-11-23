@@ -20,7 +20,25 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.resposibility_design()
+        self.command_design()
+    }
+    //命令模式
+    func command_design() {
+        //接收者
+        let main_food_sys = CXMainFoodSys()
+        
+        //命令者
+        let cmd1 = CXMainFoodCommand(receiver: main_food_sys, dish: "西红柿鸡蛋")
+        let cmd2 = CXMainFoodCommand(receiver: main_food_sys, dish: "酸辣土豆丝")
+        
+        //调用者
+        let waiter_sys = CXWaiterSys()
+        waiter_sys.setOrder(command: cmd1)
+        waiter_sys.setOrder(command: cmd2)
+        
+        waiter_sys.notiry()
+        
+        
     }
     //责任链模式
     func resposibility_design() {
