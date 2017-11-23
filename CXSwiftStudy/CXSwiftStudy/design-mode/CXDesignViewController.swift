@@ -20,7 +20,14 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.flyweight_design()
+        self.bridge_design()
+    }
+    //桥梁模式
+    func bridge_design() {
+        let normal_pen = NormalPen(n_shape: Rectangle(long: "20cm", width: "10cm"))
+        let brush_pen = BrushPen(b_shape: Circle(radius: "15cm"))
+        normal_pen.draw()
+        brush_pen.draw()
     }
     //享元模式
     func flyweight_design() {
