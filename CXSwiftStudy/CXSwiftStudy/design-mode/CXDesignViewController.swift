@@ -20,7 +20,31 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.strategy_design()
+        self.resposibility_design()
+    }
+    //责任链模式
+    func resposibility_design() {
+        let line_manager = LineManager(name: "Line Manager")
+        let department_manager = DepartmentManager(name: "Department Manager")
+        let general_manager = GeneralManager(name: "General Manager")
+        
+        line_manager.setSuccessor(successor: department_manager)
+        department_manager.setSuccessor(successor: general_manager)
+        
+        let req = Request()
+        req.requestType = "DayOff"
+        req.requestContent = "Ask 1 day off"
+        req.number = 1
+        line_manager.handleRequest(request: req)
+        print("=================")
+        req.requestContent = "Ask 5 day off"
+        req.number = 5
+        line_manager.handleRequest(request: req)
+        print("=================")
+        req.requestContent = "Ask 10 day off"
+        req.number = 10
+        line_manager.handleRequest(request: req)
+        
     }
     //策略模式
     func strategy_design() {
