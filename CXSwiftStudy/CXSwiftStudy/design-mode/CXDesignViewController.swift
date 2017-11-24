@@ -20,7 +20,18 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mediator_design()
+        self.template_design()
+    }
+    //模版模式
+    func template_design() {
+        let web_a_query_dev = WebAStockQueryDevice()
+        
+        if web_a_query_dev.operateQuery(usr: "myStockA", pwd: "myPwdA", code: "123456") {
+            print("SUCCESS")
+        } else {
+            print("FAILED")
+        }
+        
     }
     //中介者模式
     func mediator_design() {

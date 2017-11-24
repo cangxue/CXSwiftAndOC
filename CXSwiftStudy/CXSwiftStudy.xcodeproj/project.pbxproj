@@ -22,6 +22,7 @@
 		D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162DAC51FB584FC00B8886A /* CXBaseViewController.swift */; };
 		D16772251FBAE31F0076D0D1 /* CXPrototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16772241FBAE31F0076D0D1 /* CXPrototype.swift */; };
 		D1728F9F1FC8012E007B8ED4 /* CXMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1728F9E1FC8012E007B8ED4 /* CXMediator.swift */; };
+		D1728FA11FC80F7A007B8ED4 /* CXTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1728FA01FC80F7A007B8ED4 /* CXTemplate.swift */; };
 		D177B5C01FC4093B00214E62 /* CXFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177B5BF1FC4093B00214E62 /* CXFacade.swift */; };
 		D177B5C21FC479C900214E62 /* CXComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177B5C11FC479C900214E62 /* CXComposite.swift */; };
 		D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18748301F04F8000029B787 /* CollectionViewController.swift */; };
@@ -52,6 +53,7 @@
 		D162DAC51FB584FC00B8886A /* CXBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBaseViewController.swift; sourceTree = "<group>"; };
 		D16772241FBAE31F0076D0D1 /* CXPrototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXPrototype.swift; sourceTree = "<group>"; };
 		D1728F9E1FC8012E007B8ED4 /* CXMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMediator.swift; sourceTree = "<group>"; };
+		D1728FA01FC80F7A007B8ED4 /* CXTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTemplate.swift; sourceTree = "<group>"; };
 		D177B5BF1FC4093B00214E62 /* CXFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFacade.swift; sourceTree = "<group>"; };
 		D177B5C11FC479C900214E62 /* CXComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXComposite.swift; sourceTree = "<group>"; };
 		D18748301F04F8000029B787 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				D15059DC1FC6A9C80084DC0C /* CXResponsibility.swift */,
 				D15059DE1FC6BF3F0084DC0C /* CXCommand.swift */,
 				D1728F9E1FC8012E007B8ED4 /* CXMediator.swift */,
+				D1728FA01FC80F7A007B8ED4 /* CXTemplate.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				D162DAA41FB1AFE100B8886A /* CXTempViewController.swift in Sources */,
 				D15059DB1FC674620084DC0C /* CXStrategy.swift in Sources */,
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
+				D1728FA11FC80F7A007B8ED4 /* CXTemplate.swift in Sources */,
 				D1A533131FB94EBE00C801EA /* CXBuilder.swift in Sources */,
 				D10DE39F1FBD926600EC07F2 /* CXProxy.swift in Sources */,
 				D177B5C21FC479C900214E62 /* CXComposite.swift in Sources */,
