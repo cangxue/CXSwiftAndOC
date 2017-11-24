@@ -20,7 +20,24 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.command_design()
+        self.mediator_design()
+    }
+    //中介者模式
+    func mediator_design() {
+        let mobile_mediatro = StockMediator()
+        
+        let mobile_purchase = PurchaseColleague(mediator: mobile_mediatro)
+        let mobile_warehouse = WarehouseColleague(mediator: mobile_mediatro)
+        let mobile_sale = SaleColleague(mediator: mobile_mediatro)
+        
+        mobile_mediatro.purchase = mobile_purchase
+        mobile_mediatro.warehouse = mobile_warehouse
+        mobile_mediatro.sales = mobile_sale
+        
+        mobile_warehouse.threshold = 200
+        mobile_purchase.buyStuff(num: 300)
+        mobile_sale.sellStuff(num: 120)
+        
     }
     //命令模式
     func command_design() {
