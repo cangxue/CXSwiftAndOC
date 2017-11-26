@@ -23,6 +23,7 @@
 		D16772251FBAE31F0076D0D1 /* CXPrototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16772241FBAE31F0076D0D1 /* CXPrototype.swift */; };
 		D1728F9F1FC8012E007B8ED4 /* CXMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1728F9E1FC8012E007B8ED4 /* CXMediator.swift */; };
 		D1728FA11FC80F7A007B8ED4 /* CXTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1728FA01FC80F7A007B8ED4 /* CXTemplate.swift */; };
+		D1728FA31FC81A64007B8ED4 /* CXIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1728FA21FC81A64007B8ED4 /* CXIterator.swift */; };
 		D177B5C01FC4093B00214E62 /* CXFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177B5BF1FC4093B00214E62 /* CXFacade.swift */; };
 		D177B5C21FC479C900214E62 /* CXComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177B5C11FC479C900214E62 /* CXComposite.swift */; };
 		D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18748301F04F8000029B787 /* CollectionViewController.swift */; };
@@ -54,6 +55,7 @@
 		D16772241FBAE31F0076D0D1 /* CXPrototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXPrototype.swift; sourceTree = "<group>"; };
 		D1728F9E1FC8012E007B8ED4 /* CXMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMediator.swift; sourceTree = "<group>"; };
 		D1728FA01FC80F7A007B8ED4 /* CXTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTemplate.swift; sourceTree = "<group>"; };
+		D1728FA21FC81A64007B8ED4 /* CXIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXIterator.swift; sourceTree = "<group>"; };
 		D177B5BF1FC4093B00214E62 /* CXFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFacade.swift; sourceTree = "<group>"; };
 		D177B5C11FC479C900214E62 /* CXComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXComposite.swift; sourceTree = "<group>"; };
 		D18748301F04F8000029B787 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				D15059DE1FC6BF3F0084DC0C /* CXCommand.swift */,
 				D1728F9E1FC8012E007B8ED4 /* CXMediator.swift */,
 				D1728FA01FC80F7A007B8ED4 /* CXTemplate.swift */,
+				D1728FA21FC81A64007B8ED4 /* CXIterator.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				D177B5C01FC4093B00214E62 /* CXFacade.swift in Sources */,
 				D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */,
 				D111F8B51FC55CEF000F4EF7 /* CXFlyweight.swift in Sources */,
+				D1728FA31FC81A64007B8ED4 /* CXIterator.swift in Sources */,
 				D1728F9F1FC8012E007B8ED4 /* CXMediator.swift in Sources */,
 				D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */,
 				D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */,
