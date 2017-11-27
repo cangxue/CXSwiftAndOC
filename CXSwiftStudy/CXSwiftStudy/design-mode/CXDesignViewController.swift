@@ -20,7 +20,23 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.template_design()
+        self.iterator_design()
+    }
+    //迭代器模式
+    func iterator_design() {
+        //MAKE: - Usage
+        //创建小说迭代器并添加些小说
+        let novella1 = Novella(name: "frist")
+        let novella2 = Novella(name: "second")
+        let novella3 = Novella(name: "third")
+        let novella4 = Novella(name: "four")
+        
+        let greatNovellas = Novellas(novellas: [novella1, novella2, novella3, novella4])
+        
+        //遍历取出小说阅读
+        for novella in greatNovellas {
+            print("I 've read: \(novella.name)")
+        }
     }
     //模版模式
     func template_design() {
