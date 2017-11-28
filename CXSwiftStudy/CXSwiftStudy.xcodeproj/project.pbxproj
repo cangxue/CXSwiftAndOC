@@ -35,6 +35,7 @@
 		D1BA48401E9E258D00B4DA26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BA483E1E9E258D00B4DA26 /* Main.storyboard */; };
 		D1BA48421E9E258D00B4DA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BA48411E9E258D00B4DA26 /* Assets.xcassets */; };
 		D1BA48451E9E258D00B4DA26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BA48431E9E258D00B4DA26 /* LaunchScreen.storyboard */; };
+		D1D4C7021FCD4D1A00F07A51 /* CXVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D4C7011FCD4D1A00F07A51 /* CXVisitor.swift */; };
 		D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B26C1FC31F8B001AA6DC /* CXAdapter.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		D1BA48411E9E258D00B4DA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BA48441E9E258D00B4DA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BA48461E9E258D00B4DA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1D4C7011FCD4D1A00F07A51 /* CXVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXVisitor.swift; sourceTree = "<group>"; };
 		D1D5B26C1FC31F8B001AA6DC /* CXAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				D1728F9E1FC8012E007B8ED4 /* CXMediator.swift */,
 				D1728FA01FC80F7A007B8ED4 /* CXTemplate.swift */,
 				D1728FA21FC81A64007B8ED4 /* CXIterator.swift */,
+				D1D4C7011FCD4D1A00F07A51 /* CXVisitor.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				D1728F9F1FC8012E007B8ED4 /* CXMediator.swift in Sources */,
 				D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */,
 				D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */,
+				D1D4C7021FCD4D1A00F07A51 /* CXVisitor.swift in Sources */,
 				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
 				D16772251FBAE31F0076D0D1 /* CXPrototype.swift in Sources */,
 			);

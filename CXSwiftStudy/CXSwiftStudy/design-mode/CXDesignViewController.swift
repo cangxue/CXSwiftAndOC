@@ -20,7 +20,26 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.iterator_design()
+        self.visitor_design()
+    }
+    //访问者模式
+    func visitor_design() {
+        let yinqiao_pill = Coldrex(name: "Yinqiao Pill", price: 2.0)
+        let penicillin = Antibiotic(name: "Penicillin", price: 3.0)
+        
+        let doctor_prsrp = Prescription()
+        doctor_prsrp.addMedicine(medicine: yinqiao_pill)
+        doctor_prsrp.addMedicine(medicine: penicillin)
+        
+        let charger = Charger() //划价员
+        charger.name = "Doctor Strange"
+        let pharger = Pharmacy() //管理员
+        pharger.name = "Doctor Wei"
+        
+        doctor_prsrp.visit(visitor: charger)
+        doctor_prsrp.visit(visitor: pharger)
+        
+        
     }
     //迭代器模式
     func iterator_design() {
