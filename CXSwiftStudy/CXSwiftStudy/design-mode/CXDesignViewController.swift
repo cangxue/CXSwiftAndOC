@@ -20,7 +20,24 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.visitor_design()
+        self.observer_design()
+    }
+    //观察者模式
+    func observer_design() {
+        let alarm = CXAlarmSensor()
+        let sprinker = CXWaterSprinker()
+        let dialer = CXEmergencyDialer()
+        
+        let smoke_sensor = CXSmokeSensor()
+        smoke_sensor.addObserver(observer: alarm)
+        smoke_sensor.addObserver(observer: sprinker)
+        smoke_sensor.addObserver(observer: dialer)
+        
+        if smoke_sensor.isFire() {
+            smoke_sensor.action = "On Fire!"
+            smoke_sensor.notifyAll()
+        }
+        
     }
     //访问者模式
     func visitor_design() {
