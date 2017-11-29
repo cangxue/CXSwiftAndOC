@@ -20,7 +20,15 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.observer_design()
+        self.interpreter_design()
+    }
+    //解释器模式
+    func interpreter_design() {
+        let context = PlayContext()
+        context.play_text = "C53231323 Em43231323 F43231323 G63231323"
+        
+        let guitar = NormGuitar()
+        guitar.interpret(context: context)
     }
     //观察者模式
     func observer_design() {

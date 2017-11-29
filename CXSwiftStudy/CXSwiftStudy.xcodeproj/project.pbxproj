@@ -38,6 +38,7 @@
 		D1D4C7021FCD4D1A00F07A51 /* CXVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D4C7011FCD4D1A00F07A51 /* CXVisitor.swift */; };
 		D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B26C1FC31F8B001AA6DC /* CXAdapter.swift */; };
 		D1E989101FCE4C8500364407 /* CXObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9890F1FCE4C8500364407 /* CXObserver.swift */; };
+		D1E989121FCE57E900364407 /* CXInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E989111FCE57E900364407 /* CXInterpreter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		D1D4C7011FCD4D1A00F07A51 /* CXVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXVisitor.swift; sourceTree = "<group>"; };
 		D1D5B26C1FC31F8B001AA6DC /* CXAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXAdapter.swift; sourceTree = "<group>"; };
 		D1E9890F1FCE4C8500364407 /* CXObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObserver.swift; sourceTree = "<group>"; };
+		D1E989111FCE57E900364407 /* CXInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXInterpreter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				D1728FA21FC81A64007B8ED4 /* CXIterator.swift */,
 				D1D4C7011FCD4D1A00F07A51 /* CXVisitor.swift */,
 				D1E9890F1FCE4C8500364407 /* CXObserver.swift */,
+				D1E989111FCE57E900364407 /* CXInterpreter.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			files = (
 				D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */,
 				D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */,
+				D1E989121FCE57E900364407 /* CXInterpreter.swift in Sources */,
 				D162DAA41FB1AFE100B8886A /* CXTempViewController.swift in Sources */,
 				D15059DB1FC674620084DC0C /* CXStrategy.swift in Sources */,
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
