@@ -39,6 +39,7 @@
 		D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B26C1FC31F8B001AA6DC /* CXAdapter.swift */; };
 		D1E989101FCE4C8500364407 /* CXObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9890F1FCE4C8500364407 /* CXObserver.swift */; };
 		D1E989121FCE57E900364407 /* CXInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E989111FCE57E900364407 /* CXInterpreter.swift */; };
+		D1E989141FCE962E00364407 /* CXMemento.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E989131FCE962E00364407 /* CXMemento.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		D1D5B26C1FC31F8B001AA6DC /* CXAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXAdapter.swift; sourceTree = "<group>"; };
 		D1E9890F1FCE4C8500364407 /* CXObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObserver.swift; sourceTree = "<group>"; };
 		D1E989111FCE57E900364407 /* CXInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXInterpreter.swift; sourceTree = "<group>"; };
+		D1E989131FCE962E00364407 /* CXMemento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMemento.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				D1D4C7011FCD4D1A00F07A51 /* CXVisitor.swift */,
 				D1E9890F1FCE4C8500364407 /* CXObserver.swift */,
 				D1E989111FCE57E900364407 /* CXInterpreter.swift */,
+				D1E989131FCE962E00364407 /* CXMemento.swift */,
 			);
 			path = "design-mode";
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				D1728F9F1FC8012E007B8ED4 /* CXMediator.swift in Sources */,
 				D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */,
 				D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */,
+				D1E989141FCE962E00364407 /* CXMemento.swift in Sources */,
 				D1D4C7021FCD4D1A00F07A51 /* CXVisitor.swift in Sources */,
 				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
 				D16772251FBAE31F0076D0D1 /* CXPrototype.swift in Sources */,

@@ -20,7 +20,21 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.interpreter_design()
+        self.memento_design()
+    }
+    //备忘录模式
+    func memento_design() {
+        let game_chrctr = FightCharactor()
+        game_chrctr.initState(vitality: 100, attack: 79, defense: 40)
+        game_chrctr.displayState()
+        
+        let memento = game_chrctr.saveState()
+        
+        game_chrctr.fight()
+        game_chrctr.displayState()
+        
+        game_chrctr.recoverState(memento: memento)
+        game_chrctr.displayState()
     }
     //解释器模式
     func interpreter_design() {
