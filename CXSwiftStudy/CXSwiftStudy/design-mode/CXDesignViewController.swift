@@ -20,7 +20,18 @@ class CXDesignViewController: CXBaseViewController, buyTicketProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.memento_design()
+        self.state_design()
+    }
+    //状态模式
+    func state_design() {
+        let ctx = Context()
+        ctx.lift_state = StopState()
+        ctx.open()
+        ctx.run()
+        ctx.close()
+        ctx.run()
+        ctx.stop()
+        
     }
     //备忘录模式
     func memento_design() {
