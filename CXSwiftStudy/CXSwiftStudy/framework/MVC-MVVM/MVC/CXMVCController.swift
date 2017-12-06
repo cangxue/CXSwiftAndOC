@@ -15,7 +15,6 @@ class CXMVCModel: NSObject {
         self.name = name
         self.age = age
     }
-    
 }
 
 class CXMVCView: UIView {
