@@ -23,7 +23,12 @@ class CXMVCUserInfoViewController: UIViewController {
     
     //MARK: - Inferface
     func fetchData() {
-        let user = CXMVCUser.init(userId: self.userId)
+        let user = CXMVCUser()
+        user.user_name = "user\(self.userId)"
+        user.user_summary = "userSummary\(self.userId)"
+        user.user_blogCount = self.userId + 8
+        user.user_friendCount = self.userId + 12
+        
         self.user_nameLabel.text = user.user_name
         self.user_summaryLabel.text = "个人简介：\(user.user_summary ?? "1")"
         self.user_blogLabel.text = "作品：\(user.user_blogCount ?? 1)"

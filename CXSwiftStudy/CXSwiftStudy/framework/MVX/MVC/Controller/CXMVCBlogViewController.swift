@@ -40,7 +40,10 @@ class CXMVCBlogViewController: NSObject, UITableViewDelegate, UITableViewDataSou
     
         var i = 1
         while i <= 20 {
-            let blog = CXMVCBlog.init(blogId: i)
+            let blog = CXMVCBlog()
+            
+            blog.blog_title = "blogTitle\(i)"
+            blog.blog_summary = "blogSummary\(i)"
             
             self.blogs.append(CXMVCBlogCellHelper(blog: blog))
             

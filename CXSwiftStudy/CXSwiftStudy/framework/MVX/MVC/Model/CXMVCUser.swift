@@ -15,11 +15,4 @@ class CXMVCUser: NSObject {
     var user_userId: NSInteger?
     var user_blogCount: NSInteger?
     var user_friendCount: NSInteger?
-    
-    init(userId: NSInteger) {
-        self.user_name = "user\(userId)"
-        self.user_summary = "userSummary\(userId)"
-        self.user_blogCount = userId + 8
-        self.user_friendCount = userId + 12
-    }
 }
