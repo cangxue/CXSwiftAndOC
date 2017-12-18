@@ -11,6 +11,7 @@
 		D111F8B51FC55CEF000F4EF7 /* CXFlyweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111F8B41FC55CEF000F4EF7 /* CXFlyweight.swift */; };
 		D111F8B71FC57179000F4EF7 /* CXBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111F8B61FC57179000F4EF7 /* CXBridge.swift */; };
 		D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */; };
+		D12317F61FE755A9008D0F77 /* CXComplexMVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12317F51FE755A9008D0F77 /* CXComplexMVCController.swift */; };
 		D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D146F2EC1FC17C660014F0F2 /* CXDecorator.swift */; };
 		D15059DB1FC674620084DC0C /* CXStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15059DA1FC674620084DC0C /* CXStrategy.swift */; };
 		D15059DD1FC6A9C80084DC0C /* CXResponsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15059DC1FC6A9C80084DC0C /* CXResponsibility.swift */; };
@@ -30,7 +31,7 @@
 		D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */; };
 		D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */; };
 		D1A4EEC21FD4FA1400C96F82 /* CXMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4EEC11FD4FA1400C96F82 /* CXMVCViewController.swift */; };
-		D1A4EEC41FD4FA3400C96F82 /* CXMVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4EEC31FD4FA3400C96F82 /* CXMVCController.swift */; };
+		D1A4EEC41FD4FA3400C96F82 /* CXSimpleMVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4EEC31FD4FA3400C96F82 /* CXSimpleMVCController.swift */; };
 		D1A533131FB94EBE00C801EA /* CXBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A533121FB94EBE00C801EA /* CXBuilder.swift */; };
 		D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */; };
 		D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483C1E9E258D00B4DA26 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		D111F8B41FC55CEF000F4EF7 /* CXFlyweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFlyweight.swift; sourceTree = "<group>"; };
 		D111F8B61FC57179000F4EF7 /* CXBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBridge.swift; sourceTree = "<group>"; };
 		D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXBlockViewController.swift; sourceTree = "<group>"; };
+		D12317F51FE755A9008D0F77 /* CXComplexMVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXComplexMVCController.swift; sourceTree = "<group>"; };
 		D146F2EC1FC17C660014F0F2 /* CXDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDecorator.swift; sourceTree = "<group>"; };
 		D15059DA1FC674620084DC0C /* CXStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXStrategy.swift; sourceTree = "<group>"; };
 		D15059DC1FC6A9C80084DC0C /* CXResponsibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXResponsibility.swift; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXLocationViewController.swift; sourceTree = "<group>"; };
 		D1A4EEC11FD4FA1400C96F82 /* CXMVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCViewController.swift; sourceTree = "<group>"; };
-		D1A4EEC31FD4FA3400C96F82 /* CXMVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCController.swift; sourceTree = "<group>"; };
+		D1A4EEC31FD4FA3400C96F82 /* CXSimpleMVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSimpleMVCController.swift; sourceTree = "<group>"; };
 		D1A533121FB94EBE00C801EA /* CXBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBuilder.swift; sourceTree = "<group>"; };
 		D1BA48371E9E258D00B4DA26 /* CXSwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXSwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -238,7 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				D1A4EEC11FD4FA1400C96F82 /* CXMVCViewController.swift */,
-				D1A4EEC31FD4FA3400C96F82 /* CXMVCController.swift */,
+				D1A4EEC31FD4FA3400C96F82 /* CXSimpleMVCController.swift */,
+				D12317F51FE755A9008D0F77 /* CXComplexMVCController.swift */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -397,9 +400,10 @@
 				D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */,
 				D111F8B51FC55CEF000F4EF7 /* CXFlyweight.swift in Sources */,
 				D1728FA31FC81A64007B8ED4 /* CXIterator.swift in Sources */,
-				D1A4EEC41FD4FA3400C96F82 /* CXMVCController.swift in Sources */,
+				D1A4EEC41FD4FA3400C96F82 /* CXSimpleMVCController.swift in Sources */,
 				D1728F9F1FC8012E007B8ED4 /* CXMediator.swift in Sources */,
 				D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */,
+				D12317F61FE755A9008D0F77 /* CXComplexMVCController.swift in Sources */,
 				D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */,
 				D1E989141FCE962E00364407 /* CXMemento.swift in Sources */,
 				D1D4C7021FCD4D1A00F07A51 /* CXVisitor.swift in Sources */,

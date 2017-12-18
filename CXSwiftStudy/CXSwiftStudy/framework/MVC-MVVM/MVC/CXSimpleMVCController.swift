@@ -1,5 +1,5 @@
 //
-//  CXMVCController.swift
+//  CXMVCSimpleController.swift
 //  CXSwiftStudy
 //
 //  Created by xiaoma on 2017/12/4.
@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class CXMVCModel: NSObject {
+class CXSimpleMVCModel: NSObject {
     var name = "name"
     var age = 0.0
     
@@ -17,7 +17,7 @@ class CXMVCModel: NSObject {
     }
 }
 
-class CXMVCView: UIView {
+class CXSimpleMVCView: UIView {
     var name_label = UILabel()
     var age_label = UILabel()
     
@@ -26,7 +26,7 @@ class CXMVCView: UIView {
         self.frame = frame
         self.backgroundColor = UIColor.gray
         
-        self.name_label.frame = CGRect(x: 20, y: 20, width: 100, height: 44)
+        self.name_label.frame = CGRect(x: 20, y: 20, width: 200, height: 44)
         self.name_label.textColor = UIColor.red
         self.addSubview(self.name_label)
         
@@ -49,16 +49,20 @@ class CXMVCView: UIView {
     }
 }
 
-class CXMVCController: NSObject {
-    var model: CXMVCModel?
-    var view: CXMVCView?
-    init(model: CXMVCModel, view: CXMVCView) {
+class CXSimpleMVCController: NSObject {
+    var model: CXSimpleMVCModel?
+    var view: CXSimpleMVCView?
+    init(model: CXSimpleMVCModel, view: CXSimpleMVCView) {
         self.model = model
         self.view = view
     }
     
     func setModelName(name: String) {
         self.model?.name = name
+    }
+    
+    func setModelAge(age: Double) {
+        self.model?.age = age
     }
     
     func updateView() {
