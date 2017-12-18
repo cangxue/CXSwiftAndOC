@@ -25,7 +25,7 @@ class CXMVCBlogCellHelper: NSObject {
     }
     
     func blogLikeCount() -> Int {
-        return Int(arc4random() % 100)
+        return self.blog.blog_likeCount
     }
 
 }

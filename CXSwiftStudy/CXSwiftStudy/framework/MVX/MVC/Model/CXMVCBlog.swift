@@ -11,4 +11,6 @@ import UIKit
 class CXMVCBlog: NSObject {
     var blog_title = "title"
     var blog_summary = "summary"
+    var blog_likeCount = 0
+    
 }

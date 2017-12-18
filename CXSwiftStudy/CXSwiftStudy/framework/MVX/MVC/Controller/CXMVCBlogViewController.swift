@@ -32,6 +32,13 @@ class CXMVCBlogViewController: NSObject, UITableViewDelegate, UITableViewDataSou
         cell.blog_titleLabel.text = blogHelper.blogTitleText()
         cell.blog_summaryLabel.text = blogHelper.blogSummaryText()
         cell.lickBtn.setTitle("赞\(blogHelper.blogLikeCount())", for: .normal)
+        cell.likeBlock = {(success: Bool) -> (Int) in
+            if success {
+                print("点赞了")
+            }
+            
+            return (blogHelper.blogLikeCount() + 1)
+        }
         return cell
     }
     
@@ -44,6 +51,7 @@ class CXMVCBlogViewController: NSObject, UITableViewDelegate, UITableViewDataSou
             
             blog.blog_title = "blogTitle\(i)"
             blog.blog_summary = "blogSummary\(i)"
+            blog.blog_likeCount = Int(arc4random() % 100)
             
             self.blogs.append(CXMVCBlogCellHelper(blog: blog))
             

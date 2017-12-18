@@ -29,11 +29,16 @@ class CXMVCUserInfoViewController: UIViewController {
         user.user_blogCount = self.userId + 8
         user.user_friendCount = self.userId + 12
         
+        self.showData(user: user)
+        
+    }
+    
+    func showData(user: CXMVCUser) {
+        
         self.user_nameLabel.text = user.user_name
         self.user_summaryLabel.text = "个人简介：\(user.user_summary ?? "1")"
         self.user_blogLabel.text = "作品：\(user.user_blogCount ?? 1)"
         self.user_friendLabel.text = "好友：\(user.user_friendCount ?? 1)"
-        
     }
     
     //MARK: Action

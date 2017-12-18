@@ -8,11 +8,16 @@
 
 import UIKit
 
+typealias likeBtnClickBlock = (_ success: Bool) -> (Int)
+
 class CXMVCBlogTableViewCell: UITableViewCell {
 
     @IBOutlet weak var blog_titleLabel: UILabel!
     @IBOutlet weak var blog_summaryLabel: UILabel!
     @IBOutlet weak var lickBtn: UIButton!
+    
+    var likeBlock: likeBtnClickBlock?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,5 +31,9 @@ class CXMVCBlogTableViewCell: UITableViewCell {
     }
     
     @IBAction func likeBtnClick(_ sender: Any) {
+        if self.likeBlock != nil {
+            let count = self.likeBlock!(true)
+            self.lickBtn.setTitle("赞\(count)", for: .normal)
+        }
     }
 }
