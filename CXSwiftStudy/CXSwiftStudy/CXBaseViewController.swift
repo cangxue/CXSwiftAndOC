@@ -14,6 +14,9 @@ class CXBaseViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.white
+        
+        ///设置导航栏的透明度，使其不会遮挡视图
+        self.navigationController?.navigationBar.isTranslucent = false
     }
 
     override func didReceiveMemoryWarning() {
