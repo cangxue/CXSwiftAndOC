@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.showArray = ["CXDesignViewController", "CXMVCViewController"]
+        self.showArray = ["CXDesignViewController", "CXMVXViewController"]
     }
 
     override func didReceiveMemoryWarning() {

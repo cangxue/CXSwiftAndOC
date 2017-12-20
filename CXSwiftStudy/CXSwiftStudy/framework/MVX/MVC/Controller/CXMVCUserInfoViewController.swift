@@ -2,45 +2,34 @@
 //  CXMVCUserInfoViewController.swift
 //  CXSwiftStudy
 //
-//  Created by xiaoma on 2017/12/18.
+//  Created by xiaoma on 2017/12/20.
 //  Copyright © 2017年 CX. All rights reserved.
 //
 
 import UIKit
 
-class CXMVCUserInfoViewController: UIViewController {
-    @IBOutlet weak var user_icon: UIImageView!
-    @IBOutlet weak var user_nameLabel: UILabel!
-    @IBOutlet weak var user_blogLabel: UILabel!
-    @IBOutlet weak var user_friendLabel: UILabel!
-    @IBOutlet weak var user_summaryLabel: UILabel!
-    
+class CXMVCUserInfoViewController: NSObject {
     var userId = 0
+
+    var userInfoView = CXMVXUserInfoView()
     
-    class func viewHeight() -> CGFloat {
-        return 200.0
-    }
     
-    //MARK: - Inferface
     func fetchData() {
-        let user = CXMVCUser()
+        let user = CXMVXUser()
         user.user_name = "user\(self.userId)"
         user.user_summary = "userSummary\(self.userId)"
         user.user_blogCount = self.userId + 8
         user.user_friendCount = self.userId + 12
         
-        self.showData(user: user)
+        self.infoViewUpdate(user: user)
+        
         
     }
     
-    func showData(user: CXMVCUser) {
-        
-        self.user_nameLabel.text = user.user_name
-        self.user_summaryLabel.text = "个人简介：\(user.user_summary ?? "1")"
-        self.user_blogLabel.text = "作品：\(user.user_blogCount ?? 1)"
-        self.user_friendLabel.text = "好友：\(user.user_friendCount ?? 1)"
+    func infoViewUpdate(user: CXMVXUser) {
+        self.userInfoView.user_nameLabel.text = user.user_name
+        self.userInfoView.user_summaryLabel.text = "个人简介：\(user.user_summary)"
+        self.userInfoView.user_blogLabel.text = "作品：\(user.user_blogCount)"
+        self.userInfoView.user_friendLabel.text = "好友：\(user.user_friendCount)"
     }
-    
-    //MARK: Action
-
 }

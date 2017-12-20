@@ -19,7 +19,7 @@ class CXMVCBlogViewController: NSObject, UITableViewDelegate, UITableViewDataSou
         self.tableView?.dataSource = self
         self.tableView?.delegate = self
         
-        self.tableView?.register(UINib.init(nibName: "CXMVCBlogTableViewCell", bundle: nil), forCellReuseIdentifier: "CXMVCBlogTableViewCellID")
+        self.tableView?.register(UINib.init(nibName: "CXMVXBlogTableViewCell", bundle: nil), forCellReuseIdentifier: "CXMVXBlogTableViewCellID")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,7 +27,7 @@ class CXMVCBlogViewController: NSObject, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CXMVCBlogTableViewCellID") as! CXMVCBlogTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CXMVXBlogTableViewCellID") as! CXMVXBlogTableViewCell
         let blogHelper = self.blogs[indexPath.row]
         cell.blog_titleLabel.text = blogHelper.blogTitleText()
         cell.blog_summaryLabel.text = blogHelper.blogSummaryText()
@@ -47,7 +47,7 @@ class CXMVCBlogViewController: NSObject, UITableViewDelegate, UITableViewDataSou
     
         var i = 1
         while i <= 20 {
-            let blog = CXMVCBlog()
+            let blog = CXMVXBlog()
             
             blog.blog_title = "blogTitle\(i)"
             blog.blog_summary = "blogSummary\(i)"

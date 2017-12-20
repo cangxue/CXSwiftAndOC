@@ -12,7 +12,7 @@ class CXMVCUserViewController: CXBaseViewController {
     
     var userId = 0
     
-    let userInfoVC = CXMVCUserInfoViewController()
+    var userInfoVC = CXMVCUserInfoViewController()
     let blogVC = CXMVCBlogViewController()
     
     override func viewDidLoad() {
@@ -31,14 +31,14 @@ class CXMVCUserViewController: CXBaseViewController {
         
         self.userInfoVC.userId = self.userId
         
-        self.addChildViewController(self.userInfoVC)
     }
     func addUI() {
-        let userInfoViewHeight = CXMVCUserInfoViewController.viewHeight()
-        self.userInfoVC.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: userInfoViewHeight)
-        self.view.addSubview(self.userInfoVC.view)
+        let nib = UINib(nibName: "CXMVXUserInfoView", bundle: nil)
+        self.userInfoVC.userInfoView = nib.instantiate(withOwner: self, options: nil).first as! CXMVXUserInfoView
+        self.userInfoVC.userInfoView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 220)
+        self.view.addSubview(self.userInfoVC.userInfoView)
         
-        let userInfoRect = userInfoVC.view.frame
+        let userInfoRect = self.userInfoVC.userInfoView.frame
         self.blogVC.tableView?.frame = CGRect(x: 0, y: userInfoRect.maxY, width: userInfoRect.width, height: self.view.frame.height - userInfoRect.height - 64)
         self.view.addSubview(self.blogVC.tableView!)
     }

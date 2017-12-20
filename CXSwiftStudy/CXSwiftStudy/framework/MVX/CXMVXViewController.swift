@@ -1,5 +1,5 @@
 //
-//  CXMVCViewController.swift
+//  CXMVXViewController.swift
 //  CXSwiftStudy
 //
 //  Created by xiaoma on 2017/12/4.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CXMVCViewController: CXBaseViewController {
+class CXMVXViewController: CXBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

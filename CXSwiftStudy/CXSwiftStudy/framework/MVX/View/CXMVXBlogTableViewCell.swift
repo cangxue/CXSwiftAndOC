@@ -1,5 +1,5 @@
 //
-//  CXMVCBlogTableViewCell.swift
+//  CXMVXBlogTableViewCell.swift
 //  CXSwiftStudy
 //
 //  Created by xiaoma on 2017/12/18.
@@ -10,11 +10,12 @@ import UIKit
 
 typealias likeBtnClickBlock = (_ success: Bool) -> (Int)
 
-class CXMVCBlogTableViewCell: UITableViewCell {
+class CXMVXBlogTableViewCell: UITableViewCell {
 
     @IBOutlet weak var blog_titleLabel: UILabel!
     @IBOutlet weak var blog_summaryLabel: UILabel!
     @IBOutlet weak var lickBtn: UIButton!
+    
     
     var likeBlock: likeBtnClickBlock?
     

@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D103819B1FEA308800D85EC1 /* CXMVPUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */; };
+		D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819C1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift */; };
+		D103819F1FEA4E1F00D85EC1 /* CXMVXUserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D103819E1FEA4E1F00D85EC1 /* CXMVXUserInfoView.xib */; };
+		D10381A31FEA4F6E00D85EC1 /* CXMVCUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10381A21FEA4F6E00D85EC1 /* CXMVCUserInfoViewController.swift */; };
 		D10DE39F1FBD926600EC07F2 /* CXProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10DE39E1FBD926600EC07F2 /* CXProxy.swift */; };
 		D111F8B51FC55CEF000F4EF7 /* CXFlyweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111F8B41FC55CEF000F4EF7 /* CXFlyweight.swift */; };
 		D111F8B71FC57179000F4EF7 /* CXBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111F8B61FC57179000F4EF7 /* CXBridge.swift */; };
 		D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */; };
 		D12317FE1FE75F1C008D0F77 /* CXMVCUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12317FD1FE75F1C008D0F77 /* CXMVCUserViewController.swift */; };
-		D12318011FE767B5008D0F77 /* CXMVCUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12317FF1FE767B5008D0F77 /* CXMVCUserInfoViewController.swift */; };
-		D12318021FE767B5008D0F77 /* CXMVCUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D12318001FE767B5008D0F77 /* CXMVCUserInfoViewController.xib */; };
-		D12318041FE76D55008D0F77 /* CXMVCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12318031FE76D55008D0F77 /* CXMVCUser.swift */; };
+		D12318041FE76D55008D0F77 /* CXMVXUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12318031FE76D55008D0F77 /* CXMVXUser.swift */; };
 		D12318061FE7919D008D0F77 /* CXMVCBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12318051FE7919D008D0F77 /* CXMVCBlogViewController.swift */; };
-		D12318091FE79920008D0F77 /* CXMVCBlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12318071FE79920008D0F77 /* CXMVCBlogTableViewCell.swift */; };
-		D123180A1FE79920008D0F77 /* CXMVCBlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D12318081FE79920008D0F77 /* CXMVCBlogTableViewCell.xib */; };
-		D123180C1FE7A533008D0F77 /* CXMVCBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D123180B1FE7A533008D0F77 /* CXMVCBlog.swift */; };
+		D12318091FE79920008D0F77 /* CXMVXBlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12318071FE79920008D0F77 /* CXMVXBlogTableViewCell.swift */; };
+		D123180A1FE79920008D0F77 /* CXMVXBlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D12318081FE79920008D0F77 /* CXMVXBlogTableViewCell.xib */; };
+		D123180C1FE7A533008D0F77 /* CXMVXBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D123180B1FE7A533008D0F77 /* CXMVXBlog.swift */; };
 		D123180E1FE7A69B008D0F77 /* CXMVCBlogCellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D123180D1FE7A69B008D0F77 /* CXMVCBlogCellHelper.swift */; };
 		D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D146F2EC1FC17C660014F0F2 /* CXDecorator.swift */; };
 		D15059DB1FC674620084DC0C /* CXStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15059DA1FC674620084DC0C /* CXStrategy.swift */; };
@@ -38,7 +40,7 @@
 		D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18748301F04F8000029B787 /* CollectionViewController.swift */; };
 		D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */; };
 		D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */; };
-		D1A4EEC21FD4FA1400C96F82 /* CXMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4EEC11FD4FA1400C96F82 /* CXMVCViewController.swift */; };
+		D1A4EEC21FD4FA1400C96F82 /* CXMVXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4EEC11FD4FA1400C96F82 /* CXMVXViewController.swift */; };
 		D1A4EEC41FD4FA3400C96F82 /* CXSimpleMVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4EEC31FD4FA3400C96F82 /* CXSimpleMVCController.swift */; };
 		D1A533131FB94EBE00C801EA /* CXBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A533121FB94EBE00C801EA /* CXBuilder.swift */; };
 		D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA483A1E9E258D00B4DA26 /* AppDelegate.swift */; };
@@ -55,18 +57,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVPUserViewController.swift; sourceTree = "<group>"; };
+		D103819C1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVXUserInfoView.swift; sourceTree = "<group>"; };
+		D103819E1FEA4E1F00D85EC1 /* CXMVXUserInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXMVXUserInfoView.xib; sourceTree = "<group>"; };
+		D10381A21FEA4F6E00D85EC1 /* CXMVCUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCUserInfoViewController.swift; sourceTree = "<group>"; };
 		D10DE39E1FBD926600EC07F2 /* CXProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXProxy.swift; sourceTree = "<group>"; };
 		D111F8B41FC55CEF000F4EF7 /* CXFlyweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXFlyweight.swift; sourceTree = "<group>"; };
 		D111F8B61FC57179000F4EF7 /* CXBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBridge.swift; sourceTree = "<group>"; };
 		D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXBlockViewController.swift; sourceTree = "<group>"; };
 		D12317FD1FE75F1C008D0F77 /* CXMVCUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCUserViewController.swift; sourceTree = "<group>"; };
-		D12317FF1FE767B5008D0F77 /* CXMVCUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCUserInfoViewController.swift; sourceTree = "<group>"; };
-		D12318001FE767B5008D0F77 /* CXMVCUserInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXMVCUserInfoViewController.xib; sourceTree = "<group>"; };
-		D12318031FE76D55008D0F77 /* CXMVCUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCUser.swift; sourceTree = "<group>"; };
+		D12318031FE76D55008D0F77 /* CXMVXUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVXUser.swift; sourceTree = "<group>"; };
 		D12318051FE7919D008D0F77 /* CXMVCBlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCBlogViewController.swift; sourceTree = "<group>"; };
-		D12318071FE79920008D0F77 /* CXMVCBlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCBlogTableViewCell.swift; sourceTree = "<group>"; };
-		D12318081FE79920008D0F77 /* CXMVCBlogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXMVCBlogTableViewCell.xib; sourceTree = "<group>"; };
-		D123180B1FE7A533008D0F77 /* CXMVCBlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCBlog.swift; sourceTree = "<group>"; };
+		D12318071FE79920008D0F77 /* CXMVXBlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVXBlogTableViewCell.swift; sourceTree = "<group>"; };
+		D12318081FE79920008D0F77 /* CXMVXBlogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXMVXBlogTableViewCell.xib; sourceTree = "<group>"; };
+		D123180B1FE7A533008D0F77 /* CXMVXBlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVXBlog.swift; sourceTree = "<group>"; };
 		D123180D1FE7A69B008D0F77 /* CXMVCBlogCellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCBlogCellHelper.swift; sourceTree = "<group>"; };
 		D146F2EC1FC17C660014F0F2 /* CXDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDecorator.swift; sourceTree = "<group>"; };
 		D15059DA1FC674620084DC0C /* CXStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXStrategy.swift; sourceTree = "<group>"; };
@@ -86,7 +90,7 @@
 		D18748301F04F8000029B787 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D188A0DC1F95FDC5007800A3 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		D18BA6F91F4C73EE007ED286 /* CXLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXLocationViewController.swift; sourceTree = "<group>"; };
-		D1A4EEC11FD4FA1400C96F82 /* CXMVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVCViewController.swift; sourceTree = "<group>"; };
+		D1A4EEC11FD4FA1400C96F82 /* CXMVXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVXViewController.swift; sourceTree = "<group>"; };
 		D1A4EEC31FD4FA3400C96F82 /* CXSimpleMVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSimpleMVCController.swift; sourceTree = "<group>"; };
 		D1A533121FB94EBE00C801EA /* CXBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBuilder.swift; sourceTree = "<group>"; };
 		D1BA48371E9E258D00B4DA26 /* CXSwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXSwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +119,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D10381951FE963C700D85EC1 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				D10381991FE9661300D85EC1 /* Scene */,
+				D10381981FE9660B00D85EC1 /* Controller */,
+				D10381971FE9660400D85EC1 /* View */,
+				D10381961FE965E000D85EC1 /* Presenter */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		D10381961FE965E000D85EC1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D10381971FE9660400D85EC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D10381981FE9660B00D85EC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D10381991FE9661300D85EC1 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		D12317F71FE75E19008D0F77 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +170,8 @@
 		D12317F81FE75E2C008D0F77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D12318031FE76D55008D0F77 /* CXMVCUser.swift */,
-				D123180B1FE7A533008D0F77 /* CXMVCBlog.swift */,
+				D12318031FE76D55008D0F77 /* CXMVXUser.swift */,
+				D123180B1FE7A533008D0F77 /* CXMVXBlog.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,8 +179,10 @@
 		D12317F91FE75E3A008D0F77 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D12318071FE79920008D0F77 /* CXMVCBlogTableViewCell.swift */,
-				D12318081FE79920008D0F77 /* CXMVCBlogTableViewCell.xib */,
+				D103819C1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift */,
+				D103819E1FEA4E1F00D85EC1 /* CXMVXUserInfoView.xib */,
+				D12318071FE79920008D0F77 /* CXMVXBlogTableViewCell.swift */,
+				D12318081FE79920008D0F77 /* CXMVXBlogTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,8 +190,7 @@
 		D12317FA1FE75E44008D0F77 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D12317FF1FE767B5008D0F77 /* CXMVCUserInfoViewController.swift */,
-				D12318001FE767B5008D0F77 /* CXMVCUserInfoViewController.xib */,
+				D10381A21FEA4F6E00D85EC1 /* CXMVCUserInfoViewController.swift */,
 				D12318051FE7919D008D0F77 /* CXMVCBlogViewController.swift */,
 				D123180D1FE7A69B008D0F77 /* CXMVCBlogCellHelper.swift */,
 			);
@@ -292,11 +337,7 @@
 		D1A4EEC01FD4F9F300C96F82 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				D1A4EEC11FD4FA1400C96F82 /* CXMVCViewController.swift */,
-				D1A4EEC31FD4FA3400C96F82 /* CXSimpleMVCController.swift */,
 				D12317F71FE75E19008D0F77 /* Scene */,
-				D12317F81FE75E2C008D0F77 /* Model */,
-				D12317F91FE75E3A008D0F77 /* View */,
 				D12317FA1FE75E44008D0F77 /* Controller */,
 			);
 			path = MVC;
@@ -347,7 +388,12 @@
 		D1FF72AD1FD125E90086AC55 /* MVX */ = {
 			isa = PBXGroup;
 			children = (
+				D12317F81FE75E2C008D0F77 /* Model */,
+				D12317F91FE75E3A008D0F77 /* View */,
+				D1A4EEC11FD4FA1400C96F82 /* CXMVXViewController.swift */,
+				D1A4EEC31FD4FA3400C96F82 /* CXSimpleMVCController.swift */,
 				D1A4EEC01FD4F9F300C96F82 /* MVC */,
+				D10381951FE963C700D85EC1 /* MVP */,
 			);
 			path = MVX;
 			sourceTree = "<group>";
@@ -418,9 +464,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D123180A1FE79920008D0F77 /* CXMVCBlogTableViewCell.xib in Resources */,
+				D123180A1FE79920008D0F77 /* CXMVXBlogTableViewCell.xib in Resources */,
 				D1BA48451E9E258D00B4DA26 /* LaunchScreen.storyboard in Resources */,
-				D12318021FE767B5008D0F77 /* CXMVCUserInfoViewController.xib in Resources */,
+				D103819F1FEA4E1F00D85EC1 /* CXMVXUserInfoView.xib in Resources */,
 				D1BA48421E9E258D00B4DA26 /* Assets.xcassets in Resources */,
 				D1BA48401E9E258D00B4DA26 /* Main.storyboard in Resources */,
 			);
@@ -433,7 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D123180C1FE7A533008D0F77 /* CXMVCBlog.swift in Sources */,
+				D123180C1FE7A533008D0F77 /* CXMVXBlog.swift in Sources */,
 				D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */,
 				D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */,
 				D1E989121FCE57E900364407 /* CXInterpreter.swift in Sources */,
@@ -447,25 +493,27 @@
 				D177B5C21FC479C900214E62 /* CXComposite.swift in Sources */,
 				D15059DD1FC6A9C80084DC0C /* CXResponsibility.swift in Sources */,
 				D1E989101FCE4C8500364407 /* CXObserver.swift in Sources */,
-				D12318011FE767B5008D0F77 /* CXMVCUserInfoViewController.swift in Sources */,
 				D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */,
-				D12318041FE76D55008D0F77 /* CXMVCUser.swift in Sources */,
+				D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */,
+				D12318041FE76D55008D0F77 /* CXMVXUser.swift in Sources */,
 				D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */,
 				D111F8B71FC57179000F4EF7 /* CXBridge.swift in Sources */,
+				D10381A31FEA4F6E00D85EC1 /* CXMVCUserInfoViewController.swift in Sources */,
 				D12317FE1FE75F1C008D0F77 /* CXMVCUserViewController.swift in Sources */,
-				D1A4EEC21FD4FA1400C96F82 /* CXMVCViewController.swift in Sources */,
+				D1A4EEC21FD4FA1400C96F82 /* CXMVXViewController.swift in Sources */,
 				D1E989161FCEAF4100364407 /* CXState.swift in Sources */,
 				D15059DF1FC6BF3F0084DC0C /* CXCommand.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,
 				D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */,
 				D162DAC41FB4AD8B00B8886A /* CXDesignViewController.swift in Sources */,
 				D177B5C01FC4093B00214E62 /* CXFacade.swift in Sources */,
+				D103819B1FEA308800D85EC1 /* CXMVPUserViewController.swift in Sources */,
 				D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */,
 				D111F8B51FC55CEF000F4EF7 /* CXFlyweight.swift in Sources */,
 				D1728FA31FC81A64007B8ED4 /* CXIterator.swift in Sources */,
 				D1A4EEC41FD4FA3400C96F82 /* CXSimpleMVCController.swift in Sources */,
 				D1728F9F1FC8012E007B8ED4 /* CXMediator.swift in Sources */,
-				D12318091FE79920008D0F77 /* CXMVCBlogTableViewCell.swift in Sources */,
+				D12318091FE79920008D0F77 /* CXMVXBlogTableViewCell.swift in Sources */,
 				D123180E1FE7A69B008D0F77 /* CXMVCBlogCellHelper.swift in Sources */,
 				D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */,
 				D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */,

@@ -10,9 +10,9 @@ import UIKit
 
 class CXMVCBlogCellHelper: NSObject {
     
-    var blog = CXMVCBlog()
+    var blog = CXMVXBlog()
     
-    init(blog: CXMVCBlog) {
+    init(blog: CXMVXBlog) {
         self.blog = blog
     }
     
