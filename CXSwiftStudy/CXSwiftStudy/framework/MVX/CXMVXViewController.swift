@@ -42,7 +42,7 @@ class CXMVXViewController: CXBaseViewController {
         self.navigationController?.pushViewController(CXMVCUserViewController(), animated: true)
     }
     func MVPBtnClick() {
-        self.navigationController?.pushViewController(CXMVCUserViewController(), animated: true)
+        self.navigationController?.pushViewController(CXMVPUserViewController(), animated: true)
     }
     func MVVMBtnClick() {
         self.navigationController?.pushViewController(CXMVCUserViewController(), animated: true)

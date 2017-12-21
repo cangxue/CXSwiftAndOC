@@ -23,7 +23,6 @@ class CXMVCUserInfoViewController: NSObject {
         
         self.infoViewUpdate(user: user)
         
-        
     }
     
     func infoViewUpdate(user: CXMVXUser) {

@@ -8,12 +8,22 @@
 
 import UIKit
 
-class CXMVPUserViewController: UIViewController {
+class CXMVPUserViewController: CXBaseViewController {
+    
+    var userId = 0
+    
+    var userInfoVC = CXMVPUserInfoViewController()
+    
+    let blogVC = CXMVPBlogViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.configuration()
+        
+        self.addUI()
+        
+        self.fetchData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +31,38 @@ class CXMVPUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func configuration() {
+        self.title = "MVP"
+        self.userId = 20
+        
+        self.userInfoVC.userId = self.userId
+        
+        self.blogVC.presenter.userId = self.userId
+        
     }
-    */
+    
+    func addUI() {
+        let nib = UINib(nibName: "CXMVXUserInfoView", bundle: nil)
+        self.userInfoVC.userInfoView = nib.instantiate(withOwner: self, options: nil).first as! CXMVXUserInfoView
+        self.userInfoVC.userInfoView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 220)
+        self.view.addSubview(self.userInfoVC.userInfoView)
+        
+        let userInfoRect = self.userInfoVC.userInfoView.frame
+        self.blogVC.tableView?.frame = CGRect(x: 0, y: userInfoRect.maxY, width: userInfoRect.width, height: self.view.frame.height - userInfoRect.height - 64)
+        self.view.addSubview(self.blogVC.tableView!)
+    }
+    
+    func fetchData() {
+        self.userInfoVC.fetchData()
+        
+        self.blogVC.presenter.fetchData()
+        
+//        self.blogVC.fetchDataWithCompletionHandler(userId: self.userId) { (userId, success) in
+//            if success {
+//                print("获取成功\(userId)")
+//            }
+//        }
+    }
+
 
 }
