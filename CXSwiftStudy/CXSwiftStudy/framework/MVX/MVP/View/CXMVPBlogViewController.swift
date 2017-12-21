@@ -8,11 +8,18 @@
 
 import UIKit
 
+protocol BlogCellDidselectCallBack {
+    func didSelectRow(indexRow: Int) -> Void
+}
+
 class CXMVPBlogViewController: NSObject, UITableViewDataSource, UITableViewDelegate, MVPBlogViewPresenterCallBack {
     
     var tableView: UITableView?
     
     var presenter = CXMVPBlogViewPresenter()
+    
+    var cellDelegate: BlogCellDidselectCallBack?
+    
     
     override init() {
         super.init()
@@ -45,6 +52,10 @@ class CXMVPBlogViewController: NSObject, UITableViewDataSource, UITableViewDeleg
             return (cellPresenter.blogLikeCount() + 1)
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.cellDelegate?.didSelectRow(indexRow: indexPath.row)
     }
     
     //MARK: presenter callback

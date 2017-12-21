@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CXMVPUserViewController: CXBaseViewController {
+class CXMVPUserViewController: CXBaseViewController, BlogCellDidselectCallBack {
     
     var userId = 0
     
@@ -38,6 +38,7 @@ class CXMVPUserViewController: CXBaseViewController {
         self.userInfoVC.userId = self.userId
         
         self.blogVC.presenter.userId = self.userId
+        self.blogVC.cellDelegate = self
         
     }
     
@@ -62,6 +63,10 @@ class CXMVPUserViewController: CXBaseViewController {
 //                print("获取成功\(userId)")
 //            }
 //        }
+    }
+    
+    func didSelectRow(indexRow: Int) {
+        print("点击了\(indexRow)")
     }
 
 
