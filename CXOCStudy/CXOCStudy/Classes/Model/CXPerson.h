@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @class CXAccount;
+
 
 @interface CXPerson : NSObject {
     @private

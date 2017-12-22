@@ -15,7 +15,6 @@
 		D109AB431F34766900AB39D6 /* CXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB421F34766900AB39D6 /* CXPerson.m */; };
 		D15D8F741F5E5C7F005F5E21 /* CXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D15D8F731F5E5C7F005F5E21 /* CXClass.m */; };
 		D162DA7D1FB02E3E00B8886A /* CXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA7C1FB02E3E00B8886A /* CXSingleton.m */; };
-		D162DAA01FB1A69200B8886A /* CXTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA9F1FB1A69200B8886A /* CXTempViewController.m */; };
 		D162DAA71FB49EF500B8886A /* CXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DAA61FB49EF500B8886A /* CXButton.m */; };
 		D162DAAA1FB49F6100B8886A /* CXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DAA91FB49F6100B8886A /* CXTextField.m */; };
 		D162DAAD1FB49F9800B8886A /* CXRedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DAAC1FB49F9800B8886A /* CXRedButton.m */; };
@@ -60,8 +59,6 @@
 		D15D8F731F5E5C7F005F5E21 /* CXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXClass.m; sourceTree = "<group>"; };
 		D162DA7B1FB02E3E00B8886A /* CXSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSingleton.h; sourceTree = "<group>"; };
 		D162DA7C1FB02E3E00B8886A /* CXSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXSingleton.m; sourceTree = "<group>"; };
-		D162DA9E1FB1A69200B8886A /* CXTempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXTempViewController.h; sourceTree = "<group>"; };
-		D162DA9F1FB1A69200B8886A /* CXTempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXTempViewController.m; sourceTree = "<group>"; };
 		D162DAA51FB49EF500B8886A /* CXButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXButton.h; sourceTree = "<group>"; };
 		D162DAA61FB49EF500B8886A /* CXButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXButton.m; sourceTree = "<group>"; };
 		D162DAA81FB49F6100B8886A /* CXTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXTextField.h; sourceTree = "<group>"; };
@@ -370,8 +367,6 @@
 				D1BA485C1E9E265800B4DA26 /* AppDelegate.m */,
 				D1BA485E1E9E265800B4DA26 /* ViewController.h */,
 				D1BA485F1E9E265800B4DA26 /* ViewController.m */,
-				D162DA9E1FB1A69200B8886A /* CXTempViewController.h */,
-				D162DA9F1FB1A69200B8886A /* CXTempViewController.m */,
 				D1A9D5C41F29D73D00DEB1BD /* CXBaseViewController.h */,
 				D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */,
 				D1A9D5C71F29DE8700DEB1BD /* CXHeader.h */,
@@ -520,7 +515,6 @@
 				D162DAB91FB4A84300B8886A /* CXAbstractFactory.m in Sources */,
 				D162DAB61FB4A73000B8886A /* CXFactory.m in Sources */,
 				D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */,
-				D162DAA01FB1A69200B8886A /* CXTempViewController.m in Sources */,
 				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
 				D162DAC91FB5980200B8886A /* CXDesignViewController.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,

@@ -53,6 +53,7 @@
 		D1CE46251FEB5D36004DE973 /* CXMVPBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CE46241FEB5D36004DE973 /* CXMVPBlogViewController.swift */; };
 		D1CE46271FEB5DF5004DE973 /* CXMVPBlogViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CE46261FEB5DF5004DE973 /* CXMVPBlogViewPresenter.swift */; };
 		D1CE46291FEB5F73004DE973 /* CXMVPBlogCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CE46281FEB5F73004DE973 /* CXMVPBlogCellPresenter.swift */; };
+		D1CE462C1FEB99E1004DE973 /* CXClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CE462B1FEB99E1004DE973 /* CXClassesViewController.swift */; };
 		D1D4C7021FCD4D1A00F07A51 /* CXVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D4C7011FCD4D1A00F07A51 /* CXVisitor.swift */; };
 		D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B26C1FC31F8B001AA6DC /* CXAdapter.swift */; };
 		D1E989101FCE4C8500364407 /* CXObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9890F1FCE4C8500364407 /* CXObserver.swift */; };
@@ -110,6 +111,7 @@
 		D1CE46241FEB5D36004DE973 /* CXMVPBlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVPBlogViewController.swift; sourceTree = "<group>"; };
 		D1CE46261FEB5DF5004DE973 /* CXMVPBlogViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVPBlogViewPresenter.swift; sourceTree = "<group>"; };
 		D1CE46281FEB5F73004DE973 /* CXMVPBlogCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVPBlogCellPresenter.swift; sourceTree = "<group>"; };
+		D1CE462B1FEB99E1004DE973 /* CXClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXClassesViewController.swift; sourceTree = "<group>"; };
 		D1D4C7011FCD4D1A00F07A51 /* CXVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXVisitor.swift; sourceTree = "<group>"; };
 		D1D5B26C1FC31F8B001AA6DC /* CXAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXAdapter.swift; sourceTree = "<group>"; };
 		D1E9890F1FCE4C8500364407 /* CXObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObserver.swift; sourceTree = "<group>"; };
@@ -237,6 +239,8 @@
 		D18748251F04F7E80029B787 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D1CE462B1FEB99E1004DE973 /* CXClassesViewController.swift */,
+				D1CE462D1FEB9A19004DE973 /* Runtime */,
 				D188A0D81F95D640007800A3 /* basic */,
 				D18BA6F81F4C73D4007ED286 /* 定位 */,
 				D18748261F04F7E80029B787 /* 闭包 */,
@@ -384,6 +388,20 @@
 			path = CXSwiftStudy;
 			sourceTree = "<group>";
 		};
+		D1CE462A1FEB7EA6004DE973 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		D1CE462D1FEB9A19004DE973 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
 		D1FF72AC1FD125D00086AC55 /* framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +419,7 @@
 				D1A4EEC31FD4FA3400C96F82 /* CXSimpleMVCController.swift */,
 				D1A4EEC01FD4F9F300C96F82 /* MVC */,
 				D10381951FE963C700D85EC1 /* MVP */,
+				D1CE462A1FEB7EA6004DE973 /* MVVM */,
 			);
 			path = MVX;
 			sourceTree = "<group>";
@@ -486,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CE462C1FEB99E1004DE973 /* CXClassesViewController.swift in Sources */,
 				D1B48CE51FEAACCE0016874E /* CXMVPUserInfoViewController.swift in Sources */,
 				D123180C1FE7A533008D0F77 /* CXMVXBlog.swift in Sources */,
 				D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */,

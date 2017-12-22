@@ -37,4 +37,16 @@
     NSLog(@"arg1: %ld, arg2: %@", arg1, arg2);
 }
 
+- (nonnull id)copyWithZone:(nullable NSZone *)zone {
+    return [self copyWithZone:zone];
+}
+
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+    [self encodeWithCoder:aCoder];
+}
+
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
+    return [self initWithCoder:aDecoder];
+}
+
 @end

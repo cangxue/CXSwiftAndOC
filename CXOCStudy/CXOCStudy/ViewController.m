@@ -46,7 +46,7 @@
 
 - (NSMutableArray *)showArray {
     if (!_showArray) {
-        _showArray = [NSMutableArray arrayWithObjects:@"CXDesignViewController", nil];
+        _showArray = [NSMutableArray arrayWithObjects:@"CXRuntimeViewController", nil];
     }
     return _showArray;
 }
