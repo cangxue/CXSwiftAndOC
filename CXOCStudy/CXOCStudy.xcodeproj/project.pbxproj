@@ -13,6 +13,8 @@
 		D1029AE11F46BEB10079BE95 /* CXMemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1029AE01F46BEB10079BE95 /* CXMemoryViewController.m */; };
 		D109AB3F1F34762100AB39D6 /* CXKVOOrKVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */; };
 		D109AB431F34766900AB39D6 /* CXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AB421F34766900AB39D6 /* CXPerson.m */; };
+		D10DE39D1FBC2DDF00EC07F2 /* CXPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = D10DE39C1FBC2DDF00EC07F2 /* CXPrototype.m */; };
+		D10DE3A31FBEB12200EC07F2 /* CXProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D10DE3A21FBEB12200EC07F2 /* CXProxy.m */; };
 		D15D8F741F5E5C7F005F5E21 /* CXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D15D8F731F5E5C7F005F5E21 /* CXClass.m */; };
 		D162DA7D1FB02E3E00B8886A /* CXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DA7C1FB02E3E00B8886A /* CXSingleton.m */; };
 		D162DAA71FB49EF500B8886A /* CXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DAA61FB49EF500B8886A /* CXButton.m */; };
@@ -24,6 +26,13 @@
 		D162DAB91FB4A84300B8886A /* CXAbstractFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DAB81FB4A84300B8886A /* CXAbstractFactory.m */; };
 		D162DABC1FB4A8DD00B8886A /* CXAbstractRedFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DABB1FB4A8DD00B8886A /* CXAbstractRedFactory.m */; };
 		D162DAC91FB5980200B8886A /* CXDesignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D162DAC81FB5980200B8886A /* CXDesignViewController.m */; };
+		D16772111FB9962F0076D0D1 /* CXBurger.m in Sources */ = {isa = PBXBuildFile; fileRef = D16772101FB9962F0076D0D1 /* CXBurger.m */; };
+		D16772141FB996E70076D0D1 /* CXCheeseBurger.m in Sources */ = {isa = PBXBuildFile; fileRef = D16772131FB996E70076D0D1 /* CXCheeseBurger.m */; };
+		D16772171FB9971D0076D0D1 /* CXSnack.m in Sources */ = {isa = PBXBuildFile; fileRef = D16772161FB9971D0076D0D1 /* CXSnack.m */; };
+		D167721A1FB997770076D0D1 /* CXChipsSnack.m in Sources */ = {isa = PBXBuildFile; fileRef = D16772191FB997770076D0D1 /* CXChipsSnack.m */; };
+		D167721D1FB997AD0076D0D1 /* CXBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D167721C1FB997AD0076D0D1 /* CXBuilder.m */; };
+		D16772201FB9982C0076D0D1 /* CXOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = D167721F1FB9982C0076D0D1 /* CXOrder.m */; };
+		D16772231FBA84A00076D0D1 /* CXOrderDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = D16772221FBA84A00076D0D1 /* CXOrderDirector.m */; };
 		D16AA0B61F9DB9C100B4BAE2 /* CXFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16AA0B51F9DB9C100B4BAE2 /* CXFileManagerViewController.m */; };
 		D18748211F00A8980029B787 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18748201F00A8980029B787 /* CollectionViewController.m */; };
 		D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */; };
@@ -40,6 +49,10 @@
 		D1BA48631E9E265800B4DA26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BA48611E9E265800B4DA26 /* Main.storyboard */; };
 		D1BA48651E9E265800B4DA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BA48641E9E265800B4DA26 /* Assets.xcassets */; };
 		D1BA48681E9E265800B4DA26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BA48661E9E265800B4DA26 /* LaunchScreen.storyboard */; };
+		D1D5B25F1FC27FF5001AA6DC /* CXHero.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B25E1FC27FF5001AA6DC /* CXHero.m */; };
+		D1D5B2621FC28074001AA6DC /* CXBlindMonk.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B2611FC28074001AA6DC /* CXBlindMonk.m */; };
+		D1D5B2651FC280F5001AA6DC /* CXSkillDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B2641FC280F5001AA6DC /* CXSkillDecorator.m */; };
+		D1D5B26B1FC281A3001AA6DC /* CXSkill_QDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5B26A1FC281A3001AA6DC /* CXSkill_QDecorator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +68,10 @@
 		D109AB3E1F34762100AB39D6 /* CXKVOOrKVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXKVOOrKVCViewController.m; sourceTree = "<group>"; };
 		D109AB411F34766900AB39D6 /* CXPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPerson.h; sourceTree = "<group>"; };
 		D109AB421F34766900AB39D6 /* CXPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPerson.m; sourceTree = "<group>"; };
+		D10DE39B1FBC2DDF00EC07F2 /* CXPrototype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXPrototype.h; sourceTree = "<group>"; };
+		D10DE39C1FBC2DDF00EC07F2 /* CXPrototype.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXPrototype.m; sourceTree = "<group>"; };
+		D10DE3A11FBEB12200EC07F2 /* CXProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXProxy.h; sourceTree = "<group>"; };
+		D10DE3A21FBEB12200EC07F2 /* CXProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXProxy.m; sourceTree = "<group>"; };
 		D15D8F721F5E5C7F005F5E21 /* CXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXClass.h; sourceTree = "<group>"; };
 		D15D8F731F5E5C7F005F5E21 /* CXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXClass.m; sourceTree = "<group>"; };
 		D162DA7B1FB02E3E00B8886A /* CXSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSingleton.h; sourceTree = "<group>"; };
@@ -77,6 +94,20 @@
 		D162DABB1FB4A8DD00B8886A /* CXAbstractRedFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXAbstractRedFactory.m; sourceTree = "<group>"; };
 		D162DAC71FB5980200B8886A /* CXDesignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXDesignViewController.h; sourceTree = "<group>"; };
 		D162DAC81FB5980200B8886A /* CXDesignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXDesignViewController.m; sourceTree = "<group>"; };
+		D167720F1FB9962F0076D0D1 /* CXBurger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXBurger.h; sourceTree = "<group>"; };
+		D16772101FB9962F0076D0D1 /* CXBurger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXBurger.m; sourceTree = "<group>"; };
+		D16772121FB996E70076D0D1 /* CXCheeseBurger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXCheeseBurger.h; sourceTree = "<group>"; };
+		D16772131FB996E70076D0D1 /* CXCheeseBurger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXCheeseBurger.m; sourceTree = "<group>"; };
+		D16772151FB9971D0076D0D1 /* CXSnack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSnack.h; sourceTree = "<group>"; };
+		D16772161FB9971D0076D0D1 /* CXSnack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXSnack.m; sourceTree = "<group>"; };
+		D16772181FB997770076D0D1 /* CXChipsSnack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXChipsSnack.h; sourceTree = "<group>"; };
+		D16772191FB997770076D0D1 /* CXChipsSnack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXChipsSnack.m; sourceTree = "<group>"; };
+		D167721B1FB997AD0076D0D1 /* CXBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXBuilder.h; sourceTree = "<group>"; };
+		D167721C1FB997AD0076D0D1 /* CXBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXBuilder.m; sourceTree = "<group>"; };
+		D167721E1FB9982C0076D0D1 /* CXOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXOrder.h; sourceTree = "<group>"; };
+		D167721F1FB9982C0076D0D1 /* CXOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXOrder.m; sourceTree = "<group>"; };
+		D16772211FBA84A00076D0D1 /* CXOrderDirector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXOrderDirector.h; sourceTree = "<group>"; };
+		D16772221FBA84A00076D0D1 /* CXOrderDirector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXOrderDirector.m; sourceTree = "<group>"; };
 		D16AA0B41F9DB9C100B4BAE2 /* CXFileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXFileManagerViewController.h; sourceTree = "<group>"; };
 		D16AA0B51F9DB9C100B4BAE2 /* CXFileManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXFileManagerViewController.m; sourceTree = "<group>"; };
 		D187481F1F00A8980029B787 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
@@ -108,6 +139,14 @@
 		D1BA48641E9E265800B4DA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BA48671E9E265800B4DA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BA48691E9E265800B4DA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1D5B25D1FC27FF5001AA6DC /* CXHero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHero.h; sourceTree = "<group>"; };
+		D1D5B25E1FC27FF5001AA6DC /* CXHero.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXHero.m; sourceTree = "<group>"; };
+		D1D5B2601FC28074001AA6DC /* CXBlindMonk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXBlindMonk.h; sourceTree = "<group>"; };
+		D1D5B2611FC28074001AA6DC /* CXBlindMonk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXBlindMonk.m; sourceTree = "<group>"; };
+		D1D5B2631FC280F5001AA6DC /* CXSkillDecorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSkillDecorator.h; sourceTree = "<group>"; };
+		D1D5B2641FC280F5001AA6DC /* CXSkillDecorator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXSkillDecorator.m; sourceTree = "<group>"; };
+		D1D5B2691FC281A3001AA6DC /* CXSkill_QDecorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXSkill_QDecorator.h; sourceTree = "<group>"; };
+		D1D5B26A1FC281A3001AA6DC /* CXSkill_QDecorator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXSkill_QDecorator.m; sourceTree = "<group>"; };
 		F97011665520BF738C7A78F1 /* Pods-CXOCStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXOCStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXOCStudy/Pods-CXOCStudy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,9 +210,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D10DE39A1FBC2DB400EC07F2 /* Prototype */ = {
+			isa = PBXGroup;
+			children = (
+				D10DE39B1FBC2DDF00EC07F2 /* CXPrototype.h */,
+				D10DE39C1FBC2DDF00EC07F2 /* CXPrototype.m */,
+			);
+			path = Prototype;
+			sourceTree = "<group>";
+		};
+		D10DE3A01FBEAE1F00EC07F2 /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				D10DE3A11FBEB12200EC07F2 /* CXProxy.h */,
+				D10DE3A21FBEB12200EC07F2 /* CXProxy.m */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
 		D162DA791FB02DD800B8886A /* design-mode */ = {
 			isa = PBXGroup;
 			children = (
+				D1D5B24D1FC271C5001AA6DC /* Decorator */,
+				D10DE3A01FBEAE1F00EC07F2 /* Proxy */,
+				D10DE39A1FBC2DB400EC07F2 /* Prototype */,
+				D167720E1FB995E20076D0D1 /* Builder */,
 				D162DA811FB1899F00B8886A /* Factory */,
 				D162DA7A1FB02DF900B8886A /* Singleton */,
 				D162DAC71FB5980200B8886A /* CXDesignViewController.h */,
@@ -212,6 +273,27 @@
 				D162DABB1FB4A8DD00B8886A /* CXAbstractRedFactory.m */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		D167720E1FB995E20076D0D1 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				D167720F1FB9962F0076D0D1 /* CXBurger.h */,
+				D16772101FB9962F0076D0D1 /* CXBurger.m */,
+				D16772121FB996E70076D0D1 /* CXCheeseBurger.h */,
+				D16772131FB996E70076D0D1 /* CXCheeseBurger.m */,
+				D16772151FB9971D0076D0D1 /* CXSnack.h */,
+				D16772161FB9971D0076D0D1 /* CXSnack.m */,
+				D16772181FB997770076D0D1 /* CXChipsSnack.h */,
+				D16772191FB997770076D0D1 /* CXChipsSnack.m */,
+				D167721E1FB9982C0076D0D1 /* CXOrder.h */,
+				D167721F1FB9982C0076D0D1 /* CXOrder.m */,
+				D167721B1FB997AD0076D0D1 /* CXBuilder.h */,
+				D167721C1FB997AD0076D0D1 /* CXBuilder.m */,
+				D16772211FBA84A00076D0D1 /* CXOrderDirector.h */,
+				D16772221FBA84A00076D0D1 /* CXOrderDirector.m */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		D16AA0B31F9DB99800B4BAE2 /* FileManager */ = {
@@ -387,6 +469,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D1D5B24D1FC271C5001AA6DC /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5B25D1FC27FF5001AA6DC /* CXHero.h */,
+				D1D5B25E1FC27FF5001AA6DC /* CXHero.m */,
+				D1D5B2601FC28074001AA6DC /* CXBlindMonk.h */,
+				D1D5B2611FC28074001AA6DC /* CXBlindMonk.m */,
+				D1D5B2631FC280F5001AA6DC /* CXSkillDecorator.h */,
+				D1D5B2641FC280F5001AA6DC /* CXSkillDecorator.m */,
+				D1D5B2691FC281A3001AA6DC /* CXSkill_QDecorator.h */,
+				D1D5B26A1FC281A3001AA6DC /* CXSkill_QDecorator.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -515,8 +612,15 @@
 				D162DAB91FB4A84300B8886A /* CXAbstractFactory.m in Sources */,
 				D162DAB61FB4A73000B8886A /* CXFactory.m in Sources */,
 				D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */,
+
+				D162DAA01FB1A69200B8886A /* CXTempViewController.m in Sources */,
+				D16772231FBA84A00076D0D1 /* CXOrderDirector.m in Sources */,
+
 				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
+				D10DE39D1FBC2DDF00EC07F2 /* CXPrototype.m in Sources */,
+				D16772111FB9962F0076D0D1 /* CXBurger.m in Sources */,
 				D162DAC91FB5980200B8886A /* CXDesignViewController.m in Sources */,
+				D1D5B2651FC280F5001AA6DC /* CXSkillDecorator.m in Sources */,
 				D1BA48601E9E265800B4DA26 /* ViewController.m in Sources */,
 				D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */,
 				D15D8F741F5E5C7F005F5E21 /* CXClass.m in Sources */,
@@ -532,14 +636,23 @@
 				D1BA485D1E9E265800B4DA26 /* AppDelegate.m in Sources */,
 				D1B512161F56B8D600ABD3E9 /* CXOperation.m in Sources */,
 				D162DA7D1FB02E3E00B8886A /* CXSingleton.m in Sources */,
+				D16772201FB9982C0076D0D1 /* CXOrder.m in Sources */,
 				D162DABC1FB4A8DD00B8886A /* CXAbstractRedFactory.m in Sources */,
 				D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */,
+				D1D5B26B1FC281A3001AA6DC /* CXSkill_QDecorator.m in Sources */,
+				D1D5B25F1FC27FF5001AA6DC /* CXHero.m in Sources */,
 				D1BA485A1E9E265800B4DA26 /* main.m in Sources */,
+				D1D5B2621FC28074001AA6DC /* CXBlindMonk.m in Sources */,
+				D16772171FB9971D0076D0D1 /* CXSnack.m in Sources */,
+				D16772141FB996E70076D0D1 /* CXCheeseBurger.m in Sources */,
 				D1B512191F57DEF400ABD3E9 /* CXRunLoopViewController.m in Sources */,
+				D10DE3A31FBEB12200EC07F2 /* CXProxy.m in Sources */,
 				D109AB431F34766900AB39D6 /* CXPerson.m in Sources */,
 				D162DAA71FB49EF500B8886A /* CXButton.m in Sources */,
+				D167721A1FB997770076D0D1 /* CXChipsSnack.m in Sources */,
 				D1B512131F56B49C00ABD3E9 /* CXOperationViewController.m in Sources */,
 				D162DAB31FB4A02000B8886A /* CXSimpleFactory.m in Sources */,
+				D167721D1FB997AD0076D0D1 /* CXBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

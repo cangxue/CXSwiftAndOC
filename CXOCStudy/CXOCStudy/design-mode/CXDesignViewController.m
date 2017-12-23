@@ -15,8 +15,22 @@
 #import "CXFactory.h"
 #import "CXAbstractRedFactory.h"
 #import "CXRedTextField.h"
+//建造者模式
+#import "CXBuilder.h"
+#import "CXCheeseBurger.h"
+#import "CXChipsSnack.h"
+#import "CXOrderDirector.h"
+//原型模式
+#import "CXPrototype.h"
+//代理模式
+#import "CXProxy.h"
+//装饰器模式
+#import "CXHero.h"
+#import "CXBlindMonk.h"
+#import "CXSkillDecorator.h"
+#import "CXSkill_QDecorator.h"
 
-@interface CXDesignViewController ()
+@interface CXDesignViewController () <TicketDelegate>
 
 @end
 
@@ -25,15 +39,80 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self cx_decorator];
 }
-
-#pragma mark - 单例模式
-- (void)cx_singleton {
-    CXSingleton *singleton = [CXSingleton sharedInstance];
-    singleton.single_name = @"111";
-    NSLog(@"%@",singleton.single_name);
-    [CXSingleton sharedInstance].single_name = @"222";
-    NSLog(@"%@",singleton.single_name);
+#pragma mark - 装饰器模式
+- (void)cx_decorator {
+    CXBlindMonk *hero = [[CXBlindMonk alloc] init];
+    [hero learnSkills];
+    
+    CXSkill_QDecorator *skill_q = [[CXSkill_QDecorator alloc] initWithSkillName:@"天音波/回音击"];
+    skill_q.hero = hero;
+    [skill_q learnSkills];
+    
+    NSLog(@"=================");
+    
+    CXHero *hero2 = [[CXHero alloc] init];
+    hero2.name = @"蜘蛛";
+    [hero2 learnSkills];
+    
+    CXSkill_QDecorator *skill_q2 = [[CXSkill_QDecorator alloc] initWithSkillName:@"束缚"];
+    skill_q2.hero = hero2;
+    [skill_q2 learnSkills];
+}
+#pragma mark - 代理模式
+- (void)cx_proxy {
+    CXProxy *proxy = [[CXProxy alloc] init];
+    proxy.delegate = self;
+    [proxy responseDelegate];
+}
+- (void)buyTicket {
+    NSLog(@"买了票");
+}
+- (void)showTicketNumber {
+    NSLog(@"123456");
+}
+#pragma mark - 原型模式
+- (void)cx_prototype {
+    CXPrototype *prototype = [[CXPrototype alloc] init];
+    prototype.background = [NSMutableArray arrayWithObjects:@"1", @"1", @"1", @"1", nil];
+    prototype.content = @"Dog";
+    NSLog(@"Original %p %@",prototype, prototype.content);
+    NSLog(@"===================");
+    
+    //copy
+    CXPrototype *copy_prototype = prototype;
+    copy_prototype.content = @"Cat";
+    NSLog(@"Original %p %@",prototype, prototype.content);
+     NSLog(@"Copy %p %@",copy_prototype, copy_prototype.content);
+    NSLog(@"===================");
+    
+    //deep copy
+    CXPrototype *deep_copy_protyope = prototype.copy;
+    deep_copy_protyope.content = @"Duck";
+    NSLog(@"Original %p %@",prototype, prototype.content);
+    NSLog(@"Copy %p %@",copy_prototype, copy_prototype.content);
+    NSLog(@"Deep %p %@",deep_copy_protyope, deep_copy_protyope.content);
+    
+}
+#pragma mark - 建造者模式
+- (void)cx_builder {
+    //concreteBuilder
+    CXCheeseBurger *cheeseBurger = [[CXCheeseBurger alloc] init];
+    CXChipsSnack *chipsSnack = [[CXChipsSnack alloc] init];
+    
+    //builder
+    CXBuilder *builder = [[CXBuilder alloc] init];
+    builder.burger = cheeseBurger;
+    builder.snack = chipsSnack;
+    
+    //product
+    CXOrder *order1 = [builder build];
+    NSLog(@"\n%@\n%@",order1.burger.name, order1.snack.name);
+    
+    //director
+    CXOrder *order2 = [CXOrderDirector creatOrder:builder burger:cheeseBurger snack:chipsSnack];
+    NSLog(@"\n%@\n%@",order2.burger.name, order2.snack.name);
 }
 #pragma mark - 工厂模式
 - (void)cx_factory {
@@ -53,5 +132,14 @@
     CXRedTextField *abstract_field = [abstract_factory createTextFieldProduct];
     [abstract_field display];
 }
+#pragma mark - 单例模式
+- (void)cx_singleton {
+    CXSingleton *singleton = [CXSingleton sharedInstance];
+    singleton.single_name = @"111";
+    NSLog(@"%@",singleton.single_name);
+    [CXSingleton sharedInstance].single_name = @"222";
+    NSLog(@"%@",singleton.single_name);
+}
+
 
 @end
