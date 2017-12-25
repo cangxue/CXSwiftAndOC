@@ -22,7 +22,7 @@
 - (void)sure_viewWillDisappear:(BOOL)animated {
     [self sure_viewWillDisappear:animated];
     
-    NSLog(@"去除加载栏等");
+//    NSLog(@"去除加载栏等");
 }
 
 @end

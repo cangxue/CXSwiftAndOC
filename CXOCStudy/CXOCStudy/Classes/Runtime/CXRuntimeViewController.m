@@ -22,14 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.class methodSwizzlingWithOriginalSelector:@selector(viewWillAppear:) swizzledMethod:@selector(sure_viewWillAppear:)];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [self viewWillAppear:YES];
-    NSLog(@"=================");
 }
 
 #pragma mark - 常用方法
@@ -161,20 +157,17 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    NSLog(@"original 方法实现");
+//    NSLog(@"original 方法实现");
 }
-/// 原方法
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
 
-    NSLog(@"original 方法实现");
-}
 /// 替换方法
 - (void)sure_viewWillAppear:(BOOL)animated {
     [self sure_viewWillAppear:animated];
     
     NSLog(@"swizzled 方法实现");
 }
+
+#pragma mark - 解决获取索引、添加、删除元素越界崩溃问题
 
 
 
