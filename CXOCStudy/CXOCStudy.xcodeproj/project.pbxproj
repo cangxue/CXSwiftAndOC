@@ -36,6 +36,8 @@
 		D16AA0B61F9DB9C100B4BAE2 /* CXFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16AA0B51F9DB9C100B4BAE2 /* CXFileManagerViewController.m */; };
 		D18748211F00A8980029B787 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18748201F00A8980029B787 /* CollectionViewController.m */; };
 		D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */; };
+		D19A41C51FF0CC1A000A993D /* NSObject+CXSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D19A41C41FF0CC1A000A993D /* NSObject+CXSwizzling.m */; };
+		D19A41C81FF0CDEE000A993D /* UIViewController+CXSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D19A41C71FF0CDEE000A993D /* UIViewController+CXSwizzling.m */; };
 		D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */; };
 		D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */; };
 		D1B512101F56AF4300ABD3E9 /* CXThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B5120F1F56AF4300ABD3E9 /* CXThreadViewController.m */; };
@@ -114,6 +116,10 @@
 		D18748201F00A8980029B787 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		D18BA6FB1F4D515D007ED286 /* CXGCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXGCDViewController.h; sourceTree = "<group>"; };
 		D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXGCDViewController.m; sourceTree = "<group>"; };
+		D19A41C31FF0CC1A000A993D /* NSObject+CXSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CXSwizzling.h"; sourceTree = "<group>"; };
+		D19A41C41FF0CC1A000A993D /* NSObject+CXSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CXSwizzling.m"; sourceTree = "<group>"; };
+		D19A41C61FF0CDEE000A993D /* UIViewController+CXSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CXSwizzling.h"; sourceTree = "<group>"; };
+		D19A41C71FF0CDEE000A993D /* UIViewController+CXSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CXSwizzling.m"; sourceTree = "<group>"; };
 		D1A9D5C11F29CF9400DEB1BD /* BlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
 		D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		D1A9D5C41F29D73D00DEB1BD /* CXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXBaseViewController.h; sourceTree = "<group>"; };
@@ -418,6 +424,10 @@
 				D1B5121C1F59598300ABD3E9 /* CXRuntimeViewController.m */,
 				D15D8F721F5E5C7F005F5E21 /* CXClass.h */,
 				D15D8F731F5E5C7F005F5E21 /* CXClass.m */,
+				D19A41C31FF0CC1A000A993D /* NSObject+CXSwizzling.h */,
+				D19A41C41FF0CC1A000A993D /* NSObject+CXSwizzling.m */,
+				D19A41C61FF0CDEE000A993D /* UIViewController+CXSwizzling.h */,
+				D19A41C71FF0CDEE000A993D /* UIViewController+CXSwizzling.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -608,14 +618,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19A41C51FF0CC1A000A993D /* NSObject+CXSwizzling.m in Sources */,
 				D1029ABB1F42CE230079BE95 /* CXAccount.m in Sources */,
 				D162DAB91FB4A84300B8886A /* CXAbstractFactory.m in Sources */,
 				D162DAB61FB4A73000B8886A /* CXFactory.m in Sources */,
 				D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */,
-
-				D162DAA01FB1A69200B8886A /* CXTempViewController.m in Sources */,
 				D16772231FBA84A00076D0D1 /* CXOrderDirector.m in Sources */,
-
 				D18748211F00A8980029B787 /* CollectionViewController.m in Sources */,
 				D10DE39D1FBC2DDF00EC07F2 /* CXPrototype.m in Sources */,
 				D16772111FB9962F0076D0D1 /* CXBurger.m in Sources */,
@@ -647,6 +655,7 @@
 				D16772141FB996E70076D0D1 /* CXCheeseBurger.m in Sources */,
 				D1B512191F57DEF400ABD3E9 /* CXRunLoopViewController.m in Sources */,
 				D10DE3A31FBEB12200EC07F2 /* CXProxy.m in Sources */,
+				D19A41C81FF0CDEE000A993D /* UIViewController+CXSwizzling.m in Sources */,
 				D109AB431F34766900AB39D6 /* CXPerson.m in Sources */,
 				D162DAA71FB49EF500B8886A /* CXButton.m in Sources */,
 				D167721A1FB997770076D0D1 /* CXChipsSnack.m in Sources */,

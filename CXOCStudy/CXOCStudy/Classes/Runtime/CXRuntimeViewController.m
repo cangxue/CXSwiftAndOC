@@ -12,6 +12,8 @@
 #import "CXPerson.h"
 #import <objc/message.h>
 
+#import "NSObject+CXSwizzling.h"
+
 @interface CXRuntimeViewController () <UITableViewDelegate>
 
 @end
@@ -20,17 +22,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.class methodSwizzlingWithOriginalSelector:@selector(viewWillAppear:) swizzledMethod:@selector(sure_viewWillAppear:)];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self common_method];
+    
+    [self viewWillAppear:YES];
+    NSLog(@"=================");
 }
 
 #pragma mark - 常用方法
 - (void)common_method {
     unsigned int outCount = 0;
     
-    Class selfClass = [self class];
     Class testClass = [CXClass class];
     
     NSLog(@"===================== 基本信息 =======================");
@@ -126,6 +131,52 @@
     Protocol *protocol1 = protocolList[0];
     NSLog(@"CXClass is%@ responsed to protocol %s", class_conformsToProtocol(testClass, protocol1) ? @"" : @"not", protocol_getName(protocol1));
 }
+
+#pragma mark - 类和对象
+- (void)create_classOrObjectMethod {
+    /// 动态创建类
+    // 创建一个新类和元类
+    Class cls = objc_allocateClassPair(CXClass.class, "CXSubClass", 0);
+    /// 添加方法
+    // 返回方法的具体实现
+    IMP imp_method1 = class_getMethodImplementation([CXClass class], @selector(method1));
+    class_addMethod(cls, @selector(subMethod1), (IMP)imp_method1, "v@:");
+    
+    id instance = [[cls alloc] init];
+    // 调用方法
+    [instance performSelector:@selector(subMethod1)];
+    NSLog(@"%s", class_getName([instance class]));
+    
+    /// 动态创建对象
+    id theObject = class_createInstance(NSString.class, 0);
+    id str1 = [theObject init];
+    NSLog(@"%@", [str1 class]);
+    
+    id str2 = [[NSString alloc] initWithString:@"test"];
+    NSLog(@"%@", [str2 class]);
+}
+
+#pragma mark - 替换ViewController的生命周期方法
+/// 原方法
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    NSLog(@"original 方法实现");
+}
+/// 原方法
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    NSLog(@"original 方法实现");
+}
+/// 替换方法
+- (void)sure_viewWillAppear:(BOOL)animated {
+    [self sure_viewWillAppear:animated];
+    
+    NSLog(@"swizzled 方法实现");
+}
+
+
 
 
 @end
