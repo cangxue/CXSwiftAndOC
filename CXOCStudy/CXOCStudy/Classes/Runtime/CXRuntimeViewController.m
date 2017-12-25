@@ -13,6 +13,7 @@
 #import <objc/message.h>
 
 #import "NSObject+CXSwizzling.h"
+#import "NSMutableArray+CXSwizzling.h"
 
 @interface CXRuntimeViewController () <UITableViewDelegate>
 
@@ -25,7 +26,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
+    [self swizzling_mutableArray];
 }
 
 #pragma mark - 常用方法
@@ -168,6 +169,15 @@
 }
 
 #pragma mark - 解决获取索引、添加、删除元素越界崩溃问题
+/// NSMutableArray越界处理
+- (void)swizzling_mutableArray {
+    NSMutableArray *array = [NSMutableArray array];
+    [array removeObjectAtIndex:2];
+    [array addObject:@"1"];
+    [array insertObject:@"2" atIndex:3];
+}
+
+#pragma mark - 防止重复点击
 
 
 

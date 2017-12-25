@@ -38,6 +38,7 @@
 		D18BA6FD1F4D515D007ED286 /* CXGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D18BA6FC1F4D515D007ED286 /* CXGCDViewController.m */; };
 		D19A41C51FF0CC1A000A993D /* NSObject+CXSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D19A41C41FF0CC1A000A993D /* NSObject+CXSwizzling.m */; };
 		D19A41C81FF0CDEE000A993D /* UIViewController+CXSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D19A41C71FF0CDEE000A993D /* UIViewController+CXSwizzling.m */; };
+		D19A41CC1FF0D218000A993D /* NSMutableArray+CXSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D19A41CB1FF0D218000A993D /* NSMutableArray+CXSwizzling.m */; };
 		D1A9D5C31F29CF9400DEB1BD /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */; };
 		D1A9D5C61F29D73D00DEB1BD /* CXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A9D5C51F29D73D00DEB1BD /* CXBaseViewController.m */; };
 		D1B512101F56AF4300ABD3E9 /* CXThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B5120F1F56AF4300ABD3E9 /* CXThreadViewController.m */; };
@@ -120,6 +121,8 @@
 		D19A41C41FF0CC1A000A993D /* NSObject+CXSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CXSwizzling.m"; sourceTree = "<group>"; };
 		D19A41C61FF0CDEE000A993D /* UIViewController+CXSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CXSwizzling.h"; sourceTree = "<group>"; };
 		D19A41C71FF0CDEE000A993D /* UIViewController+CXSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CXSwizzling.m"; sourceTree = "<group>"; };
+		D19A41CA1FF0D218000A993D /* NSMutableArray+CXSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CXSwizzling.h"; sourceTree = "<group>"; };
+		D19A41CB1FF0D218000A993D /* NSMutableArray+CXSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CXSwizzling.m"; sourceTree = "<group>"; };
 		D1A9D5C11F29CF9400DEB1BD /* BlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
 		D1A9D5C21F29CF9400DEB1BD /* BlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		D1A9D5C41F29D73D00DEB1BD /* CXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXBaseViewController.h; sourceTree = "<group>"; };
@@ -417,17 +420,27 @@
 			path = "集合";
 			sourceTree = "<group>";
 		};
-		D1B5121A1F59597100ABD3E9 /* Runtime */ = {
+		D19A41C91FF0D1F9000A993D /* category */ = {
 			isa = PBXGroup;
 			children = (
-				D1B5121B1F59598300ABD3E9 /* CXRuntimeViewController.h */,
-				D1B5121C1F59598300ABD3E9 /* CXRuntimeViewController.m */,
-				D15D8F721F5E5C7F005F5E21 /* CXClass.h */,
-				D15D8F731F5E5C7F005F5E21 /* CXClass.m */,
 				D19A41C31FF0CC1A000A993D /* NSObject+CXSwizzling.h */,
 				D19A41C41FF0CC1A000A993D /* NSObject+CXSwizzling.m */,
 				D19A41C61FF0CDEE000A993D /* UIViewController+CXSwizzling.h */,
 				D19A41C71FF0CDEE000A993D /* UIViewController+CXSwizzling.m */,
+				D19A41CA1FF0D218000A993D /* NSMutableArray+CXSwizzling.h */,
+				D19A41CB1FF0D218000A993D /* NSMutableArray+CXSwizzling.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		D1B5121A1F59597100ABD3E9 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				D19A41C91FF0D1F9000A993D /* category */,
+				D1B5121B1F59598300ABD3E9 /* CXRuntimeViewController.h */,
+				D1B5121C1F59598300ABD3E9 /* CXRuntimeViewController.m */,
+				D15D8F721F5E5C7F005F5E21 /* CXClass.h */,
+				D15D8F731F5E5C7F005F5E21 /* CXClass.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -659,6 +672,7 @@
 				D109AB431F34766900AB39D6 /* CXPerson.m in Sources */,
 				D162DAA71FB49EF500B8886A /* CXButton.m in Sources */,
 				D167721A1FB997770076D0D1 /* CXChipsSnack.m in Sources */,
+				D19A41CC1FF0D218000A993D /* NSMutableArray+CXSwizzling.m in Sources */,
 				D1B512131F56B49C00ABD3E9 /* CXOperationViewController.m in Sources */,
 				D162DAB31FB4A02000B8886A /* CXSimpleFactory.m in Sources */,
 				D167721D1FB997AD0076D0D1 /* CXBuilder.m in Sources */,
