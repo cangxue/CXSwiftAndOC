@@ -8,7 +8,6 @@
 
 #import "NSMutableArray+CXSwizzling.h"
 #import "NSObject+CXSwizzling.h"
-#import <objc/runtime.h>
 
 @implementation NSMutableArray (CXSwizzling)
 

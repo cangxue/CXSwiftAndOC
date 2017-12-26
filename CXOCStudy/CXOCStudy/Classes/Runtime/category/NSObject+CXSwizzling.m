@@ -7,8 +7,6 @@
 //
 
 #import "NSObject+CXSwizzling.h"
-#import <objc/runtime.h>
-
 @implementation NSObject (CXSwizzling)
 
 /// 方法替换
