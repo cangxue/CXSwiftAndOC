@@ -14,6 +14,7 @@
 
 #import "NSObject+CXSwizzling.h"
 #import "NSMutableArray+CXSwizzling.h"
+#import "UIButton+CXSwizzling.h"
 
 @interface CXRuntimeViewController () <UITableViewDelegate>
 
@@ -23,10 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+     [self swizzling_button];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self swizzling_mutableArray];
+//    [self swizzling_button];
 }
 
 #pragma mark - 常用方法
@@ -178,7 +181,18 @@
 }
 
 #pragma mark - 防止重复点击
-
+- (void)swizzling_button {
+    UIButton *clickBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 80, 80, 40)];
+//    clickBtn.isIgnore = YES;
+    clickBtn.timeInterval = 5;
+    [clickBtn setTitle:@"click" forState:UIControlStateNormal];
+    clickBtn.backgroundColor = [UIColor greenColor];
+    [clickBtn addTarget:self action:@selector(clickAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:clickBtn];
+}
+- (void)clickAction {
+    NSLog(@"点击了");
+}
 
 
 
