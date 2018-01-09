@@ -9,7 +9,6 @@
 #import "UIButton+CXSwizzling.h"
 #import "NSObject+CXSwizzling.h"
 
-
 @implementation UIButton (CXSwizzling)
 
 + (void)load {
@@ -17,14 +16,6 @@
     dispatch_once(&onceToken, ^{
         [self methodSwizzlingWithOriginalSelector:@selector(sendAction:to:forEvent:) swizzledMethod:@selector(sure_sendAction:to:forEvent:)];
     });
-}
-
-- (NSTimeInterval)timeInterval {
-    return [objc_getAssociatedObject(self, _cmd) doubleValue];
-}
-
-- (void)setTimeInterval:(NSTimeInterval)timeInterval {
-    objc_setAssociatedObject(self, @selector(timeInterval), @(timeInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 /// 当按钮点击事件sendAction 时将执行sure_sendAction
@@ -44,32 +35,44 @@
         }
     }
     
-    //此处 methodA和methodB方法IMP互换了，实际上执行 sendAction；所以不会死循环
-    self.isIgnoreEvent = YES;
-    [self sure_sendAction:action to:target forEvent:event];
+    self.isIgnoreEvent = YES; // 之后重复点击无效
+    [self sure_sendAction:action to:target forEvent:event]; //执行此次点击事件
 }
 
 /// runtime 动态绑定属性
-- (void)setIsIgnoreEvent:(BOOL)isIgnoreEvent {
-    // 注意BOOL类型 需要用OBJC_ASSOCIATION_RETAIN_NONATOMIC 不要用错，否则set方法会赋值出错
-    objc_setAssociatedObject(self, @selector(isIgnoreEvent), @(isIgnoreEvent), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+// 时间
+- (NSTimeInterval)timeInterval {
+    // get方法
+    return [objc_getAssociatedObject(self, _cmd) doubleValue];
 }
 
-- (BOOL)isIgnoreEvent {
-    // _cmd == @selector(isIgnore); 和set方法里一致
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
+- (void)setTimeInterval:(NSTimeInterval)timeInterval {
+   // set方法
+    objc_setAssociatedObject(self, @selector(timeInterval), @(timeInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void)setIsIgnore:(BOOL)isIgnore {
-    // 注意BOOL类型 需要用OBJC_ASSOCIATION_RETAIN_NONATOMIC 不要用错，否则set方法会赋值出错
-    objc_setAssociatedObject(self, @selector(isIgnore), @(isIgnore), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
+// 此按钮是否忽略设置延时
 - (BOOL)isIgnore {
-    //_cmd == @select(isIgnore); 和set方法里一致
+    // get方法
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
+- (void)setIsIgnore:(BOOL)isIgnore {
+    // set方法
+    objc_setAssociatedObject(self, @selector(isIgnore), @(isIgnore), OBJC_ASSOCIATION_ASSIGN);
+}
+
+// 是否或略此次点击事件
+- (BOOL)isIgnoreEvent {
+    // get方法
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
+- (void)setIsIgnoreEvent:(BOOL)isIgnoreEvent {
+    // set方法
+    objc_setAssociatedObject(self, @selector(isIgnoreEvent), @(isIgnoreEvent), OBJC_ASSOCIATION_ASSIGN);
+}
+
+/// 设置 isIgnoreEvent 值：YES 忽略，点击无效  NO：能够点击
 - (void)resetState {
     [self setIsIgnoreEvent:NO];
 }
