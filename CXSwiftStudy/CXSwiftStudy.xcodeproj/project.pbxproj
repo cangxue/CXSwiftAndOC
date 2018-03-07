@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		855F2D9D204F8C7F006AC8C8 /* CXSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */; };
 		D103819B1FEA308800D85EC1 /* CXMVPUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */; };
 		D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819C1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift */; };
 		D103819F1FEA4E1F00D85EC1 /* CXMVXUserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D103819E1FEA4E1F00D85EC1 /* CXMVXUserInfoView.xib */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		51A5A5C2C01AD669BC9AF59E /* Pods-CXSwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
 		7072700B09593A1CA78BFB45 /* Pods-CXSwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSnapKitViewController.swift; sourceTree = "<group>"; };
 		9E7CE03F0D07516996CF7A7E /* Pods_CXSwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CXSwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVPUserViewController.swift; sourceTree = "<group>"; };
 		D103819C1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVXUserInfoView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		855F2D9B204F8C48006AC8C8 /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */,
+			);
+			path = SnapKit;
+			sourceTree = "<group>";
+		};
 		862CE305E0F4AC78BE9C7808 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,18 +272,9 @@
 			isa = PBXGroup;
 			children = (
 				D1CE462B1FEB99E1004DE973 /* CXClassesViewController.swift */,
-				D1CE462D1FEB9A19004DE973 /* Runtime */,
 				D188A0D81F95D640007800A3 /* basic */,
 				D18BA6F81F4C73D4007ED286 /* 定位 */,
 				D18748261F04F7E80029B787 /* 闭包 */,
-				D18748271F04F7E80029B787 /* 内存 */,
-				D18748281F04F7E80029B787 /* 动画 */,
-				D18748291F04F7E80029B787 /* 单元测试 */,
-				D187482A1F04F7E80029B787 /* 多线程 */,
-				D187482B1F04F7E80029B787 /* 性能检测及优化 */,
-				D187482C1F04F7E80029B787 /* 控制器 */,
-				D187482D1F04F7E80029B787 /* 流媒体 */,
-				D187482E1F04F7E80029B787 /* 网络 */,
 				D187482F1F04F7E80029B787 /* 集合 */,
 			);
 			path = Classes;
@@ -285,62 +286,6 @@
 				D11BAAAB1F33277500E21DF8 /* CXBlockViewController.swift */,
 			);
 			path = "闭包";
-			sourceTree = "<group>";
-		};
-		D18748271F04F7E80029B787 /* 内存 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "内存";
-			sourceTree = "<group>";
-		};
-		D18748281F04F7E80029B787 /* 动画 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "动画";
-			sourceTree = "<group>";
-		};
-		D18748291F04F7E80029B787 /* 单元测试 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "单元测试";
-			sourceTree = "<group>";
-		};
-		D187482A1F04F7E80029B787 /* 多线程 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "多线程";
-			sourceTree = "<group>";
-		};
-		D187482B1F04F7E80029B787 /* 性能检测及优化 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "性能检测及优化";
-			sourceTree = "<group>";
-		};
-		D187482C1F04F7E80029B787 /* 控制器 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "控制器";
-			sourceTree = "<group>";
-		};
-		D187482D1F04F7E80029B787 /* 流媒体 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "流媒体";
-			sourceTree = "<group>";
-		};
-		D187482E1F04F7E80029B787 /* 网络 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "网络";
 			sourceTree = "<group>";
 		};
 		D187482F1F04F7E80029B787 /* 集合 */ = {
@@ -419,16 +364,10 @@
 			path = MVVM;
 			sourceTree = "<group>";
 		};
-		D1CE462D1FEB9A19004DE973 /* Runtime */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Runtime;
-			sourceTree = "<group>";
-		};
 		D1FF72AC1FD125D00086AC55 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				855F2D9B204F8C48006AC8C8 /* SnapKit */,
 				D1FF72AD1FD125E90086AC55 /* MVX */,
 			);
 			path = framework;
@@ -537,11 +476,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -597,6 +538,7 @@
 				D162DAA41FB1AFE100B8886A /* CXTempViewController.swift in Sources */,
 				D12318061FE7919D008D0F77 /* CXMVCBlogViewController.swift in Sources */,
 				D15059DB1FC674620084DC0C /* CXStrategy.swift in Sources */,
+				855F2D9D204F8C7F006AC8C8 /* CXSnapKitViewController.swift in Sources */,
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
 				D1728FA11FC80F7A007B8ED4 /* CXTemplate.swift in Sources */,
 				D1A533131FB94EBE00C801EA /* CXBuilder.swift in Sources */,

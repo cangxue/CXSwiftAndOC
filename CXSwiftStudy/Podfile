@@ -6,7 +6,7 @@ target 'CXSwiftStudy' do
 
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
-
+    pod 'SnapKit', '~> 3.0.2'
 
   use_frameworks!
 
