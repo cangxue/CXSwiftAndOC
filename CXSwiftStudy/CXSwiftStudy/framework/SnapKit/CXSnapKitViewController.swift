@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import WebKit
 
-class CXSnapKitViewController: UIViewController {
+class CXSnapKitViewController: CXBaseViewController {
     
     private var box: UIView!
     
@@ -21,10 +21,9 @@ class CXSnapKitViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view.backgroundColor = UIColor.white
         
-        self.mainTableView()
+//        self.mainTableView()
+        self.webView()
     }
     
     func mainTableView() {
@@ -51,8 +50,10 @@ class CXSnapKitViewController: UIViewController {
     
     func webView() {
         mainWebView = WKWebView(frame: CGRect(), configuration: WKWebViewConfiguration())
-//        mainWebView.frame = view.bounds
+        mainWebView.frame = view.bounds
         mainWebView.navigationDelegate = self
+        
+        mainWebView.scrollView.isScrollEnabled = false
         
         self.view.addSubview(mainWebView)
         mainWebView.snp.makeConstraints({ (make) in
@@ -64,7 +65,7 @@ class CXSnapKitViewController: UIViewController {
         })
         
         
-        let url = URL.init(string: "https://www.baidu.com")
+        let url = URL.init(string: "http://quizzes.caiqr.cn/goods/addressNew")
         let request = URLRequest.init(url: url!)
         mainWebView.load(request)
     }
