@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852CF5EC20510EBC006B994D /* CXNSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CF5EB20510EBC006B994D /* CXNSObject+Extension.swift */; };
+		852CF5EE20513944006B994D /* CXRuntimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CF5ED20513944006B994D /* CXRuntimeTableViewController.swift */; };
 		853D2C10205015BB0009616D /* CXRxSwiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D2C0F205015BB0009616D /* CXRxSwiftViewModel.swift */; };
 		853D2C12205016780009616D /* CXRxSwiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D2C11205016780009616D /* CXRxSwiftProtocols.swift */; };
 		853D2C14205017970009616D /* CXRxSwiftValidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D2C13205017970009616D /* CXRxSwiftValidateModel.swift */; };
 		855F2D9D204F8C7F006AC8C8 /* CXSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */; };
 		855F2DA2204FBF28006AC8C8 /* CXRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */; };
+		85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */; };
 		D103819B1FEA308800D85EC1 /* CXMVPUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */; };
 		D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819C1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift */; };
 		D103819F1FEA4E1F00D85EC1 /* CXMVXUserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D103819E1FEA4E1F00D85EC1 /* CXMVXUserInfoView.xib */; };
@@ -71,11 +74,14 @@
 /* Begin PBXFileReference section */
 		51A5A5C2C01AD669BC9AF59E /* Pods-CXSwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
 		7072700B09593A1CA78BFB45 /* Pods-CXSwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		852CF5EB20510EBC006B994D /* CXNSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CXNSObject+Extension.swift"; sourceTree = "<group>"; };
+		852CF5ED20513944006B994D /* CXRuntimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeTableViewController.swift; sourceTree = "<group>"; };
 		853D2C0F205015BB0009616D /* CXRxSwiftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRxSwiftViewModel.swift; sourceTree = "<group>"; };
 		853D2C11205016780009616D /* CXRxSwiftProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRxSwiftProtocols.swift; sourceTree = "<group>"; };
 		853D2C13205017970009616D /* CXRxSwiftValidateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRxSwiftValidateModel.swift; sourceTree = "<group>"; };
 		855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSnapKitViewController.swift; sourceTree = "<group>"; };
 		855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRxSwiftViewController.swift; sourceTree = "<group>"; };
+		85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeViewController.swift; sourceTree = "<group>"; };
 		9E7CE03F0D07516996CF7A7E /* Pods_CXSwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CXSwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVPUserViewController.swift; sourceTree = "<group>"; };
 		D103819C1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVXUserInfoView.swift; sourceTree = "<group>"; };
@@ -163,6 +169,16 @@
 				853D2C0F205015BB0009616D /* CXRxSwiftViewModel.swift */,
 			);
 			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		85EF71522050DEC7004BDC56 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */,
+				852CF5ED20513944006B994D /* CXRuntimeTableViewController.swift */,
+				852CF5EB20510EBC006B994D /* CXNSObject+Extension.swift */,
+			);
+			path = Runtime;
 			sourceTree = "<group>";
 		};
 		862CE305E0F4AC78BE9C7808 /* Frameworks */ = {
@@ -291,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				D1CE462B1FEB99E1004DE973 /* CXClassesViewController.swift */,
+				85EF71522050DEC7004BDC56 /* Runtime */,
 				D188A0D81F95D640007800A3 /* basic */,
 				D18BA6F81F4C73D4007ED286 /* 定位 */,
 				D18748261F04F7E80029B787 /* 闭包 */,
@@ -549,12 +566,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */,
 				D1CE462C1FEB99E1004DE973 /* CXClassesViewController.swift in Sources */,
 				D1B48CE51FEAACCE0016874E /* CXMVPUserInfoViewController.swift in Sources */,
 				D123180C1FE7A533008D0F77 /* CXMVXBlog.swift in Sources */,
 				D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */,
 				D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */,
 				D1E989121FCE57E900364407 /* CXInterpreter.swift in Sources */,
+				852CF5EE20513944006B994D /* CXRuntimeTableViewController.swift in Sources */,
 				D162DAA41FB1AFE100B8886A /* CXTempViewController.swift in Sources */,
 				D12318061FE7919D008D0F77 /* CXMVCBlogViewController.swift in Sources */,
 				D15059DB1FC674620084DC0C /* CXStrategy.swift in Sources */,
@@ -569,6 +588,7 @@
 				D15059DD1FC6A9C80084DC0C /* CXResponsibility.swift in Sources */,
 				D1E989101FCE4C8500364407 /* CXObserver.swift in Sources */,
 				853D2C12205016780009616D /* CXRxSwiftProtocols.swift in Sources */,
+				852CF5EC20510EBC006B994D /* CXNSObject+Extension.swift in Sources */,
 				D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */,
 				D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */,
 				D1B48CE31FEAAB0F0016874E /* CXMVPUserInfoPresenter.swift in Sources */,
