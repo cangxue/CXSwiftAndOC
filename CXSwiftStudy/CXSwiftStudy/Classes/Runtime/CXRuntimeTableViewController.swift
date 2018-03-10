@@ -66,7 +66,7 @@ class CXRuntimeTableViewController: UIViewController, UITableViewDataSource, UIT
 extension UIApplication {
     
     open override var next: UIResponder? {
-            UITableView.awake
+//            UITableView.awake
 
             return super.next
     }

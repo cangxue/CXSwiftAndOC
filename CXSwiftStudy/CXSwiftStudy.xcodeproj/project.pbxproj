@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		852CF5EC20510EBC006B994D /* CXNSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CF5EB20510EBC006B994D /* CXNSObject+Extension.swift */; };
 		852CF5EE20513944006B994D /* CXRuntimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CF5ED20513944006B994D /* CXRuntimeTableViewController.swift */; };
-		853D2C10205015BB0009616D /* CXRxSwiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D2C0F205015BB0009616D /* CXRxSwiftViewModel.swift */; };
-		853D2C12205016780009616D /* CXRxSwiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D2C11205016780009616D /* CXRxSwiftProtocols.swift */; };
-		853D2C14205017970009616D /* CXRxSwiftValidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D2C13205017970009616D /* CXRxSwiftValidateModel.swift */; };
 		855F2D9D204F8C7F006AC8C8 /* CXSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */; };
 		855F2DA2204FBF28006AC8C8 /* CXRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */; };
 		85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */; };
@@ -76,9 +73,6 @@
 		7072700B09593A1CA78BFB45 /* Pods-CXSwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		852CF5EB20510EBC006B994D /* CXNSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CXNSObject+Extension.swift"; sourceTree = "<group>"; };
 		852CF5ED20513944006B994D /* CXRuntimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeTableViewController.swift; sourceTree = "<group>"; };
-		853D2C0F205015BB0009616D /* CXRxSwiftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRxSwiftViewModel.swift; sourceTree = "<group>"; };
-		853D2C11205016780009616D /* CXRxSwiftProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRxSwiftProtocols.swift; sourceTree = "<group>"; };
-		853D2C13205017970009616D /* CXRxSwiftValidateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRxSwiftValidateModel.swift; sourceTree = "<group>"; };
 		855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSnapKitViewController.swift; sourceTree = "<group>"; };
 		855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRxSwiftViewController.swift; sourceTree = "<group>"; };
 		85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeViewController.swift; sourceTree = "<group>"; };
@@ -164,9 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */,
-				853D2C11205016780009616D /* CXRxSwiftProtocols.swift */,
-				853D2C13205017970009616D /* CXRxSwiftValidateModel.swift */,
-				853D2C0F205015BB0009616D /* CXRxSwiftViewModel.swift */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -460,7 +451,7 @@
 				TargetAttributes = {
 					D1BA48361E9E258D00B4DA26 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 862YF45JD7;
+						DevelopmentTeam = A4WT62AY62;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -584,10 +575,8 @@
 				D10DE39F1FBD926600EC07F2 /* CXProxy.swift in Sources */,
 				D1CE46251FEB5D36004DE973 /* CXMVPBlogViewController.swift in Sources */,
 				D177B5C21FC479C900214E62 /* CXComposite.swift in Sources */,
-				853D2C14205017970009616D /* CXRxSwiftValidateModel.swift in Sources */,
 				D15059DD1FC6A9C80084DC0C /* CXResponsibility.swift in Sources */,
 				D1E989101FCE4C8500364407 /* CXObserver.swift in Sources */,
-				853D2C12205016780009616D /* CXRxSwiftProtocols.swift in Sources */,
 				852CF5EC20510EBC006B994D /* CXNSObject+Extension.swift in Sources */,
 				D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */,
 				D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */,
@@ -617,7 +606,6 @@
 				855F2DA2204FBF28006AC8C8 /* CXRxSwiftViewController.swift in Sources */,
 				D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */,
 				D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */,
-				853D2C10205015BB0009616D /* CXRxSwiftViewModel.swift in Sources */,
 				D1E989141FCE962E00364407 /* CXMemento.swift in Sources */,
 				D1D4C7021FCD4D1A00F07A51 /* CXVisitor.swift in Sources */,
 				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
@@ -743,9 +731,9 @@
 			baseConfigurationReference = 7072700B09593A1CA78BFB45 /* Pods-CXSwiftStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 862YF45JD7;
+				DEVELOPMENT_TEAM = A4WT62AY62;
 				INFOPLIST_FILE = CXSwiftStudy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CX.CXSwiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -758,9 +746,9 @@
 			baseConfigurationReference = 51A5A5C2C01AD669BC9AF59E /* Pods-CXSwiftStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 862YF45JD7;
+				DEVELOPMENT_TEAM = A4WT62AY62;
 				INFOPLIST_FILE = CXSwiftStudy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CX.CXSwiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
