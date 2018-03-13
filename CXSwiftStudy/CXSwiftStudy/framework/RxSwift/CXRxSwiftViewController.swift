@@ -78,10 +78,10 @@ struct ChildVC {
 struct ChildViewModel {
     let data = Observable.just([
         
+        ChildVC(name: "CXTextFieldViewController", title: "Text"),
         ChildVC(name: "CXUILabelViewController", title: "UILabel"),
         ChildVC(name: "CXTraitsViewController", title: "Traits"),
         ChildVC(name: "CXObservableViewController", title: "Observalbe"),
-        ChildVC(name: "CXTextFieldViewController", title: "Text"),
         ChildVC(name: "CXUIButtonViewController", title: "Button"),
         ])
 }
