@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852CC13B2053C88B006F49AA /* CXUILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CC13A2053C88B006F49AA /* CXUILabelViewController.swift */; };
+		852CC13D2053D4DC006F49AA /* CXTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CC13C2053D4DC006F49AA /* CXTextFieldViewController.swift */; };
+		852CC13F2053DF1F006F49AA /* CXUIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CC13E2053DF1F006F49AA /* CXUIButtonViewController.swift */; };
+		852CC14120577EA9006F49AA /* CXTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CC14020577EA9006F49AA /* CXTraitsViewController.swift */; };
 		852CF5EC20510EBC006B994D /* CXNSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CF5EB20510EBC006B994D /* CXNSObject+Extension.swift */; };
 		852CF5EE20513944006B994D /* CXRuntimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CF5ED20513944006B994D /* CXRuntimeTableViewController.swift */; };
 		855F2D9D204F8C7F006AC8C8 /* CXSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */; };
 		855F2DA2204FBF28006AC8C8 /* CXRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */; };
+		85B73B6F20538B3D00211433 /* CXObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B6E20538B3D00211433 /* CXObservableViewController.swift */; };
+		85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B702053B96C00211433 /* CXConfigHeader.swift */; };
 		85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */; };
 		D103819B1FEA308800D85EC1 /* CXMVPUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */; };
 		D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819C1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift */; };
@@ -71,10 +77,16 @@
 /* Begin PBXFileReference section */
 		51A5A5C2C01AD669BC9AF59E /* Pods-CXSwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
 		7072700B09593A1CA78BFB45 /* Pods-CXSwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		852CC13A2053C88B006F49AA /* CXUILabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXUILabelViewController.swift; sourceTree = "<group>"; };
+		852CC13C2053D4DC006F49AA /* CXTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTextFieldViewController.swift; sourceTree = "<group>"; };
+		852CC13E2053DF1F006F49AA /* CXUIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXUIButtonViewController.swift; sourceTree = "<group>"; };
+		852CC14020577EA9006F49AA /* CXTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTraitsViewController.swift; sourceTree = "<group>"; };
 		852CF5EB20510EBC006B994D /* CXNSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CXNSObject+Extension.swift"; sourceTree = "<group>"; };
 		852CF5ED20513944006B994D /* CXRuntimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeTableViewController.swift; sourceTree = "<group>"; };
 		855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSnapKitViewController.swift; sourceTree = "<group>"; };
 		855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRxSwiftViewController.swift; sourceTree = "<group>"; };
+		85B73B6E20538B3D00211433 /* CXObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObservableViewController.swift; sourceTree = "<group>"; };
+		85B73B702053B96C00211433 /* CXConfigHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXConfigHeader.swift; sourceTree = "<group>"; };
 		85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeViewController.swift; sourceTree = "<group>"; };
 		9E7CE03F0D07516996CF7A7E /* Pods_CXSwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CXSwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVPUserViewController.swift; sourceTree = "<group>"; };
@@ -157,9 +169,22 @@
 		855F2DA0204FBDAA006AC8C8 /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				85B73B6D20538B1900211433 /* Basic */,
 				855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */,
 			);
 			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		85B73B6D20538B1900211433 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				85B73B6E20538B3D00211433 /* CXObservableViewController.swift */,
+				852CC14020577EA9006F49AA /* CXTraitsViewController.swift */,
+				852CC13A2053C88B006F49AA /* CXUILabelViewController.swift */,
+				852CC13C2053D4DC006F49AA /* CXTextFieldViewController.swift */,
+				852CC13E2053DF1F006F49AA /* CXUIButtonViewController.swift */,
+			);
+			path = Basic;
 			sourceTree = "<group>";
 		};
 		85EF71522050DEC7004BDC56 /* Runtime */ = {
@@ -376,6 +401,7 @@
 				D1BA483C1E9E258D00B4DA26 /* ViewController.swift */,
 				D162DAC51FB584FC00B8886A /* CXBaseViewController.swift */,
 				D162DAA31FB1AFE100B8886A /* CXTempViewController.swift */,
+				85B73B702053B96C00211433 /* CXConfigHeader.swift */,
 				D1BA483E1E9E258D00B4DA26 /* Main.storyboard */,
 				D1BA48411E9E258D00B4DA26 /* Assets.xcassets */,
 				D1BA48431E9E258D00B4DA26 /* LaunchScreen.storyboard */,
@@ -560,7 +586,9 @@
 				85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */,
 				D1CE462C1FEB99E1004DE973 /* CXClassesViewController.swift in Sources */,
 				D1B48CE51FEAACCE0016874E /* CXMVPUserInfoViewController.swift in Sources */,
+				852CC14120577EA9006F49AA /* CXTraitsViewController.swift in Sources */,
 				D123180C1FE7A533008D0F77 /* CXMVXBlog.swift in Sources */,
+				85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */,
 				D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */,
 				D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */,
 				D1E989121FCE57E900364407 /* CXInterpreter.swift in Sources */,
@@ -589,8 +617,10 @@
 				D10381A31FEA4F6E00D85EC1 /* CXMVCUserInfoViewController.swift in Sources */,
 				D12317FE1FE75F1C008D0F77 /* CXMVCUserViewController.swift in Sources */,
 				D1A4EEC21FD4FA1400C96F82 /* CXMVXViewController.swift in Sources */,
+				852CC13F2053DF1F006F49AA /* CXUIButtonViewController.swift in Sources */,
 				D1E989161FCEAF4100364407 /* CXState.swift in Sources */,
 				D15059DF1FC6BF3F0084DC0C /* CXCommand.swift in Sources */,
+				85B73B6F20538B3D00211433 /* CXObservableViewController.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,
 				D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */,
 				D162DAC41FB4AD8B00B8886A /* CXDesignViewController.swift in Sources */,
@@ -602,7 +632,9 @@
 				D1A4EEC41FD4FA3400C96F82 /* CXSimpleMVCController.swift in Sources */,
 				D1728F9F1FC8012E007B8ED4 /* CXMediator.swift in Sources */,
 				D12318091FE79920008D0F77 /* CXMVXBlogTableViewCell.swift in Sources */,
+				852CC13D2053D4DC006F49AA /* CXTextFieldViewController.swift in Sources */,
 				D123180E1FE7A69B008D0F77 /* CXMVCBlogCellHelper.swift in Sources */,
+				852CC13B2053C88B006F49AA /* CXUILabelViewController.swift in Sources */,
 				855F2DA2204FBF28006AC8C8 /* CXRxSwiftViewController.swift in Sources */,
 				D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */,
 				D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */,
@@ -658,6 +690,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[arch=*]" = default;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -707,6 +741,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

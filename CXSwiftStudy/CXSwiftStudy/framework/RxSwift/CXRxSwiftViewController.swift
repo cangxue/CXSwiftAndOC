@@ -25,6 +25,8 @@ class CXRxSwiftViewController: CXBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "RxSwift"
+        
         //设置tableview
         tableView = UITableView(frame: view.bounds, style: .plain)
         //创建重用cell
@@ -75,7 +77,12 @@ struct ChildVC {
 //列表数据源
 struct ChildViewModel {
     let data = Observable.just([
-        ChildVC(name: "CXRxSwiftViewController", title: "CXRxSwiftViewController"),
+        
+        ChildVC(name: "CXUILabelViewController", title: "UILabel"),
+        ChildVC(name: "CXTraitsViewController", title: "Traits"),
+        ChildVC(name: "CXObservableViewController", title: "Observalbe"),
+        ChildVC(name: "CXTextFieldViewController", title: "Text"),
+        ChildVC(name: "CXUIButtonViewController", title: "Button"),
         ])
 }
 

@@ -10,6 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+
+enum MyError: Error {
+    case A
+    case B
+}
+
 class CXObservableViewController: CXBaseViewController {
     
     let disposeBag = DisposeBag()
@@ -24,7 +30,7 @@ class CXObservableViewController: CXBaseViewController {
         self.view.addSubview(label)
         label.text = "测试数据"
     
-        self.connectable_observable()
+        self.debug_operators()
         
     }
     
@@ -39,11 +45,6 @@ class CXObservableViewController: CXBaseViewController {
         observable = Observable<Int>.empty()
         
         observable = Observable<Int>.never()
-        
-        enum MyError: Error {
-            case A
-            case B
-        }
         
         observable = Observable<Int>.error(MyError.A)
         
@@ -751,7 +752,152 @@ class CXObservableViewController: CXBaseViewController {
         }
         
     }
-
+    
+    //MARK: -- 其他一些实用的操作符（Observable Utility Operators） ---
+    func other_operators() {
+        //delay
+        Observable.of(1, 2, 1)
+            .delay(3, scheduler: MainScheduler.instance)
+            .subscribe(onNext: {print("delay: \($0)")})
+            .disposed(by: disposeBag)
+        
+        //delaySubscription
+        Observable.of(3, 2, 1)
+            .delaySubscription(3, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { print("delaySubcription: \($0)") })
+            .disposed(by: disposeBag)
+        
+        //materialize
+        Observable.of(4, 5, 6)
+            .materialize()
+            .subscribe(onNext: { print("materialize: \($0)") })
+            .disposed(by: disposeBag)
+        
+        //dematerialize
+        Observable.of(4, 5, 6)
+            .materialize()
+            .dematerialize()
+            .subscribe(onNext: { print("materialize: \($0)") })
+            .disposed(by: disposeBag)
+        
+        //timeout
+        //定义好每个事件里的值以及发送的时间
+        let times = [
+            [ "value": 1, "time": 0 ],
+            [ "value": 2, "time": 0.5 ],
+            [ "value": 3, "time": 1.5 ],
+            [ "value": 4, "time": 4 ],
+            [ "value": 5, "time": 5 ]
+        ]
+        //生成对应的 Observable 序列并订阅
+        Observable.from(times)
+            .flatMap { item in
+                return Observable.of(Int(item["value"]!))
+                    .delaySubscription(Double(item["time"]!),
+                                       scheduler: MainScheduler.instance)
+            }
+            .timeout(2, scheduler: MainScheduler.instance) //超过两秒没发出元素，则产生error事件
+            .subscribe(onNext: { element in
+                print(element)
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: disposeBag)
+        
+        //using
+        //一个无限序列（每隔0.1秒创建一个序列数 ）
+        let infiniteInterval = Observable<Int>
+            .interval(0.1, scheduler: MainScheduler.instance)
+            .do(
+                onNext: { print("infinite: \($0)") },
+                onSubscribe: { print("开始订阅 infinite")},
+                onDispose: { print("销毁 infinite")}
+        )
+        
+        //一个有限序列（每隔0.5秒创建一个序列数，共创建三个 ）
+        let limited = Observable<Int>
+            .interval(0.5, scheduler: MainScheduler.instance)
+            .take(2)
+            .do(
+                onNext: { print("limited: \($0)") },
+                onSubscribe: { print("开始订阅 limited")},
+                onDispose: { print("销毁 limited")}
+        )
+        
+        //使用using操作符创建序列
+        let o: Observable<Int> = Observable.using({ () -> AnyDisposable in
+            return AnyDisposable(infiniteInterval.subscribe())
+        }, observableFactory: { _ in
+            return limited
+            
+        })
+        o.subscribe().disposed(by: disposeBag)
+        
+    }
+    
+    //MARK: -- 错误处理操作（Error Handling Operators） ---
+    func error_operators() {
+        
+        //catchErrorJusReturn
+        let sequenceThatFails = PublishSubject<String>()
+        sequenceThatFails
+            .catchErrorJustReturn("错误")
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+        sequenceThatFails.onNext("a")
+        sequenceThatFails.onError(MyError.A)
+        sequenceThatFails.onNext("b")
+        
+        //catchError
+        let recoverySequence = Observable.of("1", "2", "3")
+        sequenceThatFails
+            .catchError { (error) -> Observable<String> in
+                print("Error: \(error)")
+                return recoverySequence
+            }
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+        
+        //retry
+        var count = 1
+        
+        let sequenceThatErrors = Observable<String>.create { observer in
+            observer.onNext("a")
+            observer.onNext("b")
+            
+            //让第一个订阅时发生错误
+            if count == 1 {
+                observer.onError(MyError.A)
+                print("Error encountered")
+                count += 1
+            }
+            
+            observer.onNext("c")
+            observer.onNext("d")
+            observer.onCompleted()
+            
+            return Disposables.create()
+        }
+        
+        sequenceThatErrors
+            .retry(2)  //重试2次（参数为空则只重试一次）
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+        
+    }
+    
+    //MARK: -- 调试操作） ---
+    func debug_operators() {
+        //debug
+        Observable.of("2", "3")
+            .startWith("1")
+            .debug()
+            .subscribe(onNext: {print($0)})
+            .disposed(by: disposeBag)
+        
+        //RxSwift.Resources.total
+    }
+    
     
     
     ///延迟执行
@@ -766,6 +912,17 @@ class CXObservableViewController: CXBaseViewController {
     
 }
 
+class AnyDisposable: Disposable {
+    let _dispose: () -> Void
+    
+    init(_ disposable: Disposable) {
+        _dispose = disposable.dispose
+    }
+    
+    func dispose() {
+        _dispose()
+    }
+}
 
 //通过对 UI 类进行扩展
 extension UILabel {
