@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "858DDE2B205F817E00582605"
+               BuildableName = "CXSwiftStudyTests.xctest"
+               BlueprintName = "CXSwiftStudyTests"
+               ReferencedContainer = "container:CXSwiftStudy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

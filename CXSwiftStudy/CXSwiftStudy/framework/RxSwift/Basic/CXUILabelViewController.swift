@@ -57,7 +57,7 @@ class CXUILabelViewController: CXBaseViewController {
                                        NSFontAttributeName: UIFont.init(name: "HelveticaNeue-Bold", size: 16)!,
                                        NSForegroundColorAttributeName: UIColor.white,
                                        NSBackgroundColorAttributeName: UIColor.orange,
-                                       
+                                    
                                     ],
                                       range: NSMakeRange(0, 5))
         return attributeString
