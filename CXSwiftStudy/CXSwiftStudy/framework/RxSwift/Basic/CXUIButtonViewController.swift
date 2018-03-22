@@ -16,6 +16,8 @@ class CXUIButtonViewController: CXBaseViewController {
     
     var button = UIButton()
     
+    var button2 = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +27,7 @@ class CXUIButtonViewController: CXBaseViewController {
         button.backgroundColor = UIColor.orange
         self.view.addSubview(button)
         
-        self.button_title()
+        self.button_tap()
         
     
     }
@@ -43,6 +45,14 @@ class CXUIButtonViewController: CXBaseViewController {
                 print("按钮被再次电击了")
             }
             .disposed(by: disposeBag)
+        
+        button.rx.tap
+            .map { _ in
+            
+                return UIImage(named: "icon1")
+            }
+            .bind(to: button.rx.image())
+            .disposed(by: disposeBag)
     }
     
     //按钮标题的绑定
@@ -56,7 +66,7 @@ class CXUIButtonViewController: CXBaseViewController {
             .bind(to: button.rx.attributedTitle())
             .disposed(by: disposeBag)
         
-        Observable.of("back")
+        Observable.of("icon1")
             .map { imagename in
                 
                 return UIImage(named: imagename)
