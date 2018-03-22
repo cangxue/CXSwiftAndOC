@@ -18,12 +18,15 @@ class CXSegementViewController: CXBaseViewController {
     
     var button1 = UIButton()
     
+    var segmented = UISegmentedControl()
+    
+    let label = UILabel()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.switchMethod()
+        self.segmentedMethod()
     }
 
     func switchMethod() {
@@ -47,6 +50,32 @@ class CXSegementViewController: CXBaseViewController {
             .disposed(by: disposeBag)
     }
     
+    func segmentedMethod() {
+        
+        segmented = UISegmentedControl(items: ["first", "second", "third", "four"])
+        segmented.frame = CGRect(x: 30, y: 120, width: 250, height: 30)
+        segmented.selectedSegmentIndex = 0
+        self.view.addSubview(segmented)
+        
+        segmented.rx.selectedSegmentIndex.asObservable()
+            .subscribe(onNext: {
+                print("当前项：\($0)")
+            })
+            .disposed(by: disposeBag)
+        
+        
+        label.frame = CGRect(x: 30, y: 180, width: 250, height: 30)
+        label.textColor = UIColor.orange
+        label.textAlignment = .center
+        self.view.addSubview(label)
+        
+        segmented.rx.selectedSegmentIndex.asObservable()
+            .map { item in
+                return self.segmented.titleForSegment(at: item)
+            }
+            .bind(to: label.rx.text)
+            .disposed(by: disposeBag)
+    }
     
 
 }
