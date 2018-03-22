@@ -16,6 +16,7 @@
 		855F2D9D204F8C7F006AC8C8 /* CXSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */; };
 		855F2DA2204FBF28006AC8C8 /* CXRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */; };
 		858DDE2F205F817E00582605 /* CXSwiftStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE2E205F817E00582605 /* CXSwiftStudyTests.swift */; };
+		858DDE7B2063BBB300582605 /* CXSegementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE7A2063BBB300582605 /* CXSegementViewController.swift */; };
 		85B73B6F20538B3D00211433 /* CXObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B6E20538B3D00211433 /* CXObservableViewController.swift */; };
 		85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B702053B96C00211433 /* CXConfigHeader.swift */; };
 		85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */; };
@@ -99,6 +100,7 @@
 		858DDE2C205F817E00582605 /* CXSwiftStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CXSwiftStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		858DDE2E205F817E00582605 /* CXSwiftStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSwiftStudyTests.swift; sourceTree = "<group>"; };
 		858DDE30205F817E00582605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		858DDE7A2063BBB300582605 /* CXSegementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSegementViewController.swift; sourceTree = "<group>"; };
 		85B73B6E20538B3D00211433 /* CXObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObservableViewController.swift; sourceTree = "<group>"; };
 		85B73B702053B96C00211433 /* CXConfigHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXConfigHeader.swift; sourceTree = "<group>"; };
 		85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				852CC13A2053C88B006F49AA /* CXUILabelViewController.swift */,
 				852CC13C2053D4DC006F49AA /* CXTextFieldViewController.swift */,
 				852CC13E2053DF1F006F49AA /* CXUIButtonViewController.swift */,
+				858DDE7A2063BBB300582605 /* CXSegementViewController.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				D1A533131FB94EBE00C801EA /* CXBuilder.swift in Sources */,
 				D10DE39F1FBD926600EC07F2 /* CXProxy.swift in Sources */,
 				D1CE46251FEB5D36004DE973 /* CXMVPBlogViewController.swift in Sources */,
+				858DDE7B2063BBB300582605 /* CXSegementViewController.swift in Sources */,
 				D177B5C21FC479C900214E62 /* CXComposite.swift in Sources */,
 				D15059DD1FC6A9C80084DC0C /* CXResponsibility.swift in Sources */,
 				D1E989101FCE4C8500364407 /* CXObserver.swift in Sources */,

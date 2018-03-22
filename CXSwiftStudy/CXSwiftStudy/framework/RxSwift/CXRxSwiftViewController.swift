@@ -77,7 +77,7 @@ struct ChildVC {
 //列表数据源
 struct ChildViewModel {
     let data = Observable.just([
-        
+        ChildVC(name: "CXSegementViewController", title: "Segment"),
         ChildVC(name: "CXUIButtonViewController", title: "Button"),
         ChildVC(name: "CXTextFieldViewController", title: "Text"),
         ChildVC(name: "CXUILabelViewController", title: "UILabel"),
