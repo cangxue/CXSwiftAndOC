@@ -17,6 +17,7 @@
 		855F2DA2204FBF28006AC8C8 /* CXRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */; };
 		858DDE2F205F817E00582605 /* CXSwiftStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE2E205F817E00582605 /* CXSwiftStudyTests.swift */; };
 		858DDE7B2063BBB300582605 /* CXSegementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE7A2063BBB300582605 /* CXSegementViewController.swift */; };
+		85AEEB09207C9CBB00FE20BA /* CXCodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEEB08207C9CBB00FE20BA /* CXCodableViewController.swift */; };
 		85B73B6F20538B3D00211433 /* CXObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B6E20538B3D00211433 /* CXObservableViewController.swift */; };
 		85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B702053B96C00211433 /* CXConfigHeader.swift */; };
 		85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */; };
@@ -101,6 +102,7 @@
 		858DDE2E205F817E00582605 /* CXSwiftStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSwiftStudyTests.swift; sourceTree = "<group>"; };
 		858DDE30205F817E00582605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		858DDE7A2063BBB300582605 /* CXSegementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSegementViewController.swift; sourceTree = "<group>"; };
+		85AEEB08207C9CBB00FE20BA /* CXCodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXCodableViewController.swift; sourceTree = "<group>"; };
 		85B73B6E20538B3D00211433 /* CXObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObservableViewController.swift; sourceTree = "<group>"; };
 		85B73B702053B96C00211433 /* CXConfigHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXConfigHeader.swift; sourceTree = "<group>"; };
 		85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,14 @@
 				858DDE30205F817E00582605 /* Info.plist */,
 			);
 			path = CXSwiftStudyTests;
+			sourceTree = "<group>";
+		};
+		85AEEB07207C9BFA00FE20BA /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				85AEEB08207C9CBB00FE20BA /* CXCodableViewController.swift */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		85B73B6D20538B1900211433 /* Basic */ = {
@@ -455,6 +465,7 @@
 		D1FF72AC1FD125D00086AC55 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				85AEEB07207C9BFA00FE20BA /* JSON */,
 				855F2DA0204FBDAA006AC8C8 /* RxSwift */,
 				855F2D9B204F8C48006AC8C8 /* SnapKit */,
 				D1FF72AD1FD125E90086AC55 /* MVX */,
@@ -673,6 +684,7 @@
 				D15059DB1FC674620084DC0C /* CXStrategy.swift in Sources */,
 				855F2D9D204F8C7F006AC8C8 /* CXSnapKitViewController.swift in Sources */,
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
+				85AEEB09207C9CBB00FE20BA /* CXCodableViewController.swift in Sources */,
 				D1728FA11FC80F7A007B8ED4 /* CXTemplate.swift in Sources */,
 				D1A533131FB94EBE00C801EA /* CXBuilder.swift in Sources */,
 				D10DE39F1FBD926600EC07F2 /* CXProxy.swift in Sources */,
