@@ -18,6 +18,7 @@
 		858DDE2F205F817E00582605 /* CXSwiftStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE2E205F817E00582605 /* CXSwiftStudyTests.swift */; };
 		858DDE7B2063BBB300582605 /* CXSegementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE7A2063BBB300582605 /* CXSegementViewController.swift */; };
 		85AEEB09207C9CBB00FE20BA /* CXCodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEEB08207C9CBB00FE20BA /* CXCodableViewController.swift */; };
+		85B645A4207DBBAE00CE9A1C /* CXObjectMapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B645A3207DBBAE00CE9A1C /* CXObjectMapperViewController.swift */; };
 		85B73B6F20538B3D00211433 /* CXObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B6E20538B3D00211433 /* CXObservableViewController.swift */; };
 		85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B702053B96C00211433 /* CXConfigHeader.swift */; };
 		85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */; };
@@ -103,6 +104,7 @@
 		858DDE30205F817E00582605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		858DDE7A2063BBB300582605 /* CXSegementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSegementViewController.swift; sourceTree = "<group>"; };
 		85AEEB08207C9CBB00FE20BA /* CXCodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXCodableViewController.swift; sourceTree = "<group>"; };
+		85B645A3207DBBAE00CE9A1C /* CXObjectMapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObjectMapperViewController.swift; sourceTree = "<group>"; };
 		85B73B6E20538B3D00211433 /* CXObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObservableViewController.swift; sourceTree = "<group>"; };
 		85B73B702053B96C00211433 /* CXConfigHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXConfigHeader.swift; sourceTree = "<group>"; };
 		85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				85AEEB08207C9CBB00FE20BA /* CXCodableViewController.swift */,
+				85B645A3207DBBAE00CE9A1C /* CXObjectMapperViewController.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -606,12 +609,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -696,6 +701,7 @@
 				852CF5EC20510EBC006B994D /* CXNSObject+Extension.swift in Sources */,
 				D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */,
 				D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */,
+				85B645A4207DBBAE00CE9A1C /* CXObjectMapperViewController.swift in Sources */,
 				D1B48CE31FEAAB0F0016874E /* CXMVPUserInfoPresenter.swift in Sources */,
 				D12318041FE76D55008D0F77 /* CXMVXUser.swift in Sources */,
 				D1CE46291FEB5F73004DE973 /* CXMVPBlogCellPresenter.swift in Sources */,
