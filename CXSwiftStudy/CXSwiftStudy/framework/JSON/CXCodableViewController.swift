@@ -55,7 +55,7 @@ struct BookCover: Codable {
 
 struct Book: Codable {
     
-    var title: String?
+    var title: String = ""
     var frontCover: BookCover?
     var backCover: BookCover?
 }
@@ -85,29 +85,29 @@ public protocol JSONEmptyRepresentable {
     associatedtype CodingKeyType: CodingKey
 }
 
-extension KeyedDecodingContainer {
-
-    public func decodeIfPresent<T>(_ type: T.Type, forKey key: K) throws -> T? where T : Decodable {
-        if contains(key) {
-            let container = try nestedContainer(keyedBy: CodingKey.Protocol, forKey: key)
-            print("11111")
-        } else {
-            print("2222")
-            return nil
-        }
-
-        return try decode(T.self, forKey: key)
-    }
-
-}
-
-
-public protocol JSONBlankRepresentable: RawRepresentable {
-    
-}
-
-extension KeyedDecodingContainer {
-    
-}
+//extension KeyedDecodingContainer {
+//
+//    public func decodeIfPresent<T>(_ type: T.Type, forKey key: K) throws -> T? where T : Decodable {
+//        if contains(key) {
+//            let container = try nestedContainer(keyedBy: CodingKey.Protocol, forKey: key)
+//            print("11111")
+//        } else {
+//            print("2222")
+//            return nil
+//        }
+//
+//        return try decode(T.self, forKey: key)
+//    }
+//
+//}
+//
+//
+//public protocol JSONBlankRepresentable: RawRepresentable {
+//
+//}
+//
+//extension KeyedDecodingContainer {
+//
+//}
 
 
