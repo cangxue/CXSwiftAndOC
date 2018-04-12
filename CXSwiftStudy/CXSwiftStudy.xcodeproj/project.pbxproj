@@ -19,6 +19,10 @@
 		858DDE7B2063BBB300582605 /* CXSegementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE7A2063BBB300582605 /* CXSegementViewController.swift */; };
 		85AEEB09207C9CBB00FE20BA /* CXCodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEEB08207C9CBB00FE20BA /* CXCodableViewController.swift */; };
 		85B645A4207DBBAE00CE9A1C /* CXObjectMapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B645A3207DBBAE00CE9A1C /* CXObjectMapperViewController.swift */; };
+		85B645A7207EFEF000CE9A1C /* CXProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B645A6207EFEF000CE9A1C /* CXProtocolViewController.swift */; };
+		85B645A9207F038100CE9A1C /* CXBounceSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B645A8207F038100CE9A1C /* CXBounceSelect.swift */; };
+		85B645AB207F3C0600CE9A1C /* CXShakeableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B645AA207F3C0600CE9A1C /* CXShakeableProtocol.swift */; };
+		85B645AD207F45C700CE9A1C /* CXTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B645AC207F45C700CE9A1C /* CXTableViewProtocol.swift */; };
 		85B73B6F20538B3D00211433 /* CXObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B6E20538B3D00211433 /* CXObservableViewController.swift */; };
 		85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B702053B96C00211433 /* CXConfigHeader.swift */; };
 		85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */; };
@@ -105,6 +109,10 @@
 		858DDE7A2063BBB300582605 /* CXSegementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSegementViewController.swift; sourceTree = "<group>"; };
 		85AEEB08207C9CBB00FE20BA /* CXCodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXCodableViewController.swift; sourceTree = "<group>"; };
 		85B645A3207DBBAE00CE9A1C /* CXObjectMapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObjectMapperViewController.swift; sourceTree = "<group>"; };
+		85B645A6207EFEF000CE9A1C /* CXProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXProtocolViewController.swift; sourceTree = "<group>"; };
+		85B645A8207F038100CE9A1C /* CXBounceSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBounceSelect.swift; sourceTree = "<group>"; };
+		85B645AA207F3C0600CE9A1C /* CXShakeableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXShakeableProtocol.swift; sourceTree = "<group>"; };
+		85B645AC207F45C700CE9A1C /* CXTableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTableViewProtocol.swift; sourceTree = "<group>"; };
 		85B73B6E20538B3D00211433 /* CXObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObservableViewController.swift; sourceTree = "<group>"; };
 		85B73B702053B96C00211433 /* CXConfigHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXConfigHeader.swift; sourceTree = "<group>"; };
 		85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +226,17 @@
 				85B645A3207DBBAE00CE9A1C /* CXObjectMapperViewController.swift */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		85B645A5207EFEBC00CE9A1C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				85B645A6207EFEF000CE9A1C /* CXProtocolViewController.swift */,
+				85B645AC207F45C700CE9A1C /* CXTableViewProtocol.swift */,
+				85B645A8207F038100CE9A1C /* CXBounceSelect.swift */,
+				85B645AA207F3C0600CE9A1C /* CXShakeableProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		85B73B6D20538B1900211433 /* Basic */ = {
@@ -442,6 +461,7 @@
 		D1BA48391E9E258D00B4DA26 /* CXSwiftStudy */ = {
 			isa = PBXGroup;
 			children = (
+				85B645A5207EFEBC00CE9A1C /* Protocol */,
 				D1FF72AC1FD125D00086AC55 /* framework */,
 				D162DA7E1FB05CA400B8886A /* design-mode */,
 				D18748251F04F7E80029B787 /* Classes */,
@@ -680,6 +700,7 @@
 				852CC14120577EA9006F49AA /* CXTraitsViewController.swift in Sources */,
 				D123180C1FE7A533008D0F77 /* CXMVXBlog.swift in Sources */,
 				85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */,
+				85B645A9207F038100CE9A1C /* CXBounceSelect.swift in Sources */,
 				D18748311F04F8000029B787 /* CollectionViewController.swift in Sources */,
 				D188A0DD1F95FDC5007800A3 /* BasicViewController.swift in Sources */,
 				D1E989121FCE57E900364407 /* CXInterpreter.swift in Sources */,
@@ -705,6 +726,7 @@
 				D1B48CE31FEAAB0F0016874E /* CXMVPUserInfoPresenter.swift in Sources */,
 				D12318041FE76D55008D0F77 /* CXMVXUser.swift in Sources */,
 				D1CE46291FEB5F73004DE973 /* CXMVPBlogCellPresenter.swift in Sources */,
+				85B645AD207F45C700CE9A1C /* CXTableViewProtocol.swift in Sources */,
 				D162DA801FB05D5000B8886A /* CXSingleton.swift in Sources */,
 				D111F8B71FC57179000F4EF7 /* CXBridge.swift in Sources */,
 				D1CE46271FEB5DF5004DE973 /* CXMVPBlogViewPresenter.swift in Sources */,
@@ -716,6 +738,7 @@
 				D15059DF1FC6BF3F0084DC0C /* CXCommand.swift in Sources */,
 				85B73B6F20538B3D00211433 /* CXObservableViewController.swift in Sources */,
 				D1BA483B1E9E258D00B4DA26 /* AppDelegate.swift in Sources */,
+				85B645A7207EFEF000CE9A1C /* CXProtocolViewController.swift in Sources */,
 				D162DAA21FB1AA5C00B8886A /* CXFactory.swift in Sources */,
 				D162DAC41FB4AD8B00B8886A /* CXDesignViewController.swift in Sources */,
 				D177B5C01FC4093B00214E62 /* CXFacade.swift in Sources */,
@@ -733,6 +756,7 @@
 				D162DAC61FB584FC00B8886A /* CXBaseViewController.swift in Sources */,
 				D146F2ED1FC17C660014F0F2 /* CXDecorator.swift in Sources */,
 				D1E989141FCE962E00364407 /* CXMemento.swift in Sources */,
+				85B645AB207F3C0600CE9A1C /* CXShakeableProtocol.swift in Sources */,
 				D1D4C7021FCD4D1A00F07A51 /* CXVisitor.swift in Sources */,
 				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
 				D16772251FBAE31F0076D0D1 /* CXPrototype.swift in Sources */,
