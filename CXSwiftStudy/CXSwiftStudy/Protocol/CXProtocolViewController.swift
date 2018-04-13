@@ -45,6 +45,10 @@ class CXProtocolViewController: CXBaseViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
 
         self.registerCell()
+        
+        let array = [1, 2, 3, 4, 5]
+        
+        print(array.sum())
     }
     
     func registerCell() {
@@ -63,9 +67,9 @@ class CXProtocolViewController: CXBaseViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath as NSIndexPath) as ProtocolTableViewCell
+//        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath as NSIndexPath) as ProtocolTableViewCell
         
-//        let cell = ProtocolTableViewCell()
+        let cell = ProtocolTableViewCell()
         cell.textLabel?.text = "请点击我啊！"
         
         return cell
@@ -87,6 +91,11 @@ class CXProtocolViewController: CXBaseViewController, UITableViewDataSource, UIT
     }
 }
 
+extension Array where Element: Numeric {
+    func sum() -> Element {
+        return reduce(0, +)
+    }
+}
 
 // MARK: --- UITableViewCell ---
 extension UITableViewCell: ReusableViewProtocol, NibLoadableViewProtocol {}
