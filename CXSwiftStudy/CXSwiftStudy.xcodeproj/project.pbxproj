@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3D48AD5FE96F033320078D /* CXSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3D44A3B5600825463764D7 /* CXSliderViewController.swift */; };
 		852CC13B2053C88B006F49AA /* CXUILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CC13A2053C88B006F49AA /* CXUILabelViewController.swift */; };
 		852CC13D2053D4DC006F49AA /* CXTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CC13C2053D4DC006F49AA /* CXTextFieldViewController.swift */; };
 		852CC13F2053DF1F006F49AA /* CXUIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CC13E2053DF1F006F49AA /* CXUIButtonViewController.swift */; };
@@ -93,6 +94,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D3D44A3B5600825463764D7 /* CXSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXSliderViewController.swift; sourceTree = "<group>"; };
 		51A5A5C2C01AD669BC9AF59E /* Pods-CXSwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
 		7072700B09593A1CA78BFB45 /* Pods-CXSwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		852CC13A2053C88B006F49AA /* CXUILabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXUILabelViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				852CC13C2053D4DC006F49AA /* CXTextFieldViewController.swift */,
 				852CC13E2053DF1F006F49AA /* CXUIButtonViewController.swift */,
 				858DDE7A2063BBB300582605 /* CXSegementViewController.swift */,
+				1D3D44A3B5600825463764D7 /* CXSliderViewController.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -760,6 +763,7 @@
 				D1D4C7021FCD4D1A00F07A51 /* CXVisitor.swift in Sources */,
 				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
 				D16772251FBAE31F0076D0D1 /* CXPrototype.swift in Sources */,
+				1D3D48AD5FE96F033320078D /* CXSliderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
