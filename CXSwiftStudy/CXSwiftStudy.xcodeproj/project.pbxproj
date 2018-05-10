@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850420B420A4AB36009AE06B /* CXCenterTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850420B320A4AB36009AE06B /* CXCenterTabBar.swift */; };
+		850420B620A4AC26009AE06B /* CXTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850420B520A4AC26009AE06B /* CXTabBarViewController.swift */; };
 		852CC13B2053C88B006F49AA /* CXUILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CC13A2053C88B006F49AA /* CXUILabelViewController.swift */; };
 		852CC13D2053D4DC006F49AA /* CXTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CC13C2053D4DC006F49AA /* CXTextFieldViewController.swift */; };
 		852CC13F2053DF1F006F49AA /* CXUIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CC13E2053DF1F006F49AA /* CXUIButtonViewController.swift */; };
@@ -89,6 +91,8 @@
 /* Begin PBXFileReference section */
 		51A5A5C2C01AD669BC9AF59E /* Pods-CXSwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
 		7072700B09593A1CA78BFB45 /* Pods-CXSwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXSwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXSwiftStudy/Pods-CXSwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		850420B320A4AB36009AE06B /* CXCenterTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXCenterTabBar.swift; sourceTree = "<group>"; };
+		850420B520A4AC26009AE06B /* CXTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTabBarViewController.swift; sourceTree = "<group>"; };
 		852CC13A2053C88B006F49AA /* CXUILabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXUILabelViewController.swift; sourceTree = "<group>"; };
 		852CC13C2053D4DC006F49AA /* CXTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTextFieldViewController.swift; sourceTree = "<group>"; };
 		852CC13E2053DF1F006F49AA /* CXUIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXUIButtonViewController.swift; sourceTree = "<group>"; };
@@ -437,6 +441,8 @@
 				D162DAC51FB584FC00B8886A /* CXBaseViewController.swift */,
 				D162DAA31FB1AFE100B8886A /* CXTempViewController.swift */,
 				85B73B702053B96C00211433 /* CXConfigHeader.swift */,
+				850420B320A4AB36009AE06B /* CXCenterTabBar.swift */,
+				850420B520A4AC26009AE06B /* CXTabBarViewController.swift */,
 				D1BA483E1E9E258D00B4DA26 /* Main.storyboard */,
 				D1BA48411E9E258D00B4DA26 /* Assets.xcassets */,
 				D1BA48431E9E258D00B4DA26 /* LaunchScreen.storyboard */,
@@ -661,6 +667,7 @@
 				85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */,
 				D1CE462C1FEB99E1004DE973 /* CXClassesViewController.swift in Sources */,
 				D1B48CE51FEAACCE0016874E /* CXMVPUserInfoViewController.swift in Sources */,
+				850420B420A4AB36009AE06B /* CXCenterTabBar.swift in Sources */,
 				852CC14120577EA9006F49AA /* CXTraitsViewController.swift in Sources */,
 				D123180C1FE7A533008D0F77 /* CXMVXBlog.swift in Sources */,
 				85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */,
@@ -670,6 +677,7 @@
 				852CF5EE20513944006B994D /* CXRuntimeTableViewController.swift in Sources */,
 				D162DAA41FB1AFE100B8886A /* CXTempViewController.swift in Sources */,
 				D12318061FE7919D008D0F77 /* CXMVCBlogViewController.swift in Sources */,
+				850420B620A4AC26009AE06B /* CXTabBarViewController.swift in Sources */,
 				D15059DB1FC674620084DC0C /* CXStrategy.swift in Sources */,
 				855F2D9D204F8C7F006AC8C8 /* CXSnapKitViewController.swift in Sources */,
 				D1BA483D1E9E258D00B4DA26 /* ViewController.swift in Sources */,
