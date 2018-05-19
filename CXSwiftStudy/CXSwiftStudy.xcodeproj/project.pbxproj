@@ -28,6 +28,7 @@
 		85B645AD207F45C700CE9A1C /* CXTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B645AC207F45C700CE9A1C /* CXTableViewProtocol.swift */; };
 		85B73B6F20538B3D00211433 /* CXObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B6E20538B3D00211433 /* CXObservableViewController.swift */; };
 		85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B702053B96C00211433 /* CXConfigHeader.swift */; };
+		85DF225420A9A3C0002E64EA /* CXTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DF225320A9A3C0002E64EA /* CXTimerViewController.swift */; };
 		85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */; };
 		D103819B1FEA308800D85EC1 /* CXMVPUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */; };
 		D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819C1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift */; };
@@ -121,6 +122,7 @@
 		85B645AC207F45C700CE9A1C /* CXTableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTableViewProtocol.swift; sourceTree = "<group>"; };
 		85B73B6E20538B3D00211433 /* CXObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObservableViewController.swift; sourceTree = "<group>"; };
 		85B73B702053B96C00211433 /* CXConfigHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXConfigHeader.swift; sourceTree = "<group>"; };
+		85DF225320A9A3C0002E64EA /* CXTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTimerViewController.swift; sourceTree = "<group>"; };
 		85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeViewController.swift; sourceTree = "<group>"; };
 		9E7CE03F0D07516996CF7A7E /* Pods_CXSwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CXSwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXMVPUserViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,13 @@
 				1D3D44A3B5600825463764D7 /* CXSliderViewController.swift */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		85DF225020A9A294002E64EA /* extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		85EF71522050DEC7004BDC56 /* Runtime */ = {
@@ -400,6 +409,7 @@
 				D18BA6F81F4C73D4007ED286 /* 定位 */,
 				D18748261F04F7E80029B787 /* 闭包 */,
 				D187482F1F04F7E80029B787 /* 集合 */,
+				85DF225320A9A3C0002E64EA /* CXTimerViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -468,6 +478,7 @@
 		D1BA48391E9E258D00B4DA26 /* CXSwiftStudy */ = {
 			isa = PBXGroup;
 			children = (
+				85DF225020A9A294002E64EA /* extension */,
 				85B645A5207EFEBC00CE9A1C /* Protocol */,
 				D1FF72AC1FD125D00086AC55 /* framework */,
 				D162DA7E1FB05CA400B8886A /* design-mode */,
@@ -754,6 +765,7 @@
 				D162DAC41FB4AD8B00B8886A /* CXDesignViewController.swift in Sources */,
 				D177B5C01FC4093B00214E62 /* CXFacade.swift in Sources */,
 				D103819B1FEA308800D85EC1 /* CXMVPUserViewController.swift in Sources */,
+				85DF225420A9A3C0002E64EA /* CXTimerViewController.swift in Sources */,
 				D18BA6FA1F4C73EE007ED286 /* CXLocationViewController.swift in Sources */,
 				D111F8B51FC55CEF000F4EF7 /* CXFlyweight.swift in Sources */,
 				D1728FA31FC81A64007B8ED4 /* CXIterator.swift in Sources */,
