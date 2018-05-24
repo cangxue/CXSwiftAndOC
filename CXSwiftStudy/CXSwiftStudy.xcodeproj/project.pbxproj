@@ -20,6 +20,7 @@
 		855F2DA2204FBF28006AC8C8 /* CXRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */; };
 		858DDE2F205F817E00582605 /* CXSwiftStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE2E205F817E00582605 /* CXSwiftStudyTests.swift */; };
 		858DDE7B2063BBB300582605 /* CXSegementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE7A2063BBB300582605 /* CXSegementViewController.swift */; };
+		859E837220AFF15A0000F68D /* CXBezierPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E837120AFF15A0000F68D /* CXBezierPathViewController.swift */; };
 		85AEEB09207C9CBB00FE20BA /* CXCodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEEB08207C9CBB00FE20BA /* CXCodableViewController.swift */; };
 		85B645A4207DBBAE00CE9A1C /* CXObjectMapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B645A3207DBBAE00CE9A1C /* CXObjectMapperViewController.swift */; };
 		85B645A7207EFEF000CE9A1C /* CXProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B645A6207EFEF000CE9A1C /* CXProtocolViewController.swift */; };
@@ -114,6 +115,7 @@
 		858DDE2E205F817E00582605 /* CXSwiftStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSwiftStudyTests.swift; sourceTree = "<group>"; };
 		858DDE30205F817E00582605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		858DDE7A2063BBB300582605 /* CXSegementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSegementViewController.swift; sourceTree = "<group>"; };
+		859E837120AFF15A0000F68D /* CXBezierPathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBezierPathViewController.swift; sourceTree = "<group>"; };
 		85AEEB08207C9CBB00FE20BA /* CXCodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXCodableViewController.swift; sourceTree = "<group>"; };
 		85B645A3207DBBAE00CE9A1C /* CXObjectMapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObjectMapperViewController.swift; sourceTree = "<group>"; };
 		85B645A6207EFEF000CE9A1C /* CXProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXProtocolViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,14 @@
 				858DDE30205F817E00582605 /* Info.plist */,
 			);
 			path = CXSwiftStudyTests;
+			sourceTree = "<group>";
+		};
+		859E837020AFF12D0000F68D /* bezierPath */ = {
+			isa = PBXGroup;
+			children = (
+				859E837120AFF15A0000F68D /* CXBezierPathViewController.swift */,
+			);
+			path = bezierPath;
 			sourceTree = "<group>";
 		};
 		85AEEB07207C9BFA00FE20BA /* JSON */ = {
@@ -478,6 +488,7 @@
 		D1BA48391E9E258D00B4DA26 /* CXSwiftStudy */ = {
 			isa = PBXGroup;
 			children = (
+				859E837020AFF12D0000F68D /* bezierPath */,
 				85DF225020A9A294002E64EA /* extension */,
 				85B645A5207EFEBC00CE9A1C /* Protocol */,
 				D1FF72AC1FD125D00086AC55 /* framework */,
@@ -772,6 +783,7 @@
 				D1A4EEC41FD4FA3400C96F82 /* CXSimpleMVCController.swift in Sources */,
 				D1728F9F1FC8012E007B8ED4 /* CXMediator.swift in Sources */,
 				D12318091FE79920008D0F77 /* CXMVXBlogTableViewCell.swift in Sources */,
+				859E837220AFF15A0000F68D /* CXBezierPathViewController.swift in Sources */,
 				852CC13D2053D4DC006F49AA /* CXTextFieldViewController.swift in Sources */,
 				D123180E1FE7A69B008D0F77 /* CXMVCBlogCellHelper.swift in Sources */,
 				852CC13B2053C88B006F49AA /* CXUILabelViewController.swift in Sources */,
