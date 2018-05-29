@@ -18,6 +18,7 @@
 		852CF5EE20513944006B994D /* CXRuntimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CF5ED20513944006B994D /* CXRuntimeTableViewController.swift */; };
 		855F2D9D204F8C7F006AC8C8 /* CXSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */; };
 		855F2DA2204FBF28006AC8C8 /* CXRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */; };
+		858A40D720BCCDFE006B5B53 /* CXAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A40D620BCCDFE006B5B53 /* CXAnimationViewController.swift */; };
 		858DDE2F205F817E00582605 /* CXSwiftStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE2E205F817E00582605 /* CXSwiftStudyTests.swift */; };
 		858DDE7B2063BBB300582605 /* CXSegementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE7A2063BBB300582605 /* CXSegementViewController.swift */; };
 		859E837220AFF15A0000F68D /* CXBezierPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E837120AFF15A0000F68D /* CXBezierPathViewController.swift */; };
@@ -111,6 +112,7 @@
 		852CF5ED20513944006B994D /* CXRuntimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeTableViewController.swift; sourceTree = "<group>"; };
 		855F2D9C204F8C7F006AC8C8 /* CXSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSnapKitViewController.swift; sourceTree = "<group>"; };
 		855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRxSwiftViewController.swift; sourceTree = "<group>"; };
+		858A40D620BCCDFE006B5B53 /* CXAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXAnimationViewController.swift; sourceTree = "<group>"; };
 		858DDE2C205F817E00582605 /* CXSwiftStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CXSwiftStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		858DDE2E205F817E00582605 /* CXSwiftStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXSwiftStudyTests.swift; sourceTree = "<group>"; };
 		858DDE30205F817E00582605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -218,6 +220,14 @@
 				855F2DA1204FBF28006AC8C8 /* CXRxSwiftViewController.swift */,
 			);
 			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		858A40D520BCCDE9006B5B53 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				858A40D620BCCDFE006B5B53 /* CXAnimationViewController.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		858DDE2D205F817E00582605 /* CXSwiftStudyTests */ = {
@@ -488,6 +498,7 @@
 		D1BA48391E9E258D00B4DA26 /* CXSwiftStudy */ = {
 			isa = PBXGroup;
 			children = (
+				858A40D520BCCDE9006B5B53 /* Animation */,
 				859E837020AFF12D0000F68D /* bezierPath */,
 				85DF225020A9A294002E64EA /* extension */,
 				85B645A5207EFEBC00CE9A1C /* Protocol */,
@@ -753,6 +764,7 @@
 				D15059DD1FC6A9C80084DC0C /* CXResponsibility.swift in Sources */,
 				D1E989101FCE4C8500364407 /* CXObserver.swift in Sources */,
 				852CF5EC20510EBC006B994D /* CXNSObject+Extension.swift in Sources */,
+				858A40D720BCCDFE006B5B53 /* CXAnimationViewController.swift in Sources */,
 				D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */,
 				D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */,
 				85B645A4207DBBAE00CE9A1C /* CXObjectMapperViewController.swift in Sources */,
