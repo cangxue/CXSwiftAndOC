@@ -30,6 +30,7 @@
 		85B645AD207F45C700CE9A1C /* CXTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B645AC207F45C700CE9A1C /* CXTableViewProtocol.swift */; };
 		85B73B6F20538B3D00211433 /* CXObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B6E20538B3D00211433 /* CXObservableViewController.swift */; };
 		85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B702053B96C00211433 /* CXConfigHeader.swift */; };
+		85C1840920C6C3F7007FE2C4 /* CXBezierPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1840820C6C3F7007FE2C4 /* CXBezierPathView.swift */; };
 		85DF225420A9A3C0002E64EA /* CXTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DF225320A9A3C0002E64EA /* CXTimerViewController.swift */; };
 		85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */; };
 		D103819B1FEA308800D85EC1 /* CXMVPUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */; };
@@ -126,6 +127,7 @@
 		85B645AC207F45C700CE9A1C /* CXTableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTableViewProtocol.swift; sourceTree = "<group>"; };
 		85B73B6E20538B3D00211433 /* CXObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObservableViewController.swift; sourceTree = "<group>"; };
 		85B73B702053B96C00211433 /* CXConfigHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXConfigHeader.swift; sourceTree = "<group>"; };
+		85C1840820C6C3F7007FE2C4 /* CXBezierPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBezierPathView.swift; sourceTree = "<group>"; };
 		85DF225320A9A3C0002E64EA /* CXTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTimerViewController.swift; sourceTree = "<group>"; };
 		85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeViewController.swift; sourceTree = "<group>"; };
 		9E7CE03F0D07516996CF7A7E /* Pods_CXSwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CXSwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				859E837120AFF15A0000F68D /* CXBezierPathViewController.swift */,
+				85C1840820C6C3F7007FE2C4 /* CXBezierPathView.swift */,
 			);
 			path = bezierPath;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				D1E989141FCE962E00364407 /* CXMemento.swift in Sources */,
 				85B645AB207F3C0600CE9A1C /* CXShakeableProtocol.swift in Sources */,
 				D1D4C7021FCD4D1A00F07A51 /* CXVisitor.swift in Sources */,
+				85C1840920C6C3F7007FE2C4 /* CXBezierPathView.swift in Sources */,
 				D11BAAAC1F33277500E21DF8 /* CXBlockViewController.swift in Sources */,
 				D16772251FBAE31F0076D0D1 /* CXPrototype.swift in Sources */,
 				1D3D48AD5FE96F033320078D /* CXSliderViewController.swift in Sources */,

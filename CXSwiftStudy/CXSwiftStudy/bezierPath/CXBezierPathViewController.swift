@@ -5,11 +5,14 @@
 //  Created by ymh on 2018/5/19.
 //  Copyright © 2018年 CX. All rights reserved.
 //
+// 参考网址：https://www.jianshu.com/p/31092016d22c
 
 import UIKit
 
 class CXBezierPathViewController: CXBaseViewController {
-
+    
+    let bezierPathView = CXBezierPathView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,16 +21,13 @@ class CXBezierPathViewController: CXBaseViewController {
         let view = UIView.init(frame: CGRect(x: 100, y: 200, width: 100, height: 14))
         self.view.addSubview(view)
         
-        drawTrapezoid(view: view, backgroundColor: UIColor.red, text: "000")
+//        drawTrapezoid(view: view, backgroundColor: UIColor.red, text: "000")
+        
+        bezierPathView.frame = self.view.frame
+        self.view.addSubview(bezierPathView)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    // 梯形
+    // 绘制梯形
     func drawTrapezoid(view: UIView, backgroundColor: UIColor, text: String) {
         let finalSize = CGSize(width: view.bounds.size.width, height: view.bounds.size.height)
  
