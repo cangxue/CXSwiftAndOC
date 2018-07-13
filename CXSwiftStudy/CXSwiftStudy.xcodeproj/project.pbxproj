@@ -31,6 +31,7 @@
 		85B73B6F20538B3D00211433 /* CXObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B6E20538B3D00211433 /* CXObservableViewController.swift */; };
 		85B73B712053B96C00211433 /* CXConfigHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B73B702053B96C00211433 /* CXConfigHeader.swift */; };
 		85C1840920C6C3F7007FE2C4 /* CXBezierPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1840820C6C3F7007FE2C4 /* CXBezierPathView.swift */; };
+		85C1840D20C7F4F1007FE2C4 /* CXGraphicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1840C20C7F4F1007FE2C4 /* CXGraphicsViewController.swift */; };
 		85DF225420A9A3C0002E64EA /* CXTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DF225320A9A3C0002E64EA /* CXTimerViewController.swift */; };
 		85EF71542050DF25004BDC56 /* CXRuntimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */; };
 		D103819B1FEA308800D85EC1 /* CXMVPUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103819A1FEA308800D85EC1 /* CXMVPUserViewController.swift */; };
@@ -128,6 +129,7 @@
 		85B73B6E20538B3D00211433 /* CXObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXObservableViewController.swift; sourceTree = "<group>"; };
 		85B73B702053B96C00211433 /* CXConfigHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXConfigHeader.swift; sourceTree = "<group>"; };
 		85C1840820C6C3F7007FE2C4 /* CXBezierPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXBezierPathView.swift; sourceTree = "<group>"; };
+		85C1840C20C7F4F1007FE2C4 /* CXGraphicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXGraphicsViewController.swift; sourceTree = "<group>"; };
 		85DF225320A9A3C0002E64EA /* CXTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXTimerViewController.swift; sourceTree = "<group>"; };
 		85EF71532050DF25004BDC56 /* CXRuntimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXRuntimeViewController.swift; sourceTree = "<group>"; };
 		9E7CE03F0D07516996CF7A7E /* Pods_CXSwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CXSwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,23 @@
 				1D3D44A3B5600825463764D7 /* CXSliderViewController.swift */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		85C1840A20C7F41A007FE2C4 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				85C1840B20C7F433007FE2C4 /* contextRef */,
+				859E837020AFF12D0000F68D /* bezierPath */,
+			);
+			path = Draw;
+			sourceTree = "<group>";
+		};
+		85C1840B20C7F433007FE2C4 /* contextRef */ = {
+			isa = PBXGroup;
+			children = (
+				85C1840C20C7F4F1007FE2C4 /* CXGraphicsViewController.swift */,
+			);
+			path = contextRef;
 			sourceTree = "<group>";
 		};
 		85DF225020A9A294002E64EA /* extension */ = {
@@ -501,8 +520,8 @@
 		D1BA48391E9E258D00B4DA26 /* CXSwiftStudy */ = {
 			isa = PBXGroup;
 			children = (
+				85C1840A20C7F41A007FE2C4 /* Draw */,
 				858A40D520BCCDE9006B5B53 /* Animation */,
-				859E837020AFF12D0000F68D /* bezierPath */,
 				85DF225020A9A294002E64EA /* extension */,
 				85B645A5207EFEBC00CE9A1C /* Protocol */,
 				D1FF72AC1FD125D00086AC55 /* framework */,
@@ -769,6 +788,7 @@
 				852CF5EC20510EBC006B994D /* CXNSObject+Extension.swift in Sources */,
 				858A40D720BCCDFE006B5B53 /* CXAnimationViewController.swift in Sources */,
 				D1D5B26D1FC31F8B001AA6DC /* CXAdapter.swift in Sources */,
+				85C1840D20C7F4F1007FE2C4 /* CXGraphicsViewController.swift in Sources */,
 				D103819D1FEA4E1500D85EC1 /* CXMVXUserInfoView.swift in Sources */,
 				85B645A4207DBBAE00CE9A1C /* CXObjectMapperViewController.swift in Sources */,
 				D1B48CE31FEAAB0F0016874E /* CXMVPUserInfoPresenter.swift in Sources */,
